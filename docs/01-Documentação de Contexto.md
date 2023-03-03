@@ -1,6 +1,22 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Texto descritivo com a visão geral do projeto abordado. Inclui o cSe realizarmos uma busca sobre as profissões em alta nos próximos anos, certamente TI estará em evidência em qualquer pesquisa na Web. 
+
+  
+
+De acordo com o G1 (2022), há vagas em diversas áreas na Tecnologia da Informação e atualmente com alta demanda e a falta de mão de obra impulsionada principalmente pela pandemia forçaram as empresas a entrarem na digitalização.  
+
+  
+
+Para atender o mercado, o Brasil irá abrir mais de 300 mil vagas para profissionais de TI até 2024, de acordo com o site TERRA (2021). Mas um dado importante chama atenção nessa reportagem, pois apesar de formar 46 mil alunos na área todos os anos e mesmo o mercado sentido a falta de tantos profissionais, entrar no segmento não parece tão fácil assim, pois as empresas estão dando preferência para profissionais experientes e infelizmente os profissionais em início de carreira estão sendo deixado de lado. 
+
+  
+
+Podemos concluir que apesar da quantidade de vagas ofertadas e a quantidade de alunos que se formam no mercado, há poucas oportunidades para eles e não existem muitos aplicativos que conecte estudantes e recém-formados que possuem alguma habilidade tecnológica e com ideias de projetos que possam trabalhar juntos e conquistar a tão experiência que o mercado exige.  
+
+  
+
+Sendo assim, com o objetivo de ajudar principalmente os estagiários e recém formados, propomos a criação de um app que divulgue projetos e que auxilie a encontrar voluntários dispostos a atuarem em times para desenvolver ideias de projetos na área de tecnologia. ontexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
 
