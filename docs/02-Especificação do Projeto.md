@@ -30,7 +30,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Nathália Souza |  Ter oportunidade de praticar a metodologia Ágil no desenvolvimento de um projeto de software          | Para conseguir um estágio na área.              |
 | Lucas Hideaki   |  Conseguir se ligar a projetos com ideias nas quais se conecte através de Aplicativo Móvel             | Para contribuir no desenvolvimento de sistemas e ganhar experiências.              |
 | Lucas Hideaki   |  Quer ter certeza que os projetos propostos estão de acordo com que o mercado está exigindo           | Para ter maior aproveitamento de aprendizagem. .              |
-|     |                 |  |
+
 
 
 ## Modelagem do Processo de Negócio 
@@ -78,10 +78,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| O aplicativo deve permitir cadastro de usuários. | ALTA | 
 |RF-002| O aplicativo deve permitir login de usuários.  | ALTA |
-|RF-003|         |      |
-|RF-004|         |     |
+|RF-003| O aplicativo deve permitir que o usuário se conecte a projeto já existente.     |   ALTA   |
+|RF-004| O aplicativo deve ter no formulário de cadastro de projeto um campo que o usuário deva colocar a descrição da vaga de emprego.         |  ALTA   |
 |RF-005|         |     | 
 |RF-006| O aplicativo deve ter uma página com amostras de projetos finalizados.|  ALTA   |
+|RF-007|         |     |
+|RF-008|         |     | 
+|RF-009|         |     |    
 
 ### Requisitos não Funcionais
 
