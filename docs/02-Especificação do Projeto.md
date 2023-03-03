@@ -10,12 +10,12 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 |    Nathália Souza | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/imagem_nathalia.jpg" >| **Idade:** 37 anos <br> **Ocupação:** formada em Engenharia de Software e fazendo pós graduação em Ciência de dados|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|<img src="img/imagem_nathalia.jpg" width = 250>| **Idade:** 37 anos <br> **Ocupação:** formada em Engenharia de Software e fazendo pós graduação em Ciência de dados|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
 |**Motivações:**<br><ul>● Concluir a faculdade. <br><br>● Adquirir experiências com metodologias agéis. </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir estágio por não ter experiência; <br><br>● Na faculdade não tem muita oportunidade de praticar a metodologia Ágil aplicada ao desenvolvimento de software.   |**Hobbies/Histórias:**<br><ul>● Cozinhar <br>● Ler livros <br>● Viajar <br></ul>|
 
 |    Lucas Hideaki | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/HIDEAKI.jpg" >| **Idade:**  23 anos <br> **Ocupação:** Recém Formado em Análise e Desenvolvimento |**Aplicativos:**<br><ul>● Instagram <br>● GitHub <br>● Discord<br>● Team Microsoft <br></ul>|
+|<img src="img/HIDEAKI.jpg" width = 250>| **Idade:**  23 anos <br> **Ocupação:** Recém Formado em Análise e Desenvolvimento |**Aplicativos:**<br><ul>● Instagram <br>● GitHub <br>● Discord<br>● Team Microsoft <br></ul>|
 |**Motivações:**<br><ul>● Gosta muito de utilizar aplicativos e por isso, quer se aprofundar mais nessa programação.    <br><br>● Conectar com pessoas para que possamos desenvolver sistemas do nosso interesse.   </ul>|**Frustrações:**<br><ul>● Recentemente participou de um processo seletivo para júniores e estagiários, mesmo enviando vários trabalhos que havia feito o recrutador informou que a vaga foi ocupada por programadores mais experientes; <br><br>● Maior frustação é estar formado e não ter consigo colocação na área.    |**Hobbies/Histórias:**<br><ul>● Gosta de jogar jogos on-line <br>● Aprender programação em cursos de curta duração. <br> <br></ul>|
 
 
