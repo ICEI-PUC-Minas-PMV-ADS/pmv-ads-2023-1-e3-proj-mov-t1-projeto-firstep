@@ -27,7 +27,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 |    Jenifer Damasceno| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/HIDEAKI.jpg" width = 250>| **Idade:**  30 anos <br> **Ocupação:** Estudante de Análise e Desenvolvimento de Sistemas, já formada em Engenharia Civil e atuando nesta área. |**Aplicativos:**<br><ul>● Twitter <br>● Instagram  <br>● Whatsapp <br></ul>|
+|<img src="img/PersonaJenifer.png" width = 250>| **Idade:**  30 anos <br> **Ocupação:** Estudante de Análise e Desenvolvimento de Sistemas, já formada em Engenharia Civil e atuando nesta área. |**Aplicativos:**<br><ul>● Twitter <br>● Instagram  <br>● Whatsapp <br></ul>|
 |**Motivações:**<br><ul>● Deseja realizar transição de carreira e assim, se dedicar apenas a área de desenvolvimento de software.    <br> </ul>|**Frustrações:**<br><ul>● Já se candidatou em vários processos seletivos, mas não conseguiu chegar a fase de entrevistas. <br><ul>|**Hobbies/Histórias:**<br><ul>● Ir ao teatro; <br>● Ir a shows;  <br> ● Ir a praia;<br></ul>|
 
 
@@ -114,7 +114,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| O sistema deverá garantir a segurança dos dados sensíveis do usuário por meio de criptografia.| ALTA |
 |RNF-006| O sistema deverá estar disponível 24 horas por dia e 7 dias na semana. | ALTA |
 
-   
+A técnica para priorização de requisitos utilizada foi a Escala de Três Níveis e a imagem abaixo retrata a análise realizada.
+
+<img src="img/PriorizacaoDeRequisitos.png">
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
