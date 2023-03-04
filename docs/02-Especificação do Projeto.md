@@ -44,6 +44,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Kwame Dume   | Quer uma busca específica, por projetos ao qual possa participar| Para trocar experiências e aprendizagem. 
 | Kwame Dume   | Trabalhar com vários tipos de linguagem de programação | Para adquirir ampla experiência e poder entrar no mercado de trabalho.
 | Kwame Dume   | Conseguir expor seus projetos de forma que outras pessoas também possam participar | Para criar um grupo de desenvolvimento.            
+| Jenifer Damasceno  | Busca apoio de tutores  | Para Identificar pontos de melhorias na programação e realizar transição de carreira.             
 
 ## Modelagem do Processo de Negócio 
 
@@ -57,7 +58,11 @@ No entanto, muitos estudantes sentem dificuldade de criar sozinhos projetos para
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Nossa proposta tem como objetivo proporcionar uma plataforma cujo ambiente permita que usuários publiquem ideias de projetos que desejem atuar e também que eles possam se conectar a outros projetos em andamento.  
+
+Para assegurar que as experiências adquiridas nos projetos serão compatíveis com as buscadas pelo mercado de trabalho, nossa aplicação solicitará, através de um formulário, a indicação da vaga e seus pré-requisitos, aos quais deverão ser semelhantes ao que será desenvolvido no projeto proposto e esta conexão é o diferencial da nossa proposta, se comparado ao Linkedin e Github, que são plataformas onde é possível fazer publicações de links de projetos.  
+
+Dessa forma, o projeto propõe que os usuários terão um estudo focado, aumentando suas chances de inserção no mercado de trabalho. Além disso, como os projetos serão desenvolvidos em grupos, os usuários terão a possibilidade de desenvolver competências comportamentais desejadas por empresas contratantes. 
 
 ### Processo 1 – NOME DO PROCESSO
 
