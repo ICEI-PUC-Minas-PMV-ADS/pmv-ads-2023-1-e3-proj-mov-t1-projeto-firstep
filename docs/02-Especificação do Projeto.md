@@ -19,7 +19,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |**Motivações:**<br><ul>● Gosta muito de utilizar aplicativos e por isso, quer se aprofundar mais nessa programação.    <br><br>● Conectar com pessoas para que possa desenvolver sistemas do nosso interesse.   </ul>|**Frustrações:**<br><ul>● Recentemente participou de um processo seletivo para júniores e estagiários, mesmo enviando vários trabalhos que havia feito o recrutador informou que a vaga foi ocupada por programadores mais experientes; <br><br>● Maior frustação é estar formado e não ter consigo colocação na área.    |**Hobbies/Histórias:**<br><ul>● Gosta de jogar jogos on-line <br>● Aprender programação em cursos de curta duração. <br> <br></ul>|
 
 
-|    Lucas Hideaki | Informações:                       |                                        |
+|    Kwame Dume| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 |<img src="img/HIDEAKI.jpg" width = 250>| **Idade:**  46 anos <br> **Ocupação:** Motorista de aplicativo cursando faculdade de análise e desenvolvimento de sistema. |**Aplicativos:**<br><ul>● Instagram <br>● Facebook  <br>● Twitter <br>● Team Microsoft <br></ul>|
 |**Motivações:**<br><ul>● Encontrar grupos que trabalhem com linguagens de programação do seu interesse;     <br><br>● Ser um ótimo programador, sempre se atualizando e buscando por novos cursos na área. </ul>|**Frustrações:**<br><ul>● Devido à falta de experiência há poucas oportunidades, inclusive para estágios. |**Hobbies/Histórias:**<br><ul>● Jogar futebol; <br>● Tocar violão.  <br> <br></ul>|
@@ -37,8 +37,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Nathália Souza |  Ter oportunidade de praticar a metodologia Ágil no desenvolvimento de um projeto de software          | Para conseguir um estágio na área.              |
 | Lucas Hideaki   |  Conseguir se ligar a projetos com ideias nas quais se conecte através de Aplicativo Móvel             | Para contribuir no desenvolvimento de sistemas e ganhar experiências.              |
 | Lucas Hideaki   |  Quer ter certeza que os projetos propostos estão de acordo com que o mercado está exigindo           | Para ter maior aproveitamento de aprendizagem. .              |
-
-
+| Kwame Dume   | Quer uma busca específica, por projetos ao qual possa participar| Para trocar experiências e aprendizagem. 
+| Kwame Dume   | Trabalhar com vários tipos de linguagem de programação | Para adquirir ampla experiência e poder entrar no mercado de trabalho.
+| Kwame Dume   | Conseguir expor seus projetos de forma que outras pessoas também possam participar | Para criar um grupo de desenvolvimento.
 
 ## Modelagem do Processo de Negócio 
 
@@ -87,7 +88,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| O aplicativo deve permitir login de usuários.  | ALTA |
 |RF-003| O aplicativo deve permitir que o usuário se conecte a projeto já existente.     |   ALTA   |
 |RF-004| O aplicativo deve ter no formulário de cadastro de projeto um campo que o usuário deva colocar a descrição da vaga de emprego.         |  ALTA   |
-|RF-005|         |     | 
+|RF-005| O aplicativo deve realizar uma busca por linguagem de programação. 
 |RF-006| O aplicativo deve ter uma página com amostras de projetos finalizados.|  ALTA   |
 |RF-007|         |     |
 |RF-008|         |     | 
