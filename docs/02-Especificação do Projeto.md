@@ -19,6 +19,13 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |**Motivações:**<br><ul>● Gosta muito de utilizar aplicativos e por isso, quer se aprofundar mais nessa programação.    <br><br>● Conectar com pessoas para que possa desenvolver sistemas do nosso interesse.   </ul>|**Frustrações:**<br><ul>● Recentemente participou de um processo seletivo para júniores e estagiários, mesmo enviando vários trabalhos que havia feito o recrutador informou que a vaga foi ocupada por programadores mais experientes; <br><br>● Maior frustação é estar formado e não ter consigo colocação na área.    |**Hobbies/Histórias:**<br><ul>● Gosta de jogar jogos on-line <br>● Aprender programação em cursos de curta duração. <br> <br></ul>|
 
 
+|    Lucas Hideaki | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/HIDEAKI.jpg" width = 250>| **Idade:**  46 anos <br> **Ocupação:** Motorista de aplicativo cursando faculdade de análise e desenvolvimento de sistema. |**Aplicativos:**<br><ul>● Instagram <br>● Facebook  <br>● Twitter <br>● Team Microsoft <br></ul>|
+|**Motivações:**<br><ul>● Encontrar grupos que trabalhem com linguagens de programação do seu interesse;     <br><br>● Ser um ótimo programador, sempre se atualizando e buscando por novos cursos na área. </ul>|**Frustrações:**<br><ul>● Devido à falta de experiência há poucas oportunidades, inclusive para estágios. |**Hobbies/Histórias:**<br><ul>● Jogar futebol; <br>● Tocar violão.  <br> <br></ul>|
+
+
+
 
 
 ## Histórias de Usuários
