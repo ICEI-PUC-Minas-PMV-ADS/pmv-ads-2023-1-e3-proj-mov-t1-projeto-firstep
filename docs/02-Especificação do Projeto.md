@@ -21,7 +21,7 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 |    Kwame Dume| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/HIDEAKI.jpg" width = 250>| **Idade:**  46 anos <br> **Ocupação:** Motorista de aplicativo cursando faculdade de análise e desenvolvimento de sistema. |**Aplicativos:**<br><ul>● Instagram <br>● Facebook  <br>● Twitter <br>● Team Microsoft <br></ul>|
+|<img src="img/Dume.jpg" width = 250>| **Idade:**  46 anos <br> **Ocupação:** Motorista de aplicativo cursando faculdade de análise e desenvolvimento de sistema. |**Aplicativos:**<br><ul>● Instagram <br>● Facebook  <br>● Twitter <br>● Team Microsoft <br></ul>|
 |**Motivações:**<br><ul>● Encontrar grupos que trabalhem com linguagens de programação do seu interesse;     <br><br>● Ser um ótimo programador, sempre se atualizando e buscando por novos cursos na área. </ul>|**Frustrações:**<br><ul>● Devido à falta de experiência há poucas oportunidades, inclusive para estágios. |**Hobbies/Histórias:**<br><ul>● Jogar futebol; <br>● Tocar violão.  <br> <br></ul>|
 
 
@@ -192,4 +192,4 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
 
-![Orçamento](img/02-orcamento.png)
+![Orçamento](img/Gest%C3%A3o%20de%20Or%C3%A7amento.jpg)
