@@ -16,7 +16,7 @@ Podemos concluir que apesar da quantidade de vagas ofertadas e a quantidade de a
 
   
 
-Sendo assim, com o objetivo de ajudar principalmente os estagiários e recém formados, propomos a criação de um app que divulgue projetos e que auxilie a encontrar voluntários dispostos a atuarem em times para desenvolver ideias de projetos na área de tecnologia. ontexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Sendo assim, com o objetivo de ajudar principalmente os estagiários e recém formados, propomos a criação de um app que divulgue projetos e que auxilie a encontrar voluntários dispostos a atuarem em times para desenvolver ideias de projetos na área de tecnologia. 
 
 ## Problema
 
