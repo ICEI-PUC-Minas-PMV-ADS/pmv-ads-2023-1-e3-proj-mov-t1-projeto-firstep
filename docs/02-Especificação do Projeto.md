@@ -99,8 +99,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-004| O aplicativo deve ter no formulário de cadastro de projeto um campo que o usuário deva colocar a descrição da vaga de emprego.         |  ALTA   |
 |RF-005| O aplicativo deve realizar uma busca por linguagem de programação. 
 |RF-006| O aplicativo deve ter uma página com amostras de projetos finalizados.|  ALTA   |
-|RF-007|         |     |
-|RF-008|         |     | 
+|RF-007| O aplicativo deve disponibilizar contato com tutores. | BAIXA  |
+|RF-008| O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | ALTA     | 
 |RF-009|         |     |    
 
 ### Requisitos não Funcionais
