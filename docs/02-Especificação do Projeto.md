@@ -39,7 +39,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Lucas Hideaki   |  Quer ter certeza que os projetos propostos estão de acordo com que o mercado está exigindo           | Para ter maior aproveitamento de aprendizagem. .              |
 | Kwame Dume   | Quer uma busca específica, por projetos ao qual possa participar| Para trocar experiências e aprendizagem. 
 | Kwame Dume   | Trabalhar com vários tipos de linguagem de programação | Para adquirir ampla experiência e poder entrar no mercado de trabalho.
-| Kwame Dume   | Conseguir expor seus projetos de forma que outras pessoas também possam participar | Para criar um grupo de desenvolvimento.
+| Kwame Dume   | Conseguir expor seus projetos de forma que outras pessoas também possam participar | Para criar um grupo de desenvolvimento.            
 
 ## Modelagem do Processo de Negócio 
 
