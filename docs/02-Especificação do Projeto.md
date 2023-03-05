@@ -37,7 +37,7 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
  |    Mateus Coelho| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 |<img src="img/Mateus.jpeg" width = 250>| **Idade:**  23 anos <br> **Ocupação:** Estudante de Ciências da computação. |**Aplicativos:**<br><ul>● Instagram <br> ● Linkedin  <br>● Telegram <br></ul>|
-|**Motivações:**<br><ul>● Concluir a faculdade; <br><br>● Entrar no mercado de trabalho; <br><br>● Ser referência como desenvolvedor front end. <br> </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir emprego que não cobre experiência; <br><br>● Dificuldade em desenvolver um software completo por se aprofundar em front-end e não ter interesse em backend;  <br><br>● Falta de criatividade para criar projetos para portfólio; <br><br>● Dificuldade em fazer networking.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Cozinhar; <br>● Jogar jogos online;  <br> ● Andar de bicicleta; <br> ● Assistir séries. <br></ul>|
+|**Motivações:**<br><ul>● Concluir a faculdade; <br><br>● Entrar no mercado de trabalho; <br><br>● Ser referência como desenvolvedor front end. <br> </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir emprego que não cobre experiência; <br><br>● Dificuldade em desenvolver um software completo por se aprofundar em front-end e ter pouco conhecimento com backend;  <br><br>● Falta de criatividade para criar projetos para portfólio; <br><br>● Dificuldade em fazer networking.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Cozinhar; <br>● Jogar jogos online;  <br> ● Andar de bicicleta; <br> ● Assistir séries. <br></ul>|
 
 
 
@@ -72,7 +72,7 @@ No entanto, muitos estudantes sentem dificuldade de criar sozinhos projetos para
 
 Nossa proposta tem como objetivo proporcionar uma plataforma cujo ambiente permita que usuários publiquem ideias de projetos que desejem atuar e também que eles possam se conectar a outros projetos em andamento.  
 
-Para assegurar que as experiências adquiridas nos projetos serão compatíveis com as buscadas pelo mercado de trabalho, nossa aplicação solicitará, através de um formulário, a indicação da vaga e seus pré-requisitos, aos quais deverão ser semelhantes ao que será desenvolvido no projeto proposto e esta conexão é o diferencial da nossa proposta, se comparado ao Linkedin e Github, que são plataformas onde é possível fazer publicações de links de projetos.  
+Para assegurar que as experiências adquiridas nos projetos serão compatíveis com as buscadas pelo mercado de trabalho, nossa aplicação solicitará, através de um formulário, a indicação da vaga e seus pré-requisitos, aos quais deverão ser semelhantes ao que será desenvolvido no projeto proposto e esta conexão é o diferencial da nossa proposta, se comparado ao Linkedin e Github, que são plataformas onde é possível fazer somente publicações de links de projetos.  
 
 Dessa forma, o projeto propõe que os usuários terão um estudo focado, aumentando suas chances de inserção no mercado de trabalho. Além disso, como os projetos serão desenvolvidos em grupos, os usuários terão a possibilidade de desenvolver competências comportamentais desejadas por empresas contratantes. 
 
@@ -109,7 +109,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| O aplicativo deve ter uma página com amostras de projetos finalizados.|  ALTA   |
 |RF-007| O aplicativo deve disponibilizar contato com tutores. | BAIXA  |
 |RF-008| O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | ALTA     | 
-|RF-009| O aplicativo deve disponibilizar informações com as regras do projeto que deverão ser seguidas.| Média    |    
+|RF-009| O aplicativo deve disponibilizar informações com as regras do projeto que deverão ser seguidas.| MÉDIA    |    
 
 ### Requisitos não Funcionais
 
