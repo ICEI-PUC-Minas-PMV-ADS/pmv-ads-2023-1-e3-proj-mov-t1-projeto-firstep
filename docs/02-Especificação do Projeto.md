@@ -29,6 +29,10 @@ Definição do problema e ideia de solução a partir da perspectiva do usuário
 |<img src="img/PersonaJenifer.png" width = 250>| **Idade:**  30 anos <br> **Ocupação:** Estudante de Análise e Desenvolvimento de Sistemas, já formada em Engenharia Civil e atuando nesta área. |**Aplicativos:**<br><ul>● Twitter <br>● Instagram  <br>● Whatsapp <br></ul>|
 |**Motivações:**<br><ul>● Deseja realizar transição de carreira e assim, se dedicar apenas a área de desenvolvimento de software.    <br> </ul>|**Frustrações:**<br><ul>● Já se candidatou em vários processos seletivos, mas não conseguiu chegar a fase de entrevistas. <br><ul>|**Hobbies/Histórias:**<br><ul>● Ir ao teatro; <br>● Ir a shows;  <br> ● Ir a praia;<br></ul>|
  
+ |    Ana Almeida| Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/Ana.jpg" width = 250>| **Idade:**  37 anos <br> **Ocupação:** Estudante de Engenharia de Software |**Aplicativos:**<br><ul>● Instagram <br>● Linkedin  <br>● Telegram <br>● Whatsapp<br></ul>|
+|**Motivações:**<br><ul>● Poder unir a estatística, sua área de formação, a análise de dados; <br> ● Conquistar uma vaga de emprego com um bom salário;<br> ● Aplicar a vagas em outros países.   <br> </ul>|**Frustrações:**<br><ul>● Participou de vários processos seletivos, mas perdeu a vaga para alguém com experiência; <br>● Dificuldade em montar um portfólio.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Ler livros; <br>● Viajar;  <br> ● Ler sobre as novidades na área de tecnologia;<br> ● Gosta de estudar novos idiomas  <br></ul>|
  
  |    Mateus Coelho| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
@@ -52,7 +56,7 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Mateus Coelho  | Conhecer outros desenvolvedores   | Para poder atuar em projetos juntos.
 | Mateus Coelho  | Absorver diferentes ideias de projetos   | Para desenvolver soluções inovadoras. |
 | Nathália Souza |  Ter oportunidade de praticar a metodologia Ágil no desenvolvimento de um projeto de software          | Para conseguir um estágio na área.              |
-
+| Ana Almeida | Poder atuar em vários projetos|Para poder montar um portifólio bom e diversificado|
 
 ## Modelagem do Processo de Negócio 
 
@@ -105,7 +109,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-006| O aplicativo deve ter uma página com amostras de projetos finalizados.|  ALTA   |
 |RF-007| O aplicativo deve disponibilizar contato com tutores. | BAIXA  |
 |RF-008| O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | ALTA     | 
-|RF-009|         |     |    
+|RF-009| O aplicativo deve disponibilizar informações com as regras do projeto que deverão ser seguidas.| Média    |    
 
 ### Requisitos não Funcionais
 

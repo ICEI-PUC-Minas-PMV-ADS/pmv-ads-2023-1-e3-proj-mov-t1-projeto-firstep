@@ -33,7 +33,6 @@ Como objetivos específicos, podemos ressaltar:
 
 
 ## Justificativa
-
 O aumento do número de vagas em TI nos últimos anos e os benefícios que a carreira oferece tem atraído inúmeras pessoas para essa área. Mas para os estudantes e recém-formados não tem sido fácil conseguir a primeira oportunidade, pois a maioria das vagas exigem experiência e muitos alunos não possuem. Segundo o site G1(2022), Profissionais sem graduação completa ou que venham de um curso técnico devem investir em formas de demonstrar seus conhecimentos de outras maneiras. 
 
 E baseados nessa ideia, criamos esse aplicativo para que, através da conexão entre alunos e projetos, possa proporcionar a esses alunos o desenvolvimento de suas habilidades e ajudá-los a conquistar a sua vaga no mercado de trabalho. 
