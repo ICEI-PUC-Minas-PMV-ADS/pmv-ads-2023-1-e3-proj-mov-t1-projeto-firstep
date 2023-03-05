@@ -124,7 +124,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 A técnica para priorização de requisitos utilizada foi a Escala de Três Níveis e a imagem abaixo retrata a análise realizada.
 
-<img src="img/PriorizacaoDeRequisitos.png">
+<img src="img/PriorizacaoRequisitos1.png">
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
