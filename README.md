@@ -1,12 +1,12 @@
-# TÍTULO DO PROJETO
+# FirStep 
 
-`CURSO`
+Análise e Desenvolvimento de Sistema 
 
-`DISCIPLINA`
+Projeto de Aplicação Móvel
 
-`SEMESTRE`
+3º SEMESTRE
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo deste trabalho é ajudar estagiários e recém formados, por isso propomos a criação de um app que divulgue projetos e que auxilie a encontrar voluntários dispostos a atuarem em times para desenvolver ideias na área de tecnologia. 
 
 ## Integrantes
 
