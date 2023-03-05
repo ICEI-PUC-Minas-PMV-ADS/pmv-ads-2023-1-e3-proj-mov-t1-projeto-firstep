@@ -29,6 +29,12 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 |--------------------|------------------------------------|----------------------------------------|
 |<img src="img/PersonaJenifer.png" width = 250>| **Idade:**  30 anos <br> **Ocupação:** Estudante de Análise e Desenvolvimento de Sistemas, já formada em Engenharia Civil e atuando nesta área. |**Aplicativos:**<br><ul>● Twitter <br>● Instagram  <br>● Whatsapp <br></ul>|
 |**Motivações:**<br><ul>● Deseja realizar transição de carreira e assim, se dedicar apenas a área de desenvolvimento de software.    <br> </ul>|**Frustrações:**<br><ul>● Já se candidatou em vários processos seletivos, mas não conseguiu chegar a fase de entrevistas. <br><ul>|**Hobbies/Histórias:**<br><ul>● Ir ao teatro; <br>● Ir a shows;  <br> ● Ir a praia;<br></ul>|
+ 
+ 
+ |    Mateus Coelho| Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/Mateus.jpeg" width = 250>| **Idade:**  23 anos <br> **Ocupação:** Estudante de Ciências da computação. |**Aplicativos:**<br><ul>● Instagram <br>● Linkedin  <br>● Telegram <br></ul>|
+|**Motivações:**<br><ul>● Concluir a faculdade; <br><ul>● Entrar no mercado de trabalho; <br><ul>● Ser referência como desenvolvedor front end. <br> </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir emprego que não cobre experiência; <br><ul>● Dificuldade em desenvolver um software completo por se aprofundar em front-end e não ter interesse em backend;  <br><ul>● Falta de criatividade para criar projetos para portfólio; <br><ul>● Dificuldade em fazer networking.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Cozinhar; <br>● Jogar jogos online;  <br> ● Andar de bicicleta; <br> ● Assistir séries. <br></ul>|
 
 
 
@@ -44,7 +50,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 | Kwame Dume   | Quer uma busca específica, por projetos ao qual possa participar| Para trocar experiências e aprendizagem. 
 | Kwame Dume   | Trabalhar com vários tipos de linguagem de programação | Para adquirir ampla experiência e poder entrar no mercado de trabalho.
 | Kwame Dume   | Conseguir expor seus projetos de forma que outras pessoas também possam participar | Para criar um grupo de desenvolvimento.            
-| Jenifer Damasceno  | Busca apoio de tutores  | Para Identificar pontos de melhorias na programação e realizar transição de carreira.             
+| Jenifer Damasceno  | Busca apoio de tutores  | Para Identificar pontos de melhorias na programação e realizar transição de carreira. 
+| Mateus Coelho  | Conhecer outros desenvolvedores   | Para poder atuar em projetos juntos.
+| Mateus Coelho  | Absorver diferentes ideias de projetos   | Para desenvolver soluções inovadoras. 
 
 ## Modelagem do Processo de Negócio 
 
