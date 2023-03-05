@@ -1,9 +1,6 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o cSe realizarmos uma busca sobre as profissões em alta nos próximos anos, certamente TI estará em evidência em qualquer pesquisa na Web. 
-
-  
-
+ 
 De acordo com o G1 (2022), há vagas em diversas áreas na Tecnologia da Informação e atualmente com alta demanda e a falta de mão de obra impulsionada principalmente pela pandemia forçaram as empresas a entrarem na digitalização.  
 
   
