@@ -117,7 +117,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo em dispositivo móvel. | ALTA | 
 |RNF-002| O aplicativo deverá ser elaborado no React Native.  |  ALTA | 
-|RNF-003| O aplicativo deve ter bom nível de contraste entre os elementos da tela em conformidade. | Baixa|
+|RNF-003| O aplicativo deve ter bom nível de contraste entre os elementos da tela em conformidade. | BAIXA|
 |RNF-004| O aplicativo deve ser compatível com as principais plataformas do mercado (IOS, Android).| ALTA|
 |RNF-005| O sistema deverá garantir a segurança dos dados sensíveis do usuário por meio de criptografia.| ALTA |
 |RNF-006| O sistema deverá estar disponível 24 horas por dia e 7 dias na semana. | ALTA |
