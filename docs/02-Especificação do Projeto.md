@@ -33,8 +33,8 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
  
  |    Mateus Coelho| Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/Mateus.jpeg" width = 250>| **Idade:**  23 anos <br> **Ocupação:** Estudante de Ciências da computação. |**Aplicativos:**<br><ul>● Instagram <br>● Linkedin  <br>● Telegram <br></ul>|
-|**Motivações:**<br><ul>● Concluir a faculdade; <br><ul>● Entrar no mercado de trabalho; <br><ul>● Ser referência como desenvolvedor front end. <br> </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir emprego que não cobre experiência; <br><ul>● Dificuldade em desenvolver um software completo por se aprofundar em front-end e não ter interesse em backend;  <br><ul>● Falta de criatividade para criar projetos para portfólio; <br><ul>● Dificuldade em fazer networking.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Cozinhar; <br>● Jogar jogos online;  <br> ● Andar de bicicleta; <br> ● Assistir séries. <br></ul>|
+|<img src="img/Mateus.jpeg" width = 250>| **Idade:**  23 anos <br> **Ocupação:** Estudante de Ciências da computação. |**Aplicativos:**<br><ul>● Instagram <br> ● Linkedin  <br>● Telegram <br></ul>|
+|**Motivações:**<br><ul>● Concluir a faculdade; <br><br>● Entrar no mercado de trabalho; <br><br>● Ser referência como desenvolvedor front end. <br> </ul>|**Frustrações:**<br><ul>● Dificuldade em conseguir emprego que não cobre experiência; <br><br>● Dificuldade em desenvolver um software completo por se aprofundar em front-end e não ter interesse em backend;  <br><br>● Falta de criatividade para criar projetos para portfólio; <br><br>● Dificuldade em fazer networking.  <br><ul>|**Hobbies/Histórias:**<br><ul>● Cozinhar; <br>● Jogar jogos online;  <br> ● Andar de bicicleta; <br> ● Assistir séries. <br></ul>|
 
 
 
