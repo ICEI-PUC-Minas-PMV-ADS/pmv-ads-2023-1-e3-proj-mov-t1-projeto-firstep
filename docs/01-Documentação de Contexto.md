@@ -21,21 +21,22 @@ A partir do estudo do tema, percebe-se que há muitos estudantes que não conseg
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+O objetivo geral deste trabalho é conectar estudantes e recém-formados em TI que tenham interesse em desenvolver experiências buscadas por empresas contratantes. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Como objetivos específicos, podemos ressaltar: 
+
+* Permitir que estudantes e recém formados publiquem ou se conectem a ideias de projetos que desejam desenvolver; 
+
+* Permitir que empresas tenham acesso aos projetos publicados; 
+
+* Oferecer tutoria que dê suporte ao desenvolvimento dos projetos. 
+
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O aumento do número de vagas em TI nos últimos anos e os benefícios que a carreira oferece tem atraído inúmeras pessoas para essa área. Mas para os estudantes e recém-formados não tem sido fácil conseguir a primeira oportunidade, pois a maioria das vagas exigem experiência e muitos alunos não possuem. Segundo o site G1(2022), Profissionais sem graduação completa ou que venham de um curso técnico devem investir em formas de demonstrar seus conhecimentos de outras maneiras. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+E baseados nessa ideia, criamos esse aplicativo para que, através da conexão entre alunos e projetos, possa proporcionar a esses alunos o desenvolvimento de suas habilidades e ajudá-los a conquistar a sua vaga no mercado de trabalho. 
 
 ## Público-Alvo
 
