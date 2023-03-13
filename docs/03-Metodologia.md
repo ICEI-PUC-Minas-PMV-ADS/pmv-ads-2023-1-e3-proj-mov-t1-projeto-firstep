@@ -7,8 +7,14 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.  
+
+| Ambiente  | Plataforma | Link de Acesso | 
+| ------------------- | ----------------|---------------|
+|  Repositório de código fonte |  GitHub |  [Firstep / GitHub / Códigos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)            |
+|  Documentos do projeto | Microsoft Team |[Firstep / Microsoft Team / Documentos  ](https://sgapucminasbr.sharepoint.com/:f:/s/team_sga_2418_2023_1_8512101-Time4-ProjD/Etakx5uGJI1InCirtXdwrZ4BsV00pwm8KZe5cYEbSEKQdw?e=EsTZCd)                     | 
+|  Projeto de Interface e Wireframes | Figma | [Firstep / Figma / Protótipo   ](https://www.figma.com/files/team/1217088730807209021/Firstep?fuid=1153538250564335280)         |
+|  Gerenciamento do Projeto |GitHub | [Firstep / GitHub / Gerenciamento de Projeto  ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/241)                  |
 
 ## Controle de Versão
 
@@ -30,10 +36,8 @@ etiquetas:
 - `development`:
 - `documentation`: melhorias ou acréscimos à documentação
 - `enhancement`: uma funcionalidade precisa ser melhorada
-- `question`: quando há dúvidas sobre o processo.
- 
 
-![labels](img/labels.png)
+
 
 
 ## Gerenciamento de Projeto
@@ -61,11 +65,6 @@ A equipe está organizada da seguinte maneira:
 **Equipe de Design:** 
 - Jeferson Queiroz da Silva,
 - Jéssica Grimaldi
-
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-> - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
 
 ### Processo
 
