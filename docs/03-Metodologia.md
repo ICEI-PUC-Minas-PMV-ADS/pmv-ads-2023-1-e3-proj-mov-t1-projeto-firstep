@@ -36,7 +36,9 @@ etiquetas:
 - `development`:
 - `documentation`: melhorias ou acréscimos à documentação
 - `enhancement`: uma funcionalidade precisa ser melhorada
+- `question` : quando há dúvidas sobre o processo.
 
+![labels](img/labels.png)
 
 
 
