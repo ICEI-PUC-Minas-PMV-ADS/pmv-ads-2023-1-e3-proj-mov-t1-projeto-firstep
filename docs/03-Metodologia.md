@@ -7,8 +7,14 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito é apresentada na tabela que se segue.  
+
+| Ambiente  | Plataforma | Link de Acesso | 
+| ------------------- | ----------------|---------------|
+|  Repositório de código fonte |  GitHub |  [Firstep / GitHub / Códigos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)            |
+|  Documentos do projeto | GitHub |[Firstep / GitHub / Documentos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                     | 
+|  Projeto de Interface e Wireframes | Figma | [Figma / Protótipo   ](https://www.figma.com/files/team/1217088730807209021/Firstep?fuid=1153538250564335280)         |
+|  Gerenciamento do Projeto |GitHub | [Firstep / GitHub / Gerenciamento de Projeto  ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/241)                  |
 
 ## Controle de Versão
 
@@ -30,9 +36,7 @@ etiquetas:
 - `bug`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
-- `development`: 
 
-![labels](img/labels.png)
 
 
 ## Gerenciamento de Projeto
