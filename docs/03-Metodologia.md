@@ -30,7 +30,9 @@ etiquetas:
 - `bug`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
+- `development`: 
 
+![labels](img/labels.png)
 
 
 ## Gerenciamento de Projeto
