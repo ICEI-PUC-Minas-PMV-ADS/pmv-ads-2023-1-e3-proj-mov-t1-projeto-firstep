@@ -47,12 +47,26 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 Apresente a divisão de papéis entre os membros do grupo.
 
-Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Karen Noguti;
-- Product Owner: Douglas;
-- Equipe de Desenvolvimento: Carolina Laurindo, Cláudia Carapiá, Douglas Raynner, Jeferson Queiroz, Jéssica Grimaldi, Karen Noguti;
-- Equipe de Design: Jeferson Queiroz da Silva, Jéssica Grimaldi.
+Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. 
 
+A equipe está organizada da seguinte maneira: 
+
+**Scrum Master:** Karen Noguti
+
+**Product Owner:** Douglas Raynner
+
+**Equipe de Desenvolvimento:** 
+- Carolina Laurindo,
+- Cláudia Carapiá, 
+- Douglas Raynner, 
+- Jeferson Queiroz,
+- Jéssica Grimaldi,
+- Karen Noguti
+
+**Equipe de Design:** 
+- Jeferson Queiroz da Silva,
+- Jéssica Grimaldi
+- 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
 > - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
