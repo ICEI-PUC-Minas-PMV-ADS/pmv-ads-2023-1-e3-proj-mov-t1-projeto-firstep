@@ -33,7 +33,7 @@ Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
 
 - `bug`: uma funcionalidade encontra-se com problemas
-- `development`:
+- `development`: funcionalidade em desenvolvimento
 - `documentation`: melhorias ou acréscimos à documentação
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `question` : quando há dúvidas sobre o processo.
