@@ -76,17 +76,27 @@ Para assegurar que as experiências adquiridas nos projetos serão compatíveis 
 
 Dessa forma, o projeto propõe que os usuários terão um estudo focado, aumentando suas chances de inserção no mercado de trabalho. Além disso, como os projetos serão desenvolvidos em grupos, os usuários terão a possibilidade de desenvolver competências comportamentais desejadas por empresas contratantes. 
 
-### Processo 1 – NOME DO PROCESSO
+### Processo Atual – Sistema que oferece cursos para capacitação de pessoas à vagas (DIO)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
-
-
-### Processo 2 – NOME DO PROCESSO
-
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Nesse processo, o usuário realiza alguns cursos que compõem um bootcamp e ao final realiza um projeto para se candidatar a uma vaga na empresa que ofertou o bootcamp.
+ 
+![Diagrama BPMN 1](img/BPMN-DIO.png)
 
 
+### Processo Proposto 1 – Faça networking e realize projetos que estão na nossa plataforma (FIRSTEP)
 
+Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para que outras pessoas participem.
+ 
+![Diagrama BPMN 1](img/BPMN-FIRSTEP1.png)
+
+
+### Processo Proposto 2 – Faça networking e realize projetos que estão na nossa plataforma (FIRSTEP)
+
+Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para que outras pessoas participem. Cada equipe será limitada em um total de 6 integrantes.
+ 
+![Diagrama BPMN 1](img/BPMN-FIRSTEP2.png)
+ 
+ 
 ## Indicadores de Desempenho
 
 Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
