@@ -84,7 +84,7 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 O quadro kanban do grupo no GitHub está disponível através da URL [Planejamento](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/241) e é apresentado, no estado atual, na Figura X. A definição desta estrutura se baseou na proposta feita por Littlefield (2016).
 
-<img src="img\planejamento.jpg">
+<img src="img\Planejamento.jpg">
 
 Figura X - Tela do Kanban utilizado pelo grupo
 
