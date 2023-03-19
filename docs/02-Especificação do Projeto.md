@@ -119,8 +119,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito  | Prioridade |
-|------|-----------------------------------------|----|
+|ID    | Descrição do Requisito  | Prioridade |Mudança           |
+|------|-----------------------------------------|----|----|
 |RF-001| O aplicativo deve permitir cadastro de usuários. | ALTA | 
 |RF-002| O aplicativo deve permitir login de usuários.  | ALTA |
 |RF-003| O aplicativo deve permitir que o usuário se conecte a projeto já existente.     |   ALTA   |
@@ -130,6 +130,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-007| O aplicativo deve disponibilizar contato com tutores. | BAIXA  |
 |RF-008| O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | ALTA     | 
 |RF-009| O aplicativo deve disponibilizar informações com as regras do projeto que deverão ser seguidas.| MÉDIA    |    
+|RF-010| O aplicativo deve permitir um limite máximo de 6 participantes por projeto.| MÉDIA    | MD - 01  |    
 
 ### Requisitos não Funcionais
 
