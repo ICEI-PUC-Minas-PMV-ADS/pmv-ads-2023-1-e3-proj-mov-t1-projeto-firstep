@@ -26,10 +26,13 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Modelo ER�
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
 
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+ ![Essquema Relacional](img/realcional.drawio.png)
+
+ Usuário(IDUsuario (PK), Nome, E-mail (UNIQUE), Senha, Descrição / Perfil, Github)
+
+ Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Linguagem, Descrição da Vaga, Link Github, Autor do Projeto, Quantidade de Participantes)
+
 
 ## Modelo Físico
 
