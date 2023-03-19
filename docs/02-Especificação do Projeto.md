@@ -99,7 +99,17 @@ Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para 
  
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+| # | Indicador |  Objetivos| Descrição |Cálculo | Fonte | Perspectiva |
+|---|-|---------- |---------|-|--------|-------|
+|001| Número de integrantes por grupo| Promover troca de conhecimeto entre os usuários|Contabilizar a média de pessoas por grupo| Média de pessoas por grupo| Banco de dados do projeto | Todos os grupos devem ter no mínimo 4 pessoas|
+|002| Número de tutores cadastrados | Proporcionar fácil acesso a tutoria para todos os projetos  | Avaliar a quantidade de tutores disponiveis para atendimento  | Quantidade de tutores disponíves para atendimento | Banco de dados do projeto | Os tutores devem atender a no máximo 5 projetos simultaneamente |   
+|003| Número de projetos finalizados por mês | Ter projetos prontos em diversas linguagens para atrair empresas e novos usuários | Contabilizar a quantidade de projetos que foram concluídos completamente  | Quantidade de projetos totalmente concluído  | Banco de dados do projeto  | Ter 10 projetos finalizados por mês |  
+|004| Número de linguagens Cadastradas   | Atender o maior número de linguagens solicitadas pelo mercado | Avaliar a quantidade de linguagens que o aplicativo atende  | Quantidade de linguagens disponíveis | Banco de dados do projeto| Atender a mo mínimo 80% das linguagens usadas no mercado |  
+|005| Número de downloads  | Aumentar a taxa de crescimento do aplicativo  | Avaliar a taxa de downloads realizados   | Média do número de downloads por mês  | Estátisticas fornecidas pela Playstore/AppleStore | Aumentar a taxa de crescimento do app 10% ao mês   |  
+|006| Número de desinstalações do aplicativo | Diminuir o  número de desinstalações | Avaliar o que precisa ser mudado no Aplicativo para evitar futuras desinstalações | Média do número de desinstalações realizadas por mês  | Estátisticas fornecidas pela Playstore/AppleStore | Diminuir  o número de desinstalações em 20%.  |   
+|007| Nota do Aplicativo  | Aumentar a nota de satisfação do usuário | Verificar a nota do App exibida aos usuários  | Calculada com base nas notas mais recente  | Estátisticas fornecidas pela Playstore/AppleStore | Aumentar a nota do Aplicativo para 5 estrelas.  |   
+|008| Análise de Engajamento  | Aumentar a taxa de engajamento  | Gerar relatório de usuários ativos  | Número de  usuários ativos por dia e em 28 dias e recorrentes  | Estátisticas fornecidas pela Playstore/AppleStore | Aumentar o número de usuários ativos no App em 10%.  |
+|009| Qualidade do aplicativo | Diminuir quantidade de falhas que o aplicativo apresentou | Medir os insights de qualidades | Quantidade de falhas que o aplicativo apresentou por mês | Estátisticas fornecidas pela Playstore/AppleStore | Corrigir e verificar as falhas ocorridas no aplicativo para menos de 3 por mês | 
 
 
 
