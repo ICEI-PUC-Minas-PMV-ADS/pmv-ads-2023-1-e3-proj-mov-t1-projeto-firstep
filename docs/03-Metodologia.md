@@ -12,7 +12,7 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Ambiente  | Plataforma | Link de Acesso | 
 | ------------------- | ----------------|---------------|
 |  Repositório de código fonte |  GitHub |  [Firstep / GitHub / Códigos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)            |
-|  Documentos do projeto | Microsoft Team |[Firstep / GitHub / Documentos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                     | 
+|  Documentos do projeto | GitHub |[Firstep / GitHub / Documentos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                     | 
 |  Projeto de Interface e Wireframes | Figma | [Firstep / Figma / Protótipo   ](https://www.figma.com/files/team/1217088730807209021/Firstep?fuid=1153538250564335280)         |
 |  Gerenciamento do Projeto |GitHub | [Firstep / GitHub / Gerenciamento de Projeto  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                  |
 
