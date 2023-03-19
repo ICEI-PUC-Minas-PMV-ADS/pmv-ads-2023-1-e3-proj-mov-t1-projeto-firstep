@@ -12,9 +12,9 @@ Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a 
 | Ambiente  | Plataforma | Link de Acesso | 
 | ------------------- | ----------------|---------------|
 |  Repositório de código fonte |  GitHub |  [Firstep / GitHub / Códigos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)            |
-|  Documentos do projeto | Microsoft Team |[Firstep / Microsoft Team / Documentos  ](https://sgapucminasbr.sharepoint.com/:f:/s/team_sga_2418_2023_1_8512101-Time4-ProjD/Etakx5uGJI1InCirtXdwrZ4BsV00pwm8KZe5cYEbSEKQdw?e=EsTZCd)                     | 
+|  Documentos do projeto | Microsoft Team |[Firstep / GitHub / Documentos  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                     | 
 |  Projeto de Interface e Wireframes | Figma | [Firstep / Figma / Protótipo   ](https://www.figma.com/files/team/1217088730807209021/Firstep?fuid=1153538250564335280)         |
-|  Gerenciamento do Projeto |GitHub | [Firstep / GitHub / Gerenciamento de Projeto  ](https://github.com/orgs/ICEI-PUC-Minas-PMV-ADS/projects/241)                  |
+|  Gerenciamento do Projeto |GitHub | [Firstep / GitHub / Gerenciamento de Projeto  ](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)                  |
 
 ## Controle de Versão
 
