@@ -99,16 +99,37 @@ Figura X - Tela do Kanban utilizado pelo grupo
 
 ### Ferramentas
 
-As ferramentas empregadas no projeto são:
+As ferramentas empregadas no projeto são: 
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de desenho de tela (_wireframing_)
+- Editor de código
+- Ferramentas de comunicação 
+- Ferramentas de desenho de tela (wireframing) 
+- Repositório 
+- Ferramenta de criação de diagramas 
+- Ferramenta de versionamento de código 
 
-O editor de código foi escolhido porque ele possui uma integração com o sistema de versão. As ferramentas de comunicação utilizadas possuem integração semelhante e por isso foram selecionadas. Por fim, para criar diagramas utilizamos essa ferramenta por melhor captar as necessidades da nossa solução.
+O editor de código  foi escolhido porque ele possui integração com o Git e GitHub. 
 
-Liste quais ferramentas foram empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível.
+A ferramenta de comunicação utilizada é completa e de fácil acesso, sendo assim, viável para comunicar por computador e smartphone, além de ser possível o compartilhamento de tela para que o grupo consiga visualizar e contribuir na execução de etapas do projeto de forma simultânea. 
+
+A ferramenta de desenho de telas é bem completa e pode ser usada de forma gratuita, além de possibilitar a edição simultânea de telas por diferentes membros do grupo. 
+
+O repositório utilizado foi definido pela faculdade e é o mais moderno e usual, funcionando bem com Git. 
+
+A ferramenta de criação de diagramas foi escolhida devido a usabilidade, gratuidade e a facilidade, atendendo assim, a demanda de criações de diagramas por todo o projeto. 
+
+A ferramenta de versionamento de código foi escolhida devido a fácil utilização, modernidade e por  funcionar muito bem com o repositório que foi definido pela faculdade. 
+
+<br>
+
+|Função    | Plataforma  | Link de Acesso |
+|------|-----------------------------------------|----|
+| Editor de código | Visual Studio Code | [visualstudio](https://visualstudio.microsoft.com/pt-br/)|
+| Ferramenta de comunicação | Microsoft Teams | [MicrosoftTeams](https://teams.microsoft.com/) |
+| Ferramenta de desenho de telas | Figma | [figma](https://www.figma.com/file/LD9PrEobwuYqLz5e2xDQt7/)|
+| Repositório | GitHub | [github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)|
+| Ferramenta de criação de diagramas | Camunda | [camunda](https://modeler.cloud.camunda.io/diagrams/f243c63c-5c29-46b2-afc8-dfdf46457393--new-bpmn-diagram?v=756,277,1)|
+| Ferramenta de versionamento de códigos | Git | [git](https://git-scm.com/) |
+
+<br> 
  
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [Slack](https://slack.com/)
-> - [Github](https://github.com/)
