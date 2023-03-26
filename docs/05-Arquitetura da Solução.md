@@ -68,7 +68,7 @@ Com base nessas características e nas respectivas sub-características, identif
 |Característica de Qualidade| Subcaracteristicas |Justificativa      |
 |--------------------|------------------------------------|----------------------------------------|
 |  Funcionalidade            O conjunto de funções satisfazem as necessidades explícitas e implícitas para a finalidade a que se destina o produto  |         Adequação Funcional      |Propõe-se a fazer o que é apropriado.
-|    |               |   
+| Usabilidade                       É fácil utilizar o software   |   Inteligibilidade    -Apreensibilidade-Operacionalidade         |   
 |    |               |   
 |    |               |   
 |    |               |   
