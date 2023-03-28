@@ -16,7 +16,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
- ![DiagramaER](img/DiagramaER.png)
+ ![DiagramaER](img/DiagramaER2.png)
 
 ## Esquema Relacional
 
@@ -48,14 +48,7 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A hospedagem será realizada no Snack, serviço oferecido pelo aplicativo Expo Go.
 
 ## Qualidade de Software
 
