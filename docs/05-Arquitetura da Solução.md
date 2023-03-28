@@ -22,11 +22,11 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
 
- ![Essquema Relacional](img/realcional.drawio.png)
+ ![Essquema Relacional](img/relacional.png)
 
  Usuário(IDUsuario (PK), Nome, E-mail (UNIQUE), Senha, Descrição / Perfil, Github)
 
- Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Linguagem, Descrição da Vaga, Link Github, Autor do Projeto, Quantidade de Participantes)
+ Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Tecnologia , Descrição da Vaga, Repositório, Autor do Projeto, Quantidade de Participantes)
 
 
 ## Modelo Físico
