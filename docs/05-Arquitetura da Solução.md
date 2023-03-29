@@ -46,6 +46,10 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 <br>
 
+![Relação das tecnologias utilizadas](img/Tecnologias.png)
+
+<br>
+
 ## Hospedagem
 
 A hospedagem será realizada no Snack, serviço oferecido pelo aplicativo Expo Go.
