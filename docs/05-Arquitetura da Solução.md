@@ -39,9 +39,9 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 |------------|-----------------------------------------|
 | Linguagem | JavaScript | 
 | Framework | ReactNative | 
-| Bibliotecas | React Native Paper, React Navigation, Json server | 
+| Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
 | IDE | Visual Studio Code | 
-| Ferramentas | Microsoft Teams, GitHub | 
+| Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
 | Banco de dados | MySQL | 
 
 <br>
