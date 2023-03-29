@@ -92,7 +92,7 @@ Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para 
 
 ### Processo Proposto 2 – Faça networking e realize projetos que estão na nossa plataforma (FIRSTEP)
 
-Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para que outras pessoas participem. Cada equipe será limitada em um total de 6 integrantes.
+Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para que outras pessoas participem. Foi implementada uma melhoria onde cada equipe será limitada em um total de 6 integrantes.
  
 ![Diagrama BPMN 1](img/BPMN-FIRSTEP2.png)
  
