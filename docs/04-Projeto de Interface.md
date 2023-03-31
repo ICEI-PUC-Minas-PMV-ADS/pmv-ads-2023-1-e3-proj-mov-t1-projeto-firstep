@@ -18,13 +18,13 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 
 ## Wireframes
 
-##Tela de Página Inicial
+## Tela de Página Inicial
 
 Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra de Projetos.
 
 <img src="img/Pagina_inicial.png" width= 250> <br><br>
 
-##Atualização de Cadastro
+## Atualização de Cadastro
 
 Esta tela  permite o usuário editar o seu cadastro.
 
