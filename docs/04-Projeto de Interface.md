@@ -29,3 +29,12 @@ Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra 
 Esta tela  permite o usuário editar o seu cadastro.
 
 <img src="img/Atualizacao_cadastro%20.png" width= 250> <br><br>
+
+
+## Tela de Cadastro de Projeto
+
+Esta tela permite o cadastro de um projeto. 
+
+<img src="img/cadastro_projeto.png" width= 250> <br><br>
+
+
