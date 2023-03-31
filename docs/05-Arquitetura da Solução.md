@@ -66,6 +66,24 @@ Com base nessas características e nas respectivas sub-características, identif
 |● Usabilidade    <BR>  <BR>                     É fácil utilizar o software?    |    Inteligibilidade.    <BR>  <BR> Apreensibilidade.    <BR>  <BR> Operacionalidade.     |   É fácil entender os conceitos utilizados?  <BR>  <BR> É fácil aprender a usar? <BR>  <BR> É fácil de operar e controlar a operação?
 | ● Manutenibilidade   |   Modularidade; Reutilização; Analisabilidade; Modificabilidade; Testabilidade.            |   Essa característica representa o grau de eficácia e eficiência com que um produto ou sistema pode ser modificado para melhorá-lo, corrigi-lo ou adaptá-lo às mudanças no ambiente e nos requisitos.
 | ● Portabilidade  |   É possível utilizar o produto em diversas plataformas com pequeno esforço de adaptação.            |É fácil instalar em outros ambientes?<BR>  <BR>É fácil substituir por outro software?<BR>  <BR>Está de acordo com padrões ou convenções de portabilidade?
+
+|Subcaracteristicas| Métrica |Escala      |Peso      |
+|--------------------|------------------------------------|----------------------------------------|----------------------------------------|
+|Adequação | O sistema propõe-se a fazer o que é apropriado? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente       |ALTO      |
+|Acurácia| O sistema gera resultados corretos conforme acordado?|1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente    |ALTO        |
+|Conformidade| O sistema está de acordo com normas e convenções previstas em leis e descrições similares?|1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente     |ALTO        |
+|Comportamento em relação aos recursos| Quanto recurso o sistema utiliza? |1) Pouco <BR>2) Suficiente<BR> 3) Muito       |ALTO        |
+|Interoperabilidade| O sistema é capaz de interagir com os sistemas especificados? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Inteligibilidade| É fácil entender como utilizar o software ? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Apreensibilidade| É fácil aprender a usar? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Operacionalidade| É fácil de operar e controlar a operação? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente    |ALTO        |
+|Modularidade| As partes (módulos) do sistema estão integragindo entre si ? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente     |ALTO        |
+|Analisabilidade| É fácil diagnosticar eventuais problemas e identificar as causas das deficiências ou falhas? |1) Sim <BR>2) Não       |ALTO        |
+|Modificabilidade| Qual a complexidade de implementar modificações ? |1) Alta <br>2) Baixa <br>3) Média      |ALTO        |
+|Testabilidade| Qual a complexidade de se validar o software ?  |1) Alta <br>2) Baixa <br>3) Média       |ALTO        |
+|Coexistência| O sistema de software pode coexistir com outros produtos de software independentes ? |1) Sim <BR>2) Não       |ALTO        |
+|Tolerância a falhas | Ocorrendo falhas, o sistema está parametrizado para reagir ? |1) Sim <BR>2) Não       |ALTO        |
+|Confidencialidade | O sistema evita acesso não autorizado, acidental ou deliberado a programas de dados? |1) Sim <BR>2) Não       |ALTO        |
 > **Links Úteis**:
 >
 > - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
