@@ -37,4 +37,10 @@ Esta tela permite o cadastro de um projeto.
 
 <img src="img/cadastro_projeto.png" width= 250> <br><br>
 
+## Tela de Solicitação de Tutor
+
+Esta tela permite que o usuário solicite um tutor.  
+
+<img src="img/Solicitacao_tutor.png" width= 250> <br><br>
+
 
