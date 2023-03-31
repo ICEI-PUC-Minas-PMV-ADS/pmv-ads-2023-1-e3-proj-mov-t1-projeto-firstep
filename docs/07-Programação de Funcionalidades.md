@@ -6,6 +6,15 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 
 Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
+## Tela Informações do Projeto
+
+**Reponsável - Karen Noguti**
+
+Fiquei responsável pela Tela de Informações do Projeto  e ao estudar o microfundamento de Desenvolvimento Móvel não consegui avançar devido o erro abaixo. Iniciei novamente a trilha do desenvolvimento WebApi para tentar identificar o problema.
+
+
+![Tela informações de Projeto](img/Tela_Informacoes_Projeto.png)
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
