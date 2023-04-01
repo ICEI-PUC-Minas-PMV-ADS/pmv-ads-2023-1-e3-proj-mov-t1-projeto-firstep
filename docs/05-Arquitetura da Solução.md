@@ -52,7 +52,7 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Hospedagem
 
-A hospedagem será realizada no Snack, serviço oferecido pelo aplicativo Expo Go.
+A hospedagem será realizada pelo Heroku, uma plataforma de nuvem como serviço que suporta várias linguagens de programação.
 
 ## Qualidade de Software
 
