@@ -15,6 +15,15 @@ Fiquei responsável pela Tela de Informações do Projeto  e ao estudar o microf
 
 ![Tela informações de Projeto](img/Tela_Informacoes_Projeto.png)
 
+## Tela de Cadastro do Projeto
+
+**Responsável - Cláudia Carapiá**
+
+Fiquei responsável pela Tela de Cadastro de Projeto. Estou estudando o microfundamento de Desenvolvimento Móvel e criando o app de acordo com as instruções do professor Kleber. Porém, quando cheguei na parte de Web API apareceu um erro e não consegui avançar. Além disso, os vídeos da parte de Web API estão fora de ordem. Tentei identificar a ordem, mas não tenho certeza de que estou seguindo a ordem correta. Segue abaixo a tela com o erro que apareceu durante o desenvolvimento do app proposto pelo professor Kleber. Estou tentando descobrir o erro. 
+
+
+![Tela de Cadastro de Projeto](img/tela_erro.png)
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
