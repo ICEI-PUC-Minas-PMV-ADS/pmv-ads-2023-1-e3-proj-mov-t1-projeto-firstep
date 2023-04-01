@@ -101,12 +101,18 @@ Figura X - Tela do Kanban utilizado pelo grupo
 
 As ferramentas empregadas no projeto são: 
 
-- Editor de código
-- Ferramentas de comunicação 
-- Ferramentas de desenho de tela (wireframing) 
-- Repositório 
-- Ferramenta de criação de diagramas 
-- Ferramenta de versionamento de código 
+<br>
+
+|Função    | Plataforma  | Link de Acesso |
+|------|-----------------------------------------|----|
+| Editor de código | Visual Studio Code | [visualstudio](https://visualstudio.microsoft.com/pt-br/)|
+| Ferramenta de comunicação | Microsoft Teams | [MicrosoftTeams](https://teams.microsoft.com/) |
+| Ferramenta de desenho de telas | Figma | [figma](https://www.figma.com/file/LD9PrEobwuYqLz5e2xDQt7/)|
+| Repositório | GitHub | [github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)|
+| Ferramenta de criação de diagramas | Camunda | [camunda](https://modeler.cloud.camunda.io/diagrams/f243c63c-5c29-46b2-afc8-dfdf46457393--new-bpmn-diagram?v=756,277,1)|
+| Ferramenta de versionamento de códigos | Git | [git](https://git-scm.com/) |
+
+<br> 
 
 O editor de código  foi escolhido porque ele possui integração com o Git e GitHub. 
 
@@ -120,16 +126,4 @@ A ferramenta de criação de diagramas foi escolhida devido a usabilidade, gratu
 
 A ferramenta de versionamento de código foi escolhida devido a fácil utilização, modernidade e por  funcionar muito bem com o repositório que foi definido pela faculdade. 
 
-<br>
-
-|Função    | Plataforma  | Link de Acesso |
-|------|-----------------------------------------|----|
-| Editor de código | Visual Studio Code | [visualstudio](https://visualstudio.microsoft.com/pt-br/)|
-| Ferramenta de comunicação | Microsoft Teams | [MicrosoftTeams](https://teams.microsoft.com/) |
-| Ferramenta de desenho de telas | Figma | [figma](https://www.figma.com/file/LD9PrEobwuYqLz5e2xDQt7/)|
-| Repositório | GitHub | [github](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep)|
-| Ferramenta de criação de diagramas | Camunda | [camunda](https://modeler.cloud.camunda.io/diagrams/f243c63c-5c29-46b2-afc8-dfdf46457393--new-bpmn-diagram?v=756,277,1)|
-| Ferramenta de versionamento de códigos | Git | [git](https://git-scm.com/) |
-
-<br> 
  

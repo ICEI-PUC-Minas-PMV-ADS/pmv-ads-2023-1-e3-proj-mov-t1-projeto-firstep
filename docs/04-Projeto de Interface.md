@@ -11,26 +11,49 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 
 O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação.
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+![Diagrama de Fluxo](img/DiagramaFluxo.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+## Tela de Página Inicial
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra de Projetos.
+
+<img src="img/Pagina_inicial.png" width= 250> <br><br>
+
+## Atualização de Cadastro
+
+Esta tela  permite o usuário editar o seu cadastro.
+
+<img src="img/Atualizacao_cadastro%20.png" width= 250> <br><br>
+
+
+## Tela de Cadastro de Projeto
+
+Esta tela permite o cadastro de um projeto. 
+
+<img src="img/cadastro_projeto.png" width= 250> <br><br>
+
+## Tela de Solicitação de Tutor
+
+Esta tela permite que o usuário solicite um tutor.  
+
+<img src="img/Solicitacao_tutor.png" width= 250> <br><br>
+
+## Tela de Perfil
+
+Esta tela indica o Perfil do usuário, com as informações cadastradas anteriormente por ele.
+
+<img src="img/Perfil.png" width= 250> <br><br>
+
+## Tela de Regras
+
+Esta tela informa as regras de participação e inserção de projetos no aplicativo.
+
+<img src="img/Regras.png" width= 250> <br><br>
+
+
+

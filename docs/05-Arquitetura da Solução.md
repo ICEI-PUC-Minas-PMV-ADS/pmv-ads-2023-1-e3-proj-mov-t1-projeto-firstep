@@ -4,7 +4,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![Arquitetura da Solução](img/arqsolucao.png)
 
 ## Diagrama de Classes
 
@@ -16,17 +16,17 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
- ![DiagramaER](img/DiagramaER.png)
+ ![DiagramaER](img/DiagramaER2.png)
 
 ## Esquema Relacional
 
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
 
- ![Essquema Relacional](img/realcional.drawio.png)
+ ![Essquema Relacional](img/relacional.png)
 
  Usuário(IDUsuario (PK), Nome, E-mail (UNIQUE), Senha, Descrição / Perfil, Github)
 
- Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Linguagem, Descrição da Vaga, Link Github, Autor do Projeto, Quantidade de Participantes)
+ Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Tecnologia , Descrição da Vaga, Repositório, Autor do Projeto, Quantidade de Participantes)
 
 
 ## Modelo Físico
@@ -39,23 +39,20 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 |------------|-----------------------------------------|
 | Linguagem | JavaScript | 
 | Framework | ReactNative | 
-| Bibliotecas | React Native Paper, React Navigation, Json server | 
+| Bibliotecas | React Native Paper, React Navigation, Json server, Json server auth, Axios | 
 | IDE | Visual Studio Code | 
-| Ferramentas | Microsoft Teams, GitHub | 
+| Ferramentas | Microsoft Teams, GitHub, Whatsapp | 
 | Banco de dados | MySQL | 
+
+<br>
+
+![Relação das tecnologias utilizadas](img/Tecnologias.png)
 
 <br>
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
-
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+A hospedagem será realizada pelo Heroku, uma plataforma de nuvem como serviço que suporta várias linguagens de programação.
 
 ## Qualidade de Software
 
@@ -67,6 +64,7 @@ A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, d
 Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
 |Característica de Qualidade| Subcaracteristicas |Justificativa      |
 |--------------------|------------------------------------|----------------------------------------|
+<<<<<<< HEAD
 | ● Adequação Funcional  |         Adequação   <BR>  <BR>     Acurácia  <BR>  <BR>  Conformidade  | Prover um conjunto apropriado de funções para tarefas e objetivos do usuário especificados.<BR> <BR> Prover, com o grau de precisão necessário, resultados ou efeitos corretos ou conforme acordados.<BR><BR> O software deve estar de acordo com normas, convenções ou regulamentações previstas em leis e prescrições similares relacionadas à funcionalidade.
 |    ●  Eficiência de Desempenho          |   Comportamento em relação aos recursos           |  Capacidade do produto de software de usar tipos e quantidades apropriados de recursos, quando o software executa suas funções sob condições estabelecidas.
 | ● Compatibilidade   |       Interoperabilidade       |   Capacidade do produto de software de interagir com um ou mais sistemas especificados.
@@ -75,6 +73,32 @@ Com base nessas características e nas respectivas sub-características, identif
 | ● Portabilidade  |  Coexistência            |Capacidade do produto de software de coexistir com outros produtos de software independentes, em um ambiente comum, compartilhando recursos comuns.
 | ● Confiabilidade  | Tolerância a falhas             |Capacidade do produto de software de manter um nível de desempenho especificado em casos de defeitos no software ou de violação de sua interface especificada.
 | ● Segurança   |  Confidencialidade             |Capacidade do produto de software de proteger informações e dados, de forma que pessoas ou sistemas não autorizados não possam lê-los nem modificá-los e que não seja negado o acesso às pessoas ou sistemas autorizados.
+=======
+| ● Funcionalidade <BR>  <BR>         O conjunto de funções satisfazem as necessidades explícitas e implícitas para a finalidade a que se destina o produto?  |         Adequação Funcional.      |Propõe-se a fazer o que é apropriado.
+| ● Eficiência   <BR>  <BR>                   Os recursos e os tempos utilizados são compatíveis com o nível de desempenho requerido para o produto.  |   Eficiência de Desempenho Comportamento em relação ao tempo.            |   Essa característica representa o desempenho em relação à quantidade de recursos utilizados nas condições estabelecidas.
+|● Compatibilidade    |        Coexistência; Interoperabilidade.       |   Grau em que um produto, sistema ou componente pode trocar informações com outros produtos, sistemas ou componentes e/ou desempenhar suas funções necessárias enquanto compartilha o mesmo ambiente de hardware ou software.
+|● Usabilidade    <BR>  <BR>                     É fácil utilizar o software?    |    Inteligibilidade.    <BR>  <BR> Apreensibilidade.    <BR>  <BR> Operacionalidade.     |   É fácil entender os conceitos utilizados?  <BR>  <BR> É fácil aprender a usar? <BR>  <BR> É fácil de operar e controlar a operação?
+| ● Manutenibilidade   |   Modularidade; Reutilização; Analisabilidade; Modificabilidade; Testabilidade.            |   Essa característica representa o grau de eficácia e eficiência com que um produto ou sistema pode ser modificado para melhorá-lo, corrigi-lo ou adaptá-lo às mudanças no ambiente e nos requisitos.
+| ● Portabilidade  |   É possível utilizar o produto em diversas plataformas com pequeno esforço de adaptação.            |É fácil instalar em outros ambientes?<BR>  <BR>É fácil substituir por outro software?<BR>  <BR>Está de acordo com padrões ou convenções de portabilidade?
+
+|Subcaracteristicas| Métrica |Escala      |Peso      |
+|--------------------|------------------------------------|----------------------------------------|----------------------------------------|
+|Adequação | O sistema propõe-se a fazer o que é apropriado? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente       |ALTO      |
+|Acurácia| O sistema gera resultados corretos conforme acordado?|1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente    |ALTO        |
+|Conformidade| O sistema está de acordo com normas e convenções previstas em leis e descrições similares?|1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente     |ALTO        |
+|Comportamento em relação aos recursos| Quanto recurso o sistema utiliza? |1) Pouco <BR>2) Suficiente<BR> 3) Muito       |ALTO        |
+|Interoperabilidade| O sistema é capaz de interagir com os sistemas especificados? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Inteligibilidade| É fácil entender como utilizar o software ? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Apreensibilidade| É fácil aprender a usar? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente      |ALTO        |
+|Operacionalidade| É fácil de operar e controlar a operação? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente    |ALTO        |
+|Modularidade| As partes (módulos) do sistema estão integragindo entre si ? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente     |ALTO        |
+|Analisabilidade| É fácil diagnosticar eventuais problemas e identificar as causas das deficiências ou falhas? |1) Sim <BR>2) Não       |ALTO        |
+|Modificabilidade| Qual a complexidade de implementar modificações ? |1) Alta <br>2) Baixa <br>3) Média      |ALTO        |
+|Testabilidade| Qual a complexidade de se validar o software ?  |1) Alta <br>2) Baixa <br>3) Média       |ALTO        |
+|Coexistência| O sistema de software pode coexistir com outros produtos de software independentes ? |1) Sim <BR>2) Não       |ALTO        |
+|Tolerância a falhas | Ocorrendo falhas, o sistema está parametrizado para reagir ? |1) Sim <BR>2) Não       |ALTO        |
+|Confidencialidade | O sistema evita acesso não autorizado, acidental ou deliberado a programas de dados? |1) Sim <BR>2) Não       |ALTO        |
+>>>>>>> 5f4adaf7f44e754a83f5d097ed2e4db74a5c4dab
 > **Links Úteis**:
 >
 > - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
