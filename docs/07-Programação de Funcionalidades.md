@@ -8,7 +8,7 @@ Para cada requisito funcional, pode ser entregue um artefato desse tipo
 
 ## Tela Informações do Projeto
 
-**Reponsável - Karen Noguti**
+**Responsável - Karen Noguti**
 
 Fiquei responsável pela Tela de Informações do Projeto  e ao estudar o microfundamento de Desenvolvimento Móvel não consegui avançar devido o erro abaixo. Iniciei novamente a trilha do desenvolvimento WebApi para tentar identificar o problema.
 
