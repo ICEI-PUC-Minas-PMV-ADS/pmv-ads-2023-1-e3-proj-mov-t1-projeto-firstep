@@ -43,4 +43,11 @@ Esta tela permite que o usuário solicite um tutor.
 
 <img src="img/Solicitacao_tutor.png" width= 250> <br><br>
 
+## Tela de Regras
+
+Esta tela informa as regras de participação e inserção de projetos no aplicativo.
+
+<img src="img/Regras.png" width= 250> <br><br>
+
+
 
