@@ -24,6 +24,18 @@ Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra 
 
 <img src="img/Pagina_inicial.png" width= 250> <br><br>
 
+## Tela de Cadastro de Usuário
+
+Esta tela  permite que o usuário realize seu cadastro.
+
+<img src="img/Cadastro.jpeg" width= 250> <br><br> 
+
+## Tela de Login
+
+Esta tela  permite que o usuário realize seu Login.
+
+<img src="img/Login.jpeg" width= 250> <br><br> 
+
 ## Atualização de Cadastro
 
 Esta tela  permite o usuário editar o seu cadastro.
