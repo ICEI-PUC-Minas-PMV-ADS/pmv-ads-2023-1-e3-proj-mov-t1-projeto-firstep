@@ -79,5 +79,8 @@ Esta tela informa as regras de participação e inserção de projetos no aplica
 
 <img src="img/Regras.png" width= 250> <br><br>
 
+## Telas de Indicadores
 
+Estas telas exibem gráficos onde o administrador do aplicativo pode visualizar diversos dados do App.
 
+<img src="img/Indicadores.jpg" >
