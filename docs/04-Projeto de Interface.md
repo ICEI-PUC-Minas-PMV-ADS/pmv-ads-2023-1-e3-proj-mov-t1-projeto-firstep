@@ -91,8 +91,6 @@ Estas telas exibem gráficos onde o administrador do aplicativo pode visualizar 
 
 ![Gráfico de desempenho](img/graficos_desempenho.png)
 
-![Gráfico de desempenho](img/Histograma.jpg)
-
-![Gráfico de desempenho](img/Pizza.jpg)
+![Gráfico de desempenho](img/Histograma.jpg)![Gráfico de desempenho](img/Pizza.jpg)
 
 ![Gráfico de desempenho](img/Tabela_Avaliacao.png)
