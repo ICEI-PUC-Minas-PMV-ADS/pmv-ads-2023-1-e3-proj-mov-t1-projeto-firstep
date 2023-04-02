@@ -24,6 +24,12 @@ Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra 
 
 <img src="img/Pagina_inicial.png" width= 250> <br><br>
 
+## Tela de Amostra de projetos
+
+Esta tela mostra ao usuário, cadastrado ou não, todos os projetos cadastrados no aplicativo, finalizados e em andamento.
+
+<img src="img/Amostra de projetos.png" width=250>
+
 ## Tela de Cadastro de Usuário
 
 Esta tela  permite que o usuário realize seu cadastro.
@@ -35,6 +41,12 @@ Esta tela  permite que o usuário realize seu cadastro.
 Esta tela  permite que o usuário realize seu Login.
 
 <img src="img/Login.jpeg" width= 250> <br><br> 
+
+## Tela pós login
+
+Esta tela mostra ao usuário os projetos que estão em aberto para que ele possa participar
+
+<img src="img/Tela pós-login.png" width=250>
 
 ## Atualização de Cadastro
 
