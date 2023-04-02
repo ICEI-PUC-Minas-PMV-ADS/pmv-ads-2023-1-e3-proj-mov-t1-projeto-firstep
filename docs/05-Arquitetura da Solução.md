@@ -31,6 +31,10 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 
 ## Modelo Físico
 
+Banco de Dados Firstep. 
+
+ ![Banco de dados](img/Banco_de_Dados_Firstep.png)
+
 Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
 
 ## Tecnologias Utilizadas
