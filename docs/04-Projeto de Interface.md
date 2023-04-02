@@ -24,6 +24,30 @@ Esta tela  permite o direcionamento para as páginas Login, Cadastros e Amostra 
 
 <img src="img/Pagina_inicial.png" width= 250> <br><br>
 
+## Tela de Amostra de projetos
+
+Esta tela mostra ao usuário, cadastrado ou não, todos os projetos cadastrados no aplicativo, finalizados e em andamento.
+
+<img src="img/Amostra de projetos.png" width=250>
+
+## Tela de Cadastro de Usuário
+
+Esta tela  permite que o usuário realize seu cadastro.
+
+<img src="img/Cadastro.jpeg" width= 250> <br><br> 
+
+## Tela de Login
+
+Esta tela  permite que o usuário realize seu Login.
+
+<img src="img/Login.jpeg" width= 250> <br><br> 
+
+## Tela pós login
+
+Esta tela mostra ao usuário os projetos que estão em aberto para que ele possa participar
+
+<img src="img/Tela pós-login.png" width=250>
+
 ## Atualização de Cadastro
 
 Esta tela  permite o usuário editar o seu cadastro.
@@ -43,4 +67,20 @@ Esta tela permite que o usuário solicite um tutor.
 
 <img src="img/Solicitacao_tutor.png" width= 250> <br><br>
 
+## Tela de Perfil
 
+Esta tela indica o Perfil do usuário, com as informações cadastradas anteriormente por ele.
+
+<img src="img/Perfil.png" width= 250> <br><br>
+
+## Tela de Regras
+
+Esta tela informa as regras de participação e inserção de projetos no aplicativo.
+
+<img src="img/Regras.png" width= 250> <br><br>
+
+## Telas de Indicadores
+
+Estas telas exibem gráficos onde o administrador do aplicativo pode visualizar diversos dados do App.
+
+<img src="img/Indicadores.jpg" >

@@ -4,7 +4,7 @@
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
-![Arquitetura da Solução](img/02-mob-arch.png)
+![Arquitetura da Solução](img/arqsolucao.png)
 
 ## Diagrama de Classes
 
@@ -52,7 +52,7 @@ Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do ba
 
 ## Hospedagem
 
-A hospedagem será realizada no Snack, serviço oferecido pelo aplicativo Expo Go.
+A hospedagem será realizada pelo Heroku, uma plataforma de nuvem como serviço que suporta várias linguagens de programação.
 
 ## Qualidade de Software
 
@@ -62,16 +62,18 @@ No contexto de desenvolvimento de software, qualidade pode ser entendida como um
 
 A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
 Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-|Característica de Qualidade| Subcaracteristicas |Justificativa      |
+|Característica de Qualidade| Subcaracterísticas |Justificativa      |
 |--------------------|------------------------------------|----------------------------------------|
-| ● Funcionalidade <BR>  <BR>         O conjunto de funções satisfazem as necessidades explícitas e implícitas para a finalidade a que se destina o produto?  |         Adequação Funcional.      |Propõe-se a fazer o que é apropriado.
-| ● Eficiência   <BR>  <BR>                   Os recursos e os tempos utilizados são compatíveis com o nível de desempenho requerido para o produto.  |   Eficiência de Desempenho Comportamento em relação ao tempo.            |   Essa característica representa o desempenho em relação à quantidade de recursos utilizados nas condições estabelecidas.
-|● Compatibilidade    |        Coexistência; Interoperabilidade.       |   Grau em que um produto, sistema ou componente pode trocar informações com outros produtos, sistemas ou componentes e/ou desempenhar suas funções necessárias enquanto compartilha o mesmo ambiente de hardware ou software.
-|● Usabilidade    <BR>  <BR>                     É fácil utilizar o software?    |    Inteligibilidade.    <BR>  <BR> Apreensibilidade.    <BR>  <BR> Operacionalidade.     |   É fácil entender os conceitos utilizados?  <BR>  <BR> É fácil aprender a usar? <BR>  <BR> É fácil de operar e controlar a operação?
-| ● Manutenibilidade   |   Modularidade; Reutilização; Analisabilidade; Modificabilidade; Testabilidade.            |   Essa característica representa o grau de eficácia e eficiência com que um produto ou sistema pode ser modificado para melhorá-lo, corrigi-lo ou adaptá-lo às mudanças no ambiente e nos requisitos.
-| ● Portabilidade  |   É possível utilizar o produto em diversas plataformas com pequeno esforço de adaptação.            |É fácil instalar em outros ambientes?<BR>  <BR>É fácil substituir por outro software?<BR>  <BR>Está de acordo com padrões ou convenções de portabilidade?
+| ● Adequação Funcional  |         Adequação   <BR>  <BR>     Acurácia  <BR>  <BR>  Conformidade  | Prover um conjunto apropriado de funções para tarefas e objetivos do usuário especificados.<BR> <BR> Prover, com o grau de precisão necessário, resultados ou efeitos corretos ou conforme acordados.<BR><BR> O software deve estar de acordo com normas, convenções ou regulamentações previstas em leis e prescrições similares relacionadas à funcionalidade.
+|    ●  Eficiência de Desempenho          |   Comportamento em relação aos recursos           |  Capacidade do produto de software de usar tipos e quantidades apropriados de recursos, quando o software executa suas funções sob condições estabelecidas.
+| ● Compatibilidade   |       Interoperabilidade       |   Capacidade do produto de software de interagir com um ou mais sistemas especificados.
+|● Usabilidade                            |    Inteligibilidade    <BR>  <BR> Apreensibilidade    <BR>  <BR> Operacionalidade     |  Capacidade do produto de software de possibilitar ao usuário compreender se o software é apropriado e como ele pode ser usado para tarefas e condições de uso específicas. <BR>  <BR> Capacidade do produto de software de possibilitar ao usuário aprender sua aplicação. <BR>  <BR> Capacidade do produto de software de possibilitar ao usuário operá-lo e controlá-lo.
+| ● Manutenibilidade   |   Modularidade   <BR>  <BR> Analisabilidade   <BR>  <BR> Modificabilidade    <BR>  <BR> Testabilidade    |   A modularização (ou componentização) é o mecanismo que permite que um sistema de software seja dividido em partes que interagem entre si. <BR>  <BR> Capacidade do produto de software de permitir o diagnóstico de deficiências ou causas de falhas no software, ou a identificação de partes a serem modificadas. <BR>  <BR> Capacidade do produto de software de permitir que uma modificação especificada seja implementada. <BR>  <BR> Capacidade do produto de software de permitir que o software, quando modificado, seja validado.
+| ● Portabilidade  |  Coexistência            |Capacidade do produto de software de coexistir com outros produtos de software independentes, em um ambiente comum, compartilhando recursos comuns.
+| ● Confiabilidade  | Tolerância a falhas             |Capacidade do produto de software de manter um nível de desempenho especificado em casos de defeitos no software ou de violação de sua interface especificada.
+| ● Segurança   |  Confidencialidade             |Capacidade do produto de software de proteger informações e dados, de forma que pessoas ou sistemas não autorizados não possam lê-los nem modificá-los e que não seja negado o acesso às pessoas ou sistemas autorizados.
 
-|Subcaracteristicas| Métrica |Escala      |Peso      |
+|Subcaracterísticas| Métrica |Escala      |Peso      |
 |--------------------|------------------------------------|----------------------------------------|----------------------------------------|
 |Adequação | O sistema propõe-se a fazer o que é apropriado? |1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente       |ALTO      |
 |Acurácia| O sistema gera resultados corretos conforme acordado?|1) Não atende<BR> 2) Atende parcialmente<BR> 3) Atende completamente    |ALTO        |
@@ -88,8 +90,3 @@ Com base nessas características e nas respectivas sub-características, identif
 |Coexistência| O sistema de software pode coexistir com outros produtos de software independentes ? |1) Sim <BR>2) Não       |ALTO        |
 |Tolerância a falhas | Ocorrendo falhas, o sistema está parametrizado para reagir ? |1) Sim <BR>2) Não       |ALTO        |
 |Confidencialidade | O sistema evita acesso não autorizado, acidental ou deliberado a programas de dados? |1) Sim <BR>2) Não       |ALTO        |
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)
