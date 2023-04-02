@@ -33,6 +33,17 @@ Fiquei responsável pela Tela de Login do Projeto e estudei o microfundamento at
 
 ![Tela de Cadastro de Projeto](img/tela_erro_jeferson.jpeg)
 
+
+## Tela Pós-Login
+
+**Responsável - Carolina Laurindo**
+
+Fiquei responsável pela tela pós o login e estudei o microfundamento até a parte de navegação. 
+
+![Tela pós login](img/tela-pos-login.jpg)
+
+
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
