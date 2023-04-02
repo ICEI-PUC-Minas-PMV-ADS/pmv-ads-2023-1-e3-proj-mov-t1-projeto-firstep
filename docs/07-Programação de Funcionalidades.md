@@ -42,6 +42,15 @@ Fiquei responsável pela tela pós o login e estudei o microfundamento até a pa
 
 ![Tela pós login](img/tela-pos-login.jpg)
 
+## Tela Cadastro de Usuário
+
+**Responsável - Jéssica Grimaldi**
+
+Fiquei responsável pela tela de Cadastro do Usuário. Estou estudando o microfundamento de Desenvolvimento de Aplicações Móveis e desenvolvi os estudos até a criação da calculadora.  
+
+![Tela pós login](img/evolucaodeEstudosTelaCadastro.png)
+
+
 
 
 > **Links Úteis**:
