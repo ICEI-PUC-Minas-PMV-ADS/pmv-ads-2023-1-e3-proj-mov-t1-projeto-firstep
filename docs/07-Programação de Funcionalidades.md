@@ -50,6 +50,14 @@ Fiquei responsável pela tela de Cadastro do Usuário. Estou estudando o microfu
 
 ![Tela pós login](img/evolucaodeEstudosTelaCadastro.png)
 
+## Tela de Realização de projeto
+
+**Responsável - Douglas Raynner**
+
+Fiquei responsável pela tela de realização do projeto, estou estudando o microfundamento de desenvolvimento de aplicações móveis e estou criando o rosto da aplicação que será desenvolvida, testando diferentes formas de implementação.
+
+![Tela realização de projeto](img/DevTelaRealProjeto.png)
+
 
 
 
