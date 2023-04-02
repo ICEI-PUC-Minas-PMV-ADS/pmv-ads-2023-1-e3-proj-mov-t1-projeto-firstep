@@ -79,13 +79,23 @@ Esta tela informa as regras de participação e inserção de projetos no aplica
 
 <img src="img/Regras.png" width= 250> <br><br>
 
+## Informações do projeto
+
+Esta tela mostra as informações sobre o projeto para que o usuário se candidate.
+
+<img src="img/InfoProjeto.png" width= 250> <br><br>
+
+## Tela de realização do projeto
+
+Esta tela mostra as informações sobre o projeto no qual o usuário está participando.
+
+<img src="img/RealProjeto1.png" width= 250>             <img src="img/RealProjeto2.png" width= 250> <br><br>
+
 ## Telas de Indicadores
 
 Estas telas exibem gráficos onde o administrador do aplicativo pode visualizar diversos dados do App.
 
 <img src="img/Indicadores.jpg" >
-
-
 
 # Gráficos de indicadores de desempenho
 
