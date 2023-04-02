@@ -84,3 +84,9 @@ Esta tela informa as regras de participação e inserção de projetos no aplica
 Estas telas exibem gráficos onde o administrador do aplicativo pode visualizar diversos dados do App.
 
 <img src="img/Indicadores.jpg" >
+
+
+
+# Gráficos de indicadores de desempenho
+
+![Gráfico de desempenho](img/graficos_desempenho.png)
