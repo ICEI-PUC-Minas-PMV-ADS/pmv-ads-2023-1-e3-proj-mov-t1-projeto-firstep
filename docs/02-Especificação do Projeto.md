@@ -99,7 +99,7 @@ Nesse processo, o usuário pode descrever um projeto e o mesmo fica aberto para 
  
 ## Indicadores de Desempenho
 
-| # | Indicador |  Objetivos| Descrição |Cálculo | Fonte | Perspectiva |
+| # | Indicador |  Objetivos| Descrição |Cálculo | Fonte | Meta |
 |---|-|---------- |---------|-|--------|-------|
 |001| Número de integrantes por grupo| Promover troca de conhecimeto entre os usuários|Contabilizar a média de pessoas por grupo| Média de pessoas por grupo| Banco de dados do projeto | Todos os grupos devem ter no mínimo 4 pessoas|
 |002| Número de tutores cadastrados | Proporcionar fácil acesso a tutoria para todos os projetos  | Avaliar a quantidade de tutores disponiveis para atendimento  | Quantidade de tutores disponíves para atendimento | Banco de dados do projeto | Os tutores devem atender a no máximo 5 projetos simultaneamente |   
@@ -147,7 +147,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 A técnica para priorização de requisitos utilizada foi a Escala de Três Níveis e a imagem abaixo retrata a análise realizada.
 
-<img src="img/PriorizacaoRequisitos1.png">
+<img src="img/AttPriorizacaoRequisitos.png">
 
 
 ## Restrições

@@ -33,6 +33,34 @@ Fiquei responsável pela Tela de Login do Projeto e estudei o microfundamento at
 
 ![Tela de Cadastro de Projeto](img/tela_erro_jeferson.jpeg)
 
+
+## Tela Pós-Login
+
+**Responsável - Carolina Laurindo**
+
+Fiquei responsável pela tela pós o login e estudei o microfundamento até a parte de navegação. 
+
+![Tela pós login](img/tela-pos-login.jpg)
+
+## Tela Cadastro de Usuário
+
+**Responsável - Jéssica Grimaldi**
+
+Fiquei responsável pela tela de Cadastro do Usuário. Estou estudando o microfundamento de Desenvolvimento de Aplicações Móveis e desenvolvi os estudos até a criação da calculadora.  
+
+![Tela pós login](img/evolucaodeEstudosTelaCadastro.png)
+
+## Tela de Realização de projeto
+
+**Responsável - Douglas Raynner**
+
+Fiquei responsável pela tela de realização do projeto, estou estudando o microfundamento de desenvolvimento de aplicações móveis e estou criando o rosto da aplicação que será desenvolvida, testando diferentes formas de implementação.
+
+![Tela realização de projeto](img/DevTelaRealProjeto.png)
+
+
+
+
 > **Links Úteis**:
 >
 > - [Trabalhando com HTML5 Local Storage e JSON](https://www.devmedia.com.br/trabalhando-com-html5-local-storage-e-json/29045)
