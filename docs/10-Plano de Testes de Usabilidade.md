@@ -35,7 +35,7 @@ Os testes de usabilidade permitem avaliar a qualidade da interface com o usuári
 |   | 7) Problemas observados (questão aberta).|
 |   | 8) Tempo de execução para concluir a tarefa (questão aberta).|
 
-Para esta etapa do projeto, os testes serão realizados nas principais funcionalidades do sistema: cadastro do usuário, login, cadastro de produto, busca por projeto.
+Para esta etapa do projeto, os testes serão realizados nas principais funcionalidades do sistema: cadastro do usuário, login, cadastro de projeto, busca por projeto.
 
 
 O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
