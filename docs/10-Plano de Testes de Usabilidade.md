@@ -37,13 +37,42 @@ Os testes de usabilidade permitem avaliar a qualidade da interface com o usuári
 
 Para esta etapa do projeto, os testes serão realizados nas principais funcionalidades do sistema: cadastro do usuário, login, cadastro de projeto, busca por projeto.
 
+| Tarefa 1 | Critério de êxito | O que será avaliado |
+|----------|-------------------|---------------------|
+| Cadastro de novo usuário |  Concluir o cadastro com sucesso|-Concretização da tarefa <br>-Quantidade de erros cometidos<br>-Tempo necessário para se concluir|
 
-O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
+| Tarefa 2 | Critério de êxito | O que será avaliado |
+|----------|-------------------|---------------------|
+| Fazer o login no sistema |  Conseguir logar no sistema e ser encaminhado para a tela inicial com a lista de projetos|-Concretização da tarefa<br>-Quantidade de erros cometidos<br>-Tempo necessário para se concluir|
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
+| Tarefa 3 | Critério de êxito | O que será avaliado |
+|----------|-------------------|---------------------|
+| Cadastro de novo projeto| Concluir o cadastro com sucesso|-Concretização da tarefa<br>-Quantidade de erros cometidos<br>-Tempo necessário para se concluir|
 
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+| Tarefa 4 | Critério de êxito | O que será avaliado |
+|----------|-------------------|---------------------|
+|Buscar projeto cadastrado através de um filtro de linguagem de programação| Apresentar o resultado da busca à partir das informações filtradas. |-Concretização da tarefa<br>-Quantidade de erros cometidos<br>-Tempo necessário para se concluir|
+
+| Tarefa 5 | Critério de êxito | O que será avaliado |
+|----------|-------------------|---------------------|
+|Conectar-se a um projeto cadastrado | Conseguir conectar-se a um projeto cadastrado |-Concretização da tarefa<br>-Quantidade de erros cometidos<br>-Tempo necessário para se concluir|
+
+
+### Interpretação e Consolidação dos dados 
+
+Após os testes será realizado a consolidação e interpretação dos resultados.
+
+### Relato dos Resultados
+
+Após a interpretação e consolidação dos resultados será relatado a performance e a opinião dos participantes.
+
+### Objetivo
+
+Fazer melhorias na plataforma proporcionando uma melhor experiência ao usuário. O que será mensurado no teste:
+- A qualidade na navegação
+- Satisfação do usuário
+
+### Ferramentas de Testes
+Para realizar os testes serão utilizados:
+- Celulares Android e iOS
+
