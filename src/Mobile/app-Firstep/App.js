@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import CadastroProjeto from '../app-Firstep/Pages/CadastroProjeto';
+import CadastroProjeto from '../app-Firstep/pages/CadastroProjeto';
 
 
 const App = () => {
