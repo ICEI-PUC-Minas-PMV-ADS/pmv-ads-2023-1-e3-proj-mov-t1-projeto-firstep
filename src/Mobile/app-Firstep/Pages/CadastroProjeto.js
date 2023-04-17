@@ -12,8 +12,8 @@ const CadastroProjeto = () => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [tec, setTec] = useState('');
-    const [desProj, setDesProj] = useState('');
-    const [desVaga, setDesVaga] = useState('');
+    const [descricaoProj, setDescricaoProj] = useState('');
+    const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repos, setRepos] = useState('');
 
 
@@ -44,13 +44,13 @@ const CadastroProjeto = () => {
                 />
                 <Input
                     label="Descrição do Projeto:"
-                    value={desProj}
-                    onChangeText={(text) => setDesProj(text)}
+                    value={descricaoProj}
+                    onChangeText={(text) => setDescricaoProj(text)}
                 />
                 <Input
                     label="Descrição da Vaga:"
-                    value={desVaga}
-                    onChangeText={(text) => setDesVaga(text)}
+                    value={descricaoVaga}
+                    onChangeText={(text) => setDescricaoVaga(text)}
                 />
                 <Input
                     label="Repositório:"
