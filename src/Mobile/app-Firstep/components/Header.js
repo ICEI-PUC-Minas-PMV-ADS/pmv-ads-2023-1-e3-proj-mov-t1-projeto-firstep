@@ -11,8 +11,4 @@ const Header = ({ title, goBack }) => {
   );
 };
 
-
-
-
-
 export default Header;
