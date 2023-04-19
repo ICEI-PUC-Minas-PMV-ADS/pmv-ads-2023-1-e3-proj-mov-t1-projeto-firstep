@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import CadastroProjeto from './pages/CadastroProjeto';
+import CadastroProjeto from './Pages/CadastroProjeto';
 
 
 const App = () => {
