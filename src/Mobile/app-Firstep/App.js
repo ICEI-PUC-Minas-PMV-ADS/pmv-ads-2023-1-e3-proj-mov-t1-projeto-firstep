@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-
+import CadastroProjeto from './pages/CadastroProjeto';
 
 
 const App = () => {
   return (
  
-   <View></View>
+   <CadastroProjeto />
    
   );
 };
