@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Button, Headline } from 'react-native-paper';
 
-import Container from '../componentes/Container';
-import Body from '../componentes/Body';
-import Input from '../componentes/Input';
+import Container from '../Componentes/Container';
+import Body from '../Componentes/Body';
+import Input from '../Componentes/Input';
 
-import Logo from '../componentes/Logo';
+import Logo from '../Componentes/Logo';
 
 const CadastroProjeto = () => {
     const [nome, setNome] = useState('');
