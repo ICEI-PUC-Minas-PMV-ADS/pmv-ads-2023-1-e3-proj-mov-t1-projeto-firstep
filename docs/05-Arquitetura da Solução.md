@@ -35,7 +35,7 @@ Banco de Dados Firstep.
 
  ![Banco de dados](img/Banco_de_Dados_Firstep.png)
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O arquivo de banco.sql contendo os scripts de criação das tabelas do banco de dados está incluído dentro da pasta src\bd no [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep/blob/main/src/Banco_de_dados.sql).
 
 ## Tecnologias Utilizadas
 
