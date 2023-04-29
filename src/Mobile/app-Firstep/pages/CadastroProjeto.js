@@ -11,7 +11,7 @@ import Logo from '../components/Logo';
 const CadastroProjeto = () => {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-    const [tec, setTec] = useState('');
+    const [tecnologia, setTecnologia] = useState('');
     const [descricaoProj, setDescricaoProj] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
@@ -39,8 +39,8 @@ const CadastroProjeto = () => {
                 />
                 <Input
                     label="Tecnologias Utilizadas:"
-                    value={tec}
-                    onChangeText={(text) => setTec(text)}
+                    value={tecnologia}
+                    onChangeText={(text) => setTecnologia(text)}
                 />
                 <Input
                     label="Descrição do Projeto:"
