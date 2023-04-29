@@ -14,7 +14,7 @@ const CadastroProjeto = () => {
     const [tec, setTec] = useState('');
     const [descricaoProj, setDescricaoProj] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
-    const [repos, setRepos] = useState('');
+    const [repositorio, setRepositorio] = useState('');
 
 
 
@@ -54,8 +54,8 @@ const CadastroProjeto = () => {
                 />
                 <Input
                     label="Repositório:"
-                    value={repos}
-                    onChangeText={(text) => setRepos(text)}
+                    value={repositorio}
+                    onChangeText={(text) => setRepositorio(text)}
                 />
                 <Button
                     mode="contained"
