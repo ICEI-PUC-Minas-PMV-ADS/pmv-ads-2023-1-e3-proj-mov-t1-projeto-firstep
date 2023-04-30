@@ -28,35 +28,36 @@ const CadastroProjeto = () => {
             <Headline style={styles.textTitulo}>Criar Projeto</Headline>
             <Body>
                 <Input
-                    label="Nome do Projeto:"
+                    label="* Nome do Projeto:"
                     value={nome}
                     onChangeText={(text) => setNome(text)}
                 />
                 <Input
-                    label="E-mail do usuário:"
+                    label="* E-mail do usuário:"
                     value={email}
                     onChangeText={(text) => setEmail(text)}
                 />
                 <Input
-                    label="Tecnologias Utilizadas:"
+                    label="* Tecnologias Utilizadas:"
                     value={tecnologia}
                     onChangeText={(text) => setTecnologia(text)}
                 />
                 <Input
-                    label="Descrição do Projeto:"
+                    label="* Descrição do Projeto:"
                     value={descricaoProj}
                     onChangeText={(text) => setDescricaoProj(text)}
                 />
                 <Input
-                    label="Descrição da Vaga:"
+                    label="* Descrição da Vaga:"
                     value={descricaoVaga}
                     onChangeText={(text) => setDescricaoVaga(text)}
                 />
                 <Input
-                    label="Repositório:"
+                    label="* Repositório:"
                     value={repositorio}
                     onChangeText={(text) => setRepositorio(text)}
                 />
+                <Headline style={styles.textObservacao}>*Obrigatório</Headline>
                 <Button
                     mode="contained"
                     onPress={() => console.log('Pressed')}
@@ -77,6 +78,12 @@ const styles = StyleSheet.create({
     textTitulo: {
         fontWeight: 'bold',
         textAlign: 'center',
+        marginBottom: 20,
+    },
+    textObservacao: {
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'left',
         marginBottom: 20,
     },
     button: {
