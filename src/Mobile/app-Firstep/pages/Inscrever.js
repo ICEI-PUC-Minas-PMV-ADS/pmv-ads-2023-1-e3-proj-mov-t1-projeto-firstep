@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  View,
-  FlatList,
-  StyleSheet,
-  StatusBar,
-  TextInput,
-  ScrollView,
-} from 'react-native';
+import {View,StyleSheet,ScrollView,} from 'react-native';
 import { Button, List, Text } from 'react-native-paper';
 
 import Container from '../components/Container';
