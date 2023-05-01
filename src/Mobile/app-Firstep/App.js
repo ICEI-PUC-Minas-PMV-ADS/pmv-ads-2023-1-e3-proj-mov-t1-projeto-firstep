@@ -6,6 +6,7 @@ import Inscrever from './pages/Inscrever';
 import CadastroUsuario from './pages/CadastroUsuario';
 import RealizacaoProjeto from './pages/RealizacaoProjeto';
 import Home from './pages/Home';
+import TelaPosLogin from './pages/TelaPosLogin';
 
 
 
@@ -13,7 +14,7 @@ import Home from './pages/Home';
 const App = () => {
   return (
 
-    <RealizacaoProjeto/>
+    <TelaPosLogin/>
 
   );
 };
