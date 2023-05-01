@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NavigationContainer } from '@react-navigation/native';
+
 import CadastroProjeto from './pages/CadastroProjeto';
 import Login from './pages/Login';
 import Inscrever from './pages/Inscrever';
@@ -13,9 +15,9 @@ import TelaPosLogin from './pages/TelaPosLogin';
 
 const App = () => {
   return (
-
-    <TelaPosLogin/>
-
+    <NavigationContainer>       
+        <Home />
+    </NavigationContainer>
   );
 };
 

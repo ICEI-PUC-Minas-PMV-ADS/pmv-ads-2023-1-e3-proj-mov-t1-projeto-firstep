@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { Button, Headline } from 'react-native-paper';
 
 import Container from '../components/Container';
@@ -19,10 +19,9 @@ const CadastroProjeto = () => {
 
 
     return (
+        <ScrollView>
         <Container>
-
             <View style={styles.logo}>
-
                 <Logo />
             </View>
             <Headline style={styles.textTitulo}>Criar Projeto</Headline>
@@ -67,6 +66,7 @@ const CadastroProjeto = () => {
             </Body>
 
         </Container>
+        </ScrollView>
     );
 };
 
