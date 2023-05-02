@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import {View,StyleSheet,ScrollView,} from 'react-native';
-import { Button, List, Text } from 'react-native-paper';
+import {View,StyleSheet} from 'react-native';
+import { Button, Text } from 'react-native-paper';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
 import Card from '../components/Card';
+import Body from '../components/Body';
 
 const Inscrever = () => {
   const [id, setId] = useState('');
@@ -31,10 +32,10 @@ const Inscrever = () => {
 
   return (
     <Container>
-      <ScrollView>
         <View style={styles.logo}>
           <Logo />
         </View>
+        <Body>
         <Text style={styles.titulo}>{DATA.nomeProjeto}</Text>
         <Card>
           <Text style={styles.texto}>{DATA.descricaoProjeto}</Text>
@@ -64,7 +65,7 @@ const Inscrever = () => {
           onPress={() => console.log('Pressed')}>
           Voltar
         </Button>
-      </ScrollView>
+        </Body>
     </Container>
   );
 };
