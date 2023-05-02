@@ -19,8 +19,8 @@ const CadastroProjeto = () => {
 
 
     return (
-        <ScrollView>
         <Container>
+             <ScrollView>
             <View style={styles.logo}>
                 <Logo />
             </View>
@@ -64,10 +64,9 @@ const CadastroProjeto = () => {
                     Criar Projeto
                 </Button>
             </Body>
-
+            </ScrollView>
         </Container>
-        </ScrollView>
-    );
+       );
 };
 
 const styles = StyleSheet.create({
