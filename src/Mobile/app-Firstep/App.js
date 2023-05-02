@@ -11,12 +11,10 @@ import Home from './pages/Home';
 import TelaPosLogin from './pages/TelaPosLogin';
 
 
-
-
 const App = () => {
   return (
     <NavigationContainer>       
-        <Home />
+        <Inscrever/>
     </NavigationContainer>
   );
 };
