@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
-import { View, StyleSheet } from 'react-native';
+import React from 'react';
+import { CommonActions } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Text, BottomNavigation } from 'react-native-paper';
+import {  BottomNavigation } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import TelaPosLogin from './TelaPosLogin'
+import TelaPosLogin from './TelaPosLogin';
 import RealizacaoProjeto from './RealizacaoProjeto';
 import CadastroProjeto from  './CadastroProjeto';
 
