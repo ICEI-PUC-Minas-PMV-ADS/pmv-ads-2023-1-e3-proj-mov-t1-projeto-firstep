@@ -4,9 +4,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Text, BottomNavigation } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import TelaPosLogin from "./TelaPosLogin";
-import RealizacaoProjeto from "./RealizacaoProjeto";
-import CadastroProjeto from "./CadastroProjeto";
+import TelaPosLogin from './TelaPosLogin'
+import RealizacaoProjeto from './RealizacaoProjeto';
+import CadastroProjeto from  './CadastroProjeto';
 
 const Tab = createBottomTabNavigator();
 
