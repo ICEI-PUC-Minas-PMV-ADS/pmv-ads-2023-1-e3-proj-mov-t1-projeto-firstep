@@ -7,7 +7,7 @@ import Home from './pages/Home';
 const App = () => {
   return (
     <NavigationContainer>       
-        <Home />
+        <Home/>
     </NavigationContainer>
   );
 };
