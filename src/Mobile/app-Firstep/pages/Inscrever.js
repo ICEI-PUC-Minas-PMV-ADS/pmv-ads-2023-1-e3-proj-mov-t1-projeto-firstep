@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {View,StyleSheet} from 'react-native';
+import {View,StyleSheet, ScrollView } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 
 import Container from '../components/Container';
@@ -32,6 +32,7 @@ const Inscrever = () => {
 
   return (
     <Container>
+      <ScrollView>
         <View style={styles.logo}>
           <Logo />
         </View>
@@ -66,6 +67,7 @@ const Inscrever = () => {
           Voltar
         </Button>
         </Body>
+        </ScrollView>
     </Container>
   );
 };
