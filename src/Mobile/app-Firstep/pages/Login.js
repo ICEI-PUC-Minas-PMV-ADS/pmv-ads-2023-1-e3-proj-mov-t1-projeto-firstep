@@ -64,7 +64,7 @@ const Login = () => {
         </Button>
         <Button
           style={styles.button}
-          mode="outlined"
+          mode="contained"
           onPress={() => navigation.navigate('Register')}>
           Registrar
         </Button>
@@ -75,7 +75,9 @@ const Login = () => {
 
 const styles = StyleSheet.create({
   button: {
-    marginBottom: 8,
+    marginVertical: 8,
+    marginHorizontal: 40,
+    backgroundColor: '#3E2500',
   },
  
   header: {
