@@ -22,7 +22,7 @@ Fiquei responsável pela Tela de Informações do Projeto  e ao estudar o microf
 ### Etapa 3
 Fiquei responsável pela Tela de Cadastro de Projeto. O grupo decidiu utilizar o VS code para desenvolver o aplicativo e facilitar o trabalho em equipe. Eu desenvolvi a interface gráfica da tela a qual estou responsável utilizando os conhecimentos adquiridos no microfundamento de desenvolvimento. 
 
-![Tela de Cadastro de Projeto](img/cadastro_projeto2.png)
+<img src="img/cadastro_projeto2.png" width= 250>
 
 ### Etapa 2
 Fiquei responsável pela Tela de Cadastro de Projeto. Estou estudando o microfundamento de Desenvolvimento Móvel e criando o app de acordo com as instruções do professor Kleber. Porém, quando cheguei na parte de Web API apareceu um erro e não consegui avançar. Além disso, os vídeos da parte de Web API estão fora de ordem. Tentei identificar a ordem, mas não tenho certeza de que estou seguindo a ordem correta. Segue abaixo a tela com o erro que apareceu durante o desenvolvimento do app proposto pelo professor Kleber. Estou tentando descobrir o erro. 
