@@ -24,10 +24,6 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 
  ![Essquema Relacional](img/relacional.png)
 
- Usuário(IDUsuario (PK), Nome, E-mail (UNIQUE), Senha, Descrição / Perfil, Github)
-
- Projeto (IDProjeto (PK), IDUsuario (FK), Nome do Projeto, Descrição do Projeto, Tecnologia , Descrição da Vaga, Repositório, Autor do Projeto, Quantidade de Participantes)
-
 
 ## Modelo Físico
 
