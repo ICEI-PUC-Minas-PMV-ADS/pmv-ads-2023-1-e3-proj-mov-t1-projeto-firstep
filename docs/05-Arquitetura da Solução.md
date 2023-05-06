@@ -23,14 +23,15 @@ O Modelo ER representa através de um diagrama como as entidades (coisas, objeto
 O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
 
 
- <img src="img/relacional.png" width= 350> <br><br>
+ <img src="img/relacional.png" width= 650> <br><br>
 
 
 ## Modelo Físico
 
 Banco de Dados Firstep. 
 
- ![Banco de dados](img/Banco_de_Dados_Firstep.png)
+
+ <img src="img/Banco_de_Dados_Firstep.png" width= 350> <br><br>
 
 O arquivo de banco.sql contendo os scripts de criação das tabelas do banco de dados está incluído dentro da pasta src\bd no [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep/blob/main/src/Banco_de_dados.sql).
 
