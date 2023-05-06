@@ -34,7 +34,7 @@ Esta tela mostra ao usuário, cadastrado ou não, todos os projetos cadastrados 
 
 Esta tela  permite que o usuário realize seu cadastro.
 
-<img src="img/Cadastro.jpeg" width= 250> <br><br> 
+<img src="img/TelaCadastroUsuario.png" width= 250>
 
 ## Tela de Login
 
