@@ -13,6 +13,13 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | Passos 	| - Acessar o aplicativo <br> - Digitar email e senha <br> - Clicar no botão 'login' |  
 |Critério de Êxito | - Verificar se o usuário conseguiu se conectar a sua conta  .|
 |  |  |
+| **Caso de teste**   | **CT-02-Tela Cadastro do Usuário**|
+|:---:	|:---:	|
+|Requisito Associado |  RF-001 - O aplicativo deve permitir cadastro de usuários. | 
+| Objetivo do Teste 	| O usuário deverá realizar seu cadastro|
+| Passos 	| - Acessar o aplicativo <br> - Digitar nome, e-mail, senha, descrição e link do github <br> - Clicar no botão 'Enviar cadastro' |  
+|Critério de Êxito | - O cadastro do usuário deve ser realizado.|
+|  |  |
 | **Caso de teste**   | **CT-03-Tela Cadastro de Projeto**|
 |	|	|
 |Requisito Associado |  RF-008 - O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | 
