@@ -39,6 +39,12 @@ Fiquei responsável pela Tela de Cadastro de Projeto. Estou estudando o microfun
 
 **Responsável - Jeferson Queiroz**
 
+### Etapa 3
+Fiquei responsável pela Tela de login do Projeto. Desenvolvendo o projeto de acordo a aprendizagem do microfundamento.
+
+<img src="img/Tela_login.png" width= 250>
+
+### Etapa 2
 Fiquei responsável pela Tela de Login do Projeto e estudei o microfundamento até navegação, o programa apresentou um erro e não consegui avançar por enquanto.
 
 
