@@ -63,6 +63,12 @@ Fiquei responsável pela tela pós o login e estudei o microfundamento até a pa
 
 **Responsável - Jéssica Grimaldi**
 
+### Etapa 3
+A tela abaixo foi desenvolvida conforme orientações do microndamento.
+
+<img src="img/Captura de Tela 2023-05-06 às 15.44.36.png" width= 250>
+
+### Etapa 2
 Fiquei responsável pela tela de Cadastro do Usuário. Estou estudando o microfundamento de Desenvolvimento de Aplicações Móveis e desenvolvi os estudos até a criação da calculadora.  
 
 ![Tela Cadastro Usuário](img/evolucaodeEstudosTelaCadastro.png)
