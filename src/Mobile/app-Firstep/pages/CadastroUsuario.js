@@ -18,12 +18,7 @@ const CadastroUsuario = () => {
             <View style={styles.logo}>
                 <Logo />
             </View>
-                <Button
-                    mode="contained"
-                    onPress={() => console.log('Pressed')}
-                    style={styles.button}>
-                    Cadastre-se
-                </Button>
+                <Headline style={styles.textTitulo}>Cadastre-se</Headline>
             <Body>
                 <Input
                     label="* Nome:"
@@ -65,6 +60,11 @@ const CadastroUsuario = () => {
 const styles = StyleSheet.create({
     logo: {
         alignItems: 'center',
+    },
+    textTitulo: {
+        fontWeight: 'bold',
+        textAlign: 'center',
+        marginBottom: 20,
     },
     textObservacao: {
         fontSize: 15,
