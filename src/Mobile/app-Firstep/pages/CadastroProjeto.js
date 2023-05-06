@@ -16,8 +16,6 @@ const CadastroProjeto = () => {
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
 
-
-
     return (
         <Container>
              <ScrollView>

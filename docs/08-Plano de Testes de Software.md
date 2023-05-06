@@ -6,7 +6,7 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
-| **Caso de teste**   | **CT-01-Tela Cadastro de Projeto**|
+| **Caso de teste**   | **CT-01-Tela Login**|
 |:---:	|:---:	|
 |Requisito Associado |  RF-002 - O aplicativo deve permitir login de usuários. | 
 | Objetivo do Teste 	| O usuário deverá realizar o login.|
@@ -25,6 +25,12 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | Objetivo do Teste 	| Verificar se o sistema permite que o usuário se cadastre em projetos existentes. |
 | Passos 	| - Acessar o aplicativo <br> - Clicar no projeto que deseja se cadastrar<br> - Clicar em "Cadastrar-se" <br> 
 |Critério de Êxito | - Ao clicar em "Cadastrar-se" o usuário deve ser incluído como participante.  | 
+|   |    | 
+| **Caso de Teste**	| **CT-12 – Realização do Projeto**	|
+|Requisito Associado | RF-007 - O aplicativo deve disponibilizar contato com tutores.|
+| Objetivo do Teste 	| Verificar se o sistema permite que o usuário solicite um tutor. |
+| Passos 	| - Acessar o aplicativo <br> - Clicar no projeto em que está cadastrado<br> - Clicar em "Solicitar tutor" <br> 
+|Critério de Êxito | - Deve ser enviado uma mensagem a um tutor disponível.  | 
 |   |    | 
 
 
