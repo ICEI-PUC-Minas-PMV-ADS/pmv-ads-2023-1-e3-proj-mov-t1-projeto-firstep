@@ -31,7 +31,7 @@ O Esquema Relacional corresponde à representação dos dados em tabelas juntame
 Banco de Dados Firstep. 
 
 
- <img src="img/Banco_de_Dados_Firstep.png" width= 350> <br><br>
+ <img src="img/Banco_de_Dados_Firstep.png" width= 550> <br><br>
 
 O arquivo de banco.sql contendo os scripts de criação das tabelas do banco de dados está incluído dentro da pasta src\bd no [link](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep/blob/main/src/Banco_de_dados.sql).
 
