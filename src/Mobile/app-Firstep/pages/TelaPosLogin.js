@@ -31,7 +31,7 @@ const Item = ({ title }) => (
     </View>
 );
 const Logo2 = () => {
-    return <Image style={styles.image} source={require('../assets/contato.png')} />
+    return <Image source={require('../assets/contato.png')} />
 };
 
 const TelaPosLogin = () => {

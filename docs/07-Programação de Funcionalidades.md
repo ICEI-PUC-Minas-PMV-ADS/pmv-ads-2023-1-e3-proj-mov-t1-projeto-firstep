@@ -55,6 +55,12 @@ Fiquei responsável pela Tela de Login do Projeto e estudei o microfundamento at
 
 **Responsável - Carolina Laurindo**
 
+### Etapa 3
+Após o estudo do microfundamento, desenvolvi a tela abaixo:
+<img src="img/Tela pós-login.png" width= 250>
+
+
+### Etapa 2
 Fiquei responsável pela tela pós o login e estudei o microfundamento até a parte de navegação. 
 
 ![Tela pós login](img/tela-pos-login.jpg)
