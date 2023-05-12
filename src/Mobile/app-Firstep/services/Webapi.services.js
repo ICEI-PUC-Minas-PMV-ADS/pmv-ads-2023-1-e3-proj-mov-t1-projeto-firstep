@@ -1,4 +1,4 @@
-import axios from "axios"
+import axios from "react-native-axios"
 
 const API = axios.create();
 
