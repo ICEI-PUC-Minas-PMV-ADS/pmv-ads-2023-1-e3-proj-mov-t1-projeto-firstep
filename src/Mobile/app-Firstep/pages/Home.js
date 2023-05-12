@@ -7,9 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import TelaPosLogin from './TelaPosLogin';
 import RealizacaoProjeto from './RealizacaoProjeto';
 import CadastroProjeto from  './CadastroProjeto';
-import Login from './Login';
 import Inscrever from './Inscrever';
-import CadastroUsuario from './CadastroUsuario';
 
 const Tab = createBottomTabNavigator();
 
@@ -94,30 +92,10 @@ export default function Home() {
         }}
       />
       <Tab.Screen
-        name="Login"
-        component={Login}
-        options={{
-          tabBarLabel: 'Login',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="login" size={size} color={color} />;
-          },
-        }}
-      />
-      <Tab.Screen
         name="Inscrever"
         component={Inscrever}
         options={{
           tabBarLabel: 'Inscrever',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="form-select" size={size} color={color} />;
-          },
-        }}
-      />
-      <Tab.Screen
-        name="CadastroUsuario"
-        component={CadastroUsuario}
-        options={{
-          tabBarLabel: 'Cadastro Usuário',
           tabBarIcon: ({ color, size }) => {
             return <Icon name="form-select" size={size} color={color} />;
           },

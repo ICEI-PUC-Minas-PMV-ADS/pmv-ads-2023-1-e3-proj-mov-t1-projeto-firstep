@@ -6,11 +6,17 @@ import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
 
+import {useUser} from '../contexts/UserContext';
+
+import { useNavigation } from '@react-navigation/native';
+
 
 const Login = () => {
 
 
+  const navigation = useNavigation();
 
+  const { setSigned } = useUser();
   const [email, setEmail] = useState('firstep@gmail.com');
   const [password, setPassword] = useState('firstep');
 
@@ -59,7 +65,7 @@ const Login = () => {
         <Button
           style={styles.button}
           mode="contained"
-          onPress={handleLogin}>
+          onPress={() => setSigned(true)}>
           LOGIN
         </Button>
         <Button
