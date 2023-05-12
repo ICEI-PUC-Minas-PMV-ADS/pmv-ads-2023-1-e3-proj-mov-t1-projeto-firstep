@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {View,StyleSheet, ScrollView } from 'react-native';
 import { Button, Text } from 'react-native-paper';
+import { useIsFocused } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
 import Card from '../components/Card';
 import Body from '../components/Body';
+import { getProjetos } from '../services/Inscrever.services';
+
 
 const Inscrever = () => {
   const [id, setId] = useState('');
@@ -30,6 +33,25 @@ const Inscrever = () => {
     quantidadeParticipante: 3,
   };
 
+  const isFocused = useIsFocused();
+
+  useEffect (() => {
+fetchProjetos()
+  }, [isFocused])
+
+  async function fetchProjetos(){
+
+    const res = await getProjetos("1")
+    setId(res.id)
+    console.log(res)
+    setNomeProjeto(res.nomeProjeto)
+    setDescricaoProjeto(res.descricaoProjeto)
+    setTecnologias(res.tecnologias)
+    setdescricaoVaga(res.descricaoVaga)
+    setquantidadeParticipante(res.quantidadeParticipante)
+  
+  }
+
   return (
     <Container>
       <ScrollView>
@@ -37,20 +59,20 @@ const Inscrever = () => {
           <Logo />
         </View>
         <Body>
-        <Text style={styles.titulo}>{DATA.nomeProjeto}</Text>
+        <Text style={styles.titulo}>{nomeProjeto}</Text>
         <Card>
-          <Text style={styles.texto}>{DATA.descricaoProjeto}</Text>
+          <Text style={styles.texto}>{descricaoProjeto}</Text>
         </Card>
         <Card>
-          <Text style={styles.texto}>{DATA.descricaoVaga}</Text>
+          <Text style={styles.texto}>{descricaoVaga}</Text>
         </Card>
         <Card>
           <Text style={styles.texto}>Tecnologias Utilizadas: </Text>
-          <Text style={styles.texto}>{DATA.tecnologias}</Text>
+          <Text style={styles.texto}>{tecnologias}</Text>
         </Card>
 
         <Text style={styles.quantPart}>
-          Quantidade de Participantes: {DATA.quantidadeParticipante}
+          Quantidade de Participantes: {quantidadeParticipante}
         </Text>
 
         <Button
