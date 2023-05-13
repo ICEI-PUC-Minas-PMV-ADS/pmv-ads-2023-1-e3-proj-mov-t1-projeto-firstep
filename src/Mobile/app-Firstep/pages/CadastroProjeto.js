@@ -8,7 +8,11 @@ import Input from '../components/Input';
 
 import Logo from '../components/Logo';
 
+import { useNavigation } from '@react-navigation/native';
+
 const CadastroProjeto = () => {
+    const navigation = useNavigation();
+
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [tecnologia, setTecnologia] = useState('');
@@ -61,6 +65,12 @@ const CadastroProjeto = () => {
                     style={styles.button}>
                     Criar Projeto
                 </Button>
+                <Button
+                    mode="contained"
+                    onPress={() => navigation.goBack()}
+                    style={styles.button}>
+                    Voltar
+                </Button>
             </Body>
             </ScrollView>
         </Container>
@@ -86,6 +96,7 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: '#3E2500',
         borderRadius: 10,
+        marginTop: 10,
     },
 });
 
