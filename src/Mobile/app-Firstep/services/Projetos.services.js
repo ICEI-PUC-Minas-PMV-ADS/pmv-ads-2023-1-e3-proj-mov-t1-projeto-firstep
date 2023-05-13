@@ -47,19 +47,3 @@ export const insertProjetos = async (param) => {
     }
   }
 
-  export const deleteProjetos = async (id) => {
-    try{
-      return await API.delete(`${BASE_URL}/projetos/${id}`, param).then( 
-        response => {
-          return response.data;
-        },
-        error =>{
-          console.log(error);
-          return  null;
-        }
-      );
-    }catch(error){
-      console.log(error);
-      return null;
-    }
-  }
