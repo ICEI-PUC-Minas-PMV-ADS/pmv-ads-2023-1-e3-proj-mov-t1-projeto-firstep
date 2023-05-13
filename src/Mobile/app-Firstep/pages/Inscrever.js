@@ -105,10 +105,10 @@ const styles = StyleSheet.create({
   },
 
   titulo: {
-    fontSize: 25,
-    marginVertical: 8,
-    marginHorizontal: 40,
+    fontWeight: 'bold',
     textAlign: 'center',
+    marginBottom: 20,
+    fontSize: 25,
   },
 
   quantPart: {
