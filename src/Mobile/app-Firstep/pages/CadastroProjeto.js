@@ -7,7 +7,7 @@ import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
 
-import { insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
+import { insertProjetos, updateProjetos} from '../services/Projetos.services';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -63,12 +63,7 @@ const CadastroProjeto = ({ route }) => {
        }
        };
 
-        const handleExcluir = () => {
-        deleteProjetos(item.id).then(res => {
-            navigation.goBack();
-        });
-        };
-    
+  
 
     return (
         <Container>
@@ -114,20 +109,20 @@ const CadastroProjeto = ({ route }) => {
                     onChangeText={(text) => setRepositorio(text)}
                 />
                 <Headline style={styles.textObservacao}>*Obrigatório</Headline>
-                <Button
+                {item 
+                 ? <Button
+                    mode="contained"
+                    onPress={handleSalvar}
+                    style={styles.button}>
+                    Editar
+                   </Button>
+                :  <Button
                     mode="contained"
                     onPress={handleSalvar}
                     style={styles.button}>
                     Criar Projeto
-                </Button>
-               {item &&(
-                <Button
-                    mode="contained"
-                    onPress={handleExcluir}
-                    style={styles.button}>
-                    Excluir
-                </Button>
-              )}
+                   </Button>
+                }
                 <Button
                     mode="contained"
                     onPress={() => navigation.goBack()}
