@@ -5,18 +5,20 @@ import { Button, Headline } from 'react-native-paper';
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
-
 import Logo from '../components/Logo';
+
+import { insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
 
 import { useNavigation } from '@react-navigation/native';
 
 const CadastroProjeto = () => {
     const navigation = useNavigation();
 
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [tecnologia, setTecnologia] = useState('');
-    const [descricaoProj, setDescricaoProj] = useState('');
+    const [nomeProjeto, setNomeProjeto] = useState('');
+    const [autorProjeto, setAutorProjeto] = useState('');
+    const [emailUsuario, setEmailUsuario] = useState('');
+    const [tecnologias, setTecnologias] = useState('');
+    const [descricaoProjeto, setDescricaoProjeto] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
 
@@ -30,23 +32,28 @@ const CadastroProjeto = () => {
             <Body>
                 <Input
                     label="* Nome do Projeto:"
-                    value={nome}
-                    onChangeText={(text) => setNome(text)}
+                    value={nomeProjeto}
+                    onChangeText={(text) => setNomeProjeto(text)}
+                />
+                <Input
+                    label="* Autor do Projeto:"
+                    value={autorProjeto}
+                    onChangeText={(text) => setAutorProjeto(text)}
                 />
                 <Input
                     label="* E-mail do usuário:"
-                    value={email}
-                    onChangeText={(text) => setEmail(text)}
+                    value={emailUsuario}
+                    onChangeText={(text) => setEmailUsuario(text)}
                 />
                 <Input
                     label="* Tecnologias Utilizadas:"
-                    value={tecnologia}
-                    onChangeText={(text) => setTecnologia(text)}
+                    value={tecnologias}
+                    onChangeText={(text) => setTecnologias(text)}
                 />
                 <Input
                     label="* Descrição do Projeto:"
-                    value={descricaoProj}
-                    onChangeText={(text) => setDescricaoProj(text)}
+                    value={descricaoProjeto}
+                    onChangeText={(text) => setDescricaoProjeto(text)}
                 />
                 <Input
                     label="* Descrição da Vaga:"
