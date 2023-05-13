@@ -16,8 +16,8 @@ const Login = () => {
 
   const { setSigned } = useUser();
 
-  const [email, setEmail] = useState('firstep@gmail.com');
-  const [password, setPassword] = useState('firstep');
+  const [email, setEmail] = useState('karen@pucminas.br');
+  const [password, setPassword] = useState('12345');
 
     const handleLogin= () => {
 
