@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
-import { getProjetos } from '../services/Inscrever.services';
+import { getProjetos } from '../services/Projetos.services';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
