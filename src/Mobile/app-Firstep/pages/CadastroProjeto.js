@@ -11,8 +11,9 @@ import { insertProjetos, updateProjetos, deleteProjetos } from '../services/Proj
 
 import { useNavigation } from '@react-navigation/native';
 
-const CadastroProjeto = () => {
+const CadastroProjeto = ({ route }) => {
     const navigation = useNavigation();
+    const { item } = route.params ? route.params : {};
 
     const [nomeProjeto, setNomeProjeto] = useState('');
     const [autorProjeto, setAutorProjeto] = useState('');
@@ -21,6 +22,53 @@ const CadastroProjeto = () => {
     const [descricaoProjeto, setDescricaoProjeto] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
+
+    useEffect (() => {
+        if(item){
+          setNomeProjeto(item.nomeProjeto);
+          setAutorProjeto(item.autorProjeto);
+          setEmailUsuario(item.emailUsuario);
+          setTecnologias(item.tecnologias);
+          setDescricaoProjeto(item.descricaoProjeto);
+          setDescricaoVaga(item.descricaoVaga);
+          setRepositorio(item.repositorio);
+        }
+    
+      }, [item]);
+
+       const handleSalvar = () => {
+       if(item){
+        updateProjetos({
+            nomeProjeto: nomeProjeto,
+            autorProjeto: autorProjeto,
+            emailUsuario: emailUsuario,
+            tecnologias: tecnologias,
+            descricaoProjeto: descricaoProjeto,
+            descricaoVaga: descricaoVaga,
+            repositorio: repositorio,
+            id: item.id
+        }).then( res => {navigation.goBack();});
+       } else{
+        insertProjetos({
+            nomeProjeto: nomeProjeto,
+            autorProjeto: autorProjeto,
+            emailUsuario: emailUsuario,
+            tecnologias: tecnologias,
+            descricaoProjeto: descricaoProjeto,
+            descricaoVaga: descricaoVaga,
+            repositorio: repositorio,
+        }).then(res => {
+            navigation.goBack();
+        });
+       }
+       };
+
+        const handleExcluir = () => {
+        deleteProjetos(item.id).then(res => {
+            navigation.goBack();
+        });
+        };
+    
 
     return (
         <Container>
@@ -68,10 +116,18 @@ const CadastroProjeto = () => {
                 <Headline style={styles.textObservacao}>*Obrigatório</Headline>
                 <Button
                     mode="contained"
-                    onPress={() => console.log('Pressed')}
+                    onPress={handleSalvar}
                     style={styles.button}>
                     Criar Projeto
                 </Button>
+               {item &&(
+                <Button
+                    mode="contained"
+                    onPress={handleExcluir}
+                    style={styles.button}>
+                    Excluir
+                </Button>
+              )}
                 <Button
                     mode="contained"
                     onPress={() => navigation.goBack()}
