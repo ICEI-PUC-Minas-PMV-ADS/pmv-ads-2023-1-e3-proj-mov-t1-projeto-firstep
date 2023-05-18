@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, ScrollView } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
-import { getProjetos } from '../services/Projetos.services';
+import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { useNavigation } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
@@ -10,14 +11,19 @@ import Card from '../components/Card';
 import Body from '../components/Body';
 
 const Inscrever = () => {
+
+  const navigation = useNavigation();
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
+  const [emailUsuario, setEmailUsuario] = useState('');
   const [descricaoProjeto, setDescricaoProjeto] = useState('');
   const [tecnologias, setTecnologias] = useState('');
-  const [descricaoVaga, setdescricaoVaga] = useState('');
+  const [descricaoVaga, setDescricaoVaga] = useState('');
   const [repositorio, setRepositorio] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
-  const [quantidadeParticipante, setquantidadeParticipante] = useState('');
+  const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
+  const [finalizado,setFinalizado] = useState('');
+  const [participantesProjeto, setParticipantesProjeto] = useState([]);
 
   const isFocused = useIsFocused();
 
@@ -31,12 +37,34 @@ const Inscrever = () => {
     setId(res.id)
     console.log(res)
     setNomeProjeto(res.nomeProjeto)
+    setEmailUsuario(res.emailUsuario)
     setDescricaoProjeto(res.descricaoProjeto)
     setTecnologias(res.tecnologias)
-    setdescricaoVaga(res.descricaoVaga)
-    setquantidadeParticipante(res.quantidadeParticipante)
+    setDescricaoVaga(res.descricaoVaga)
+    setRepositorio(res.repositorio)
+    setAutorProjeto(res.autorProjeto)
+    setQuantidadeParticipante(res.quantidadeParticipante)
+    setFinalizado(res.finalizado)
+    setParticipantesProjeto(res.participantesProjeto)
+  };
 
-  }
+  const handleSalvar = () => {
+    setQuantidadeParticipante(quantidadeParticipante+1)
+    updateProjetos({
+      "id": id,
+      "nomeProjeto": nomeProjeto,
+      "emailUsuario": emailUsuario,
+      "descricaoProjeto": descricaoProjeto,
+      "tecnologias": tecnologias,
+      "descricaoVaga": descricaoVaga,
+      "Finalizado": false,
+      "repositorio": repositorio,
+      "autorProjeto": autorProjeto,
+      "quantidadeParticipante": quantidadeParticipante,
+      "participantesProjeto": participantesProjeto
+    })
+
+  };
   return (
     <Container>
       <ScrollView>
@@ -63,14 +91,14 @@ const Inscrever = () => {
           <Button
             style={styles.button}
             mode="contained"
-            onPress={() => console.log('Pressed')}>
+            onPress={handleSalvar}>
             Candidatar-se
           </Button>
 
           <Button
-            style={styles.button}
             mode="contained"
-            onPress={() => console.log('Pressed')}>
+            onPress={() => navigation.goBack()}
+            style={styles.button}>
             Voltar
           </Button>
         </Body>
