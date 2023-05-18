@@ -22,6 +22,8 @@ const CadastroProjeto = ({ route }) => {
     const [descricaoProjeto, setDescricaoProjeto] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
+    const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
+
 
     useEffect (() => {
         if(item){
@@ -39,24 +41,30 @@ const CadastroProjeto = ({ route }) => {
        const handleSalvar = () => {
        if(item){
         updateProjetos({
-            nomeProjeto: nomeProjeto,
-            autorProjeto: autorProjeto,
-            emailUsuario: emailUsuario,
-            tecnologias: tecnologias,
-            descricaoProjeto: descricaoProjeto,
-            descricaoVaga: descricaoVaga,
-            repositorio: repositorio,
-            id: item.id
+            "nomeProjeto": nomeProjeto,
+            "autorProjeto": autorProjeto,
+            "emailUsuario": emailUsuario,
+            "tecnologias": tecnologias,
+            "descricaoProjeto": descricaoProjeto,
+            "descricaoVaga": descricaoVaga,
+            "repositorio": repositorio,
+            "quantidadeParticipante": quantidadeParticipante,
+            "participantesProjeto": [],
+            "Finalizado": false,
+            "id": item.id
         }).then( res => {navigation.goBack();});
        } else{
         insertProjetos({
-            nomeProjeto: nomeProjeto,
-            autorProjeto: autorProjeto,
-            emailUsuario: emailUsuario,
-            tecnologias: tecnologias,
-            descricaoProjeto: descricaoProjeto,
-            descricaoVaga: descricaoVaga,
-            repositorio: repositorio,
+            "nomeProjeto": nomeProjeto,
+            "autorProjeto": autorProjeto,
+            "emailUsuario": emailUsuario,
+            "tecnologias": tecnologias,
+            "descricaoProjeto": descricaoProjeto,
+            "descricaoVaga": descricaoVaga,
+            "repositorio": repositorio,
+            "quantidadeParticipante":1,
+            "participantesProjeto": [],
+            "Finalizado": false,
         }).then(res => {
             navigation.goBack();
         });
