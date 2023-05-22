@@ -33,7 +33,7 @@ const Inscrever = () => {
 
   async function fetchProjetos() {
 
-    const res = await getProjetos("1")
+    const res = await getProjetos("2")
     setId(res.id)
     console.log(res)
     setNomeProjeto(res.nomeProjeto)
@@ -49,7 +49,11 @@ const Inscrever = () => {
   };
 
   const handleSalvar = () => {
-    setQuantidadeParticipante(quantidadeParticipante+1)
+    if(quantidadeParticipante <= 5){
+      setQuantidadeParticipante(quantidadeParticipante+1)
+    }else{
+       Alert.alert('Limite máximo de participantes foi atingido');
+    }
     updateProjetos({
       "id": id,
       "nomeProjeto": nomeProjeto,
@@ -62,7 +66,7 @@ const Inscrever = () => {
       "autorProjeto": autorProjeto,
       "quantidadeParticipante": quantidadeParticipante,
       "participantesProjeto": participantesProjeto
-    })
+    });
 
   };
   return (
