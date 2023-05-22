@@ -41,30 +41,30 @@ const CadastroProjeto = ({ route }) => {
        const handleSalvar = () => {
        if(item){
         updateProjetos({
+            "id": item.id,
             "nomeProjeto": nomeProjeto,
-            "autorProjeto": autorProjeto,
             "emailUsuario": emailUsuario,
-            "tecnologias": tecnologias,
             "descricaoProjeto": descricaoProjeto,
+            "tecnologias": tecnologias,
             "descricaoVaga": descricaoVaga,
+            "Finalizado": false,  
             "repositorio": repositorio,
+            "autorProjeto": autorProjeto,
             "quantidadeParticipante": quantidadeParticipante,
             "participantesProjeto": [],
-            "Finalizado": false,
-            "id": item.id
         }).then( res => {navigation.goBack();});
        } else{
         insertProjetos({
             "nomeProjeto": nomeProjeto,
-            "autorProjeto": autorProjeto,
             "emailUsuario": emailUsuario,
-            "tecnologias": tecnologias,
             "descricaoProjeto": descricaoProjeto,
+            "tecnologias": tecnologias,
             "descricaoVaga": descricaoVaga,
+            "Finalizado": false,  
             "repositorio": repositorio,
-            "quantidadeParticipante":1,
+            "autorProjeto": autorProjeto,
+            "quantidadeParticipante": quantidadeParticipante,
             "participantesProjeto": [],
-            "Finalizado": false,
         }).then(res => {
             navigation.goBack();
         });
