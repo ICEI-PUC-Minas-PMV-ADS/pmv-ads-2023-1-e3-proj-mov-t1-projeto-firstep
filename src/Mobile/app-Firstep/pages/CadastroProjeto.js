@@ -63,7 +63,7 @@ const CadastroProjeto = ({ route }) => {
             "Finalizado": false,  
             "repositorio": repositorio,
             "autorProjeto": autorProjeto,
-            "quantidadeParticipante": quantidadeParticipante,
+            "quantidadeParticipante": 1,
             "participantesProjeto": [],
         }).then(res => {
             navigation.goBack();
