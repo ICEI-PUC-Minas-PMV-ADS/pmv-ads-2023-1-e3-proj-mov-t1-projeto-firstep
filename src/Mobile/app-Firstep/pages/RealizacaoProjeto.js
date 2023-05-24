@@ -1,84 +1,110 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
 import { Button, Headline } from 'react-native-paper';
+import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { useNavigation } from '@react-navigation/native';
+import { useIsFocused } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Logo from '../components/Logo';
+import Card from '../components/Card';
+//import Button1 from '../components/Button1';
 
 const RealizacaoProjeto = () => {
-  const [nomeProjeto] = useState('');
-  const [descricaoProjeto] = useState('');
-  const [email] = useState('');
-  const [tecnologia] = useState('');
-  const [autorProjeto] = useState('');
-  const [descricaoVaga] = useState('');
-  const [contato] = useState('');
+  const [id, setId] = useState('');
+  const [nomeProjeto, setNomeProjeto] = useState('');
+  const [descricaoProjeto, setDescricaoProjeto] = useState('');
+  const [tecnologias, setTecnologias] = useState('');
+  const [descricaoVaga, setDescricaoVaga] = useState('');
+  const [repositorio, setRepositorio] = useState('');
+  const [emailUsuario, setEmailUsuario] = useState('');
+  const [autorProjeto, setAutorProjeto] = useState('');
+  const [participantesProjeto, setParticipantesProjeto] = useState([]);
 
-  const DATA = {
-    id: 1,
-    nomeProjeto: 'Agricont',
-    descricaoProjeto:
-      'O projeto consiste em uma página web para gestão patrimonial de agricultores.',
-    tecnologias: 
-      'HTML, CSS, BootStrap, NET C#, SQLServer',
-    vaga:
-      'Vaga: Dev fullstack jr',
-    empresa: 
-      'Empresa: Juninhos LTDA',
-    salario:
-      'Salário: À Combinar',
-    repositorio:
-      'Repositório: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t5-projeto-agricont',
-    contato:
-      'Contato: junior123@gmail.com',
-    autorProjeto: [
-      'Carolina Vitória ',
-      'Cláudia Carapiá ',
-      'Douglas Raynner ',
-      'Jéssica Grimaldi ',
-      'Jeferson Queiroz ',
-      'Karen Noguti ']
+  const navigation = useNavigation();
+
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    fetchProjetos()
+  }, [isFocused])
+
+  async function fetchProjetos() {
+
+    const res = await getProjetos("3")
+    setId(res.id)
+    setNomeProjeto(res.nomeProjeto)
+    setDescricaoProjeto(res.descricaoProjeto)
+    setTecnologias(res.tecnologias)
+    setDescricaoVaga(res.descricaoVaga)
+    setRepositorio(res.repositorio)
+    setEmailUsuario(res.emailUsuario)
+    setAutorProjeto(res.autorProjeto)
+    setParticipantesProjeto(res.participantesProjeto)
   };
 
   return (
     <Container>
-      <View style={styles.logo}>
-        <Logo />
-      </View>
-      <Headline style={styles.textTitulo}>{DATA.nomeProjeto}</Headline>
-      <Body>
-      <View style={styles.card}>
-        <Text style={styles.texto}>{DATA.descricaoProjeto}</Text>
-      </View>
-      <View style={styles.card}>
-        <Text style={styles.texto}>{DATA.vaga}</Text>
-        <Text style={styles.texto}>{DATA.empresa}</Text>
-        <Text style={styles.texto}>{DATA.salario}</Text>
-      </View>
-      <View style={styles.card}>
-        <Text style={styles.texto}>Tecnologias utilizadas:</Text>
-        <Text style={styles.texto}>{DATA.tecnologias}</Text>
-      </View>
-      <View style={styles.card}>
-        <Text style={styles.texto}>{DATA.repositorio}</Text>
-        <Text style={styles.texto}>{DATA.contato}</Text>
-      </View>
-      <View style={styles.uniao}>
-      <View style={styles.card2}>
-        <Text style={styles.texto2}>Precisa de ajuda?</Text>
-        <Button
-          mode="contained"
-          onPress={() => console.log('Pressed')}
-          style={styles.button}>
-          Solicitar Tutor
-        </Button>
-      </View>
-      <View style={styles.card2}>
-        <Text style={styles.texto}>{DATA.autorProjeto}</Text>
-      </View>
-      </View>
-      </Body>
+      <ScrollView>
+        <View style={styles.logo}>
+          <Logo />
+        </View>
+        <Headline style={styles.textTitulo}>{nomeProjeto}</Headline>
+        <Body>
+          <View>
+            <Card>
+              <Text style={styles.texto}>Descrição do projeto:</Text>
+              <Text style={styles.texto}>{descricaoProjeto}</Text>
+            </Card>
+          </View>
+          <View>
+            <Card>
+              <Text style={styles.texto}>Descrição da vaga:</Text>
+              <Text style={styles.texto}>{descricaoVaga}</Text>
+            </Card>
+          </View>
+          <View>
+            <Card>
+              <Text style={styles.texto}>Tecnologias utilizadas:</Text>
+              <Text style={styles.texto}>{tecnologias}</Text>
+            </Card>
+          </View>
+          <View>
+            <Card>
+              <Text style={styles.texto}>Autor do projeto: {autorProjeto}</Text>
+              <Text style={styles.texto}>Email do usuário: {emailUsuario}</Text>
+              <Text style={styles.texto}>Repositório: {repositorio}</Text>
+            </Card>
+          </View>
+          <View style={styles.uniao}>
+            <View style={styles.card2}>
+              <Text style={styles.texto2}>Precisa de ajuda?</Text>
+              <Button
+                mode="contained"
+                onPress={() => console.log('Solicitar tutor')}
+                style={styles.button}>
+                Solicitar Tutor
+              </Button>
+            </View>
+            <View style={styles.card2}>
+              <Text style={styles.texto}>{participantesProjeto}</Text>
+            </View>
+          </View>
+          <Button
+            mode="contained"
+            onPress={() => console.log('Sair do projeto')}
+            style={styles.button}>
+            Sair do projeto
+          </Button>
+          <Button
+            mode="contained"
+            onPress={() => navigation.goBack()}
+            style={styles.button}>
+            Voltar
+          </Button>
+        </Body>
+      </ScrollView>
     </Container>
   );
 };
@@ -94,8 +120,14 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   button: {
-    backgroundColor: '#4AC288',
+    backgroundColor: '#3E2500',
     borderRadius: 10,
+    alignItems: "center"
+  },
+  button: {
+    backgroundColor: '#3E2500',
+    borderRadius: 10,
+    marginTop: 10,
     alignItems: "center"
   },
   texto: {
@@ -107,20 +139,13 @@ const styles = StyleSheet.create({
     padding: 3,
     textAlign: 'center',
   },
-  card: { 
-    width: "100%",
-    borderRadius: 10,
-    backgroundColor: "#F6E984",
-    padding: 10,
-    marginVertical: 5
-  },
-  card2: { 
+  card2: {
     width: "48.7%",
     height: 140,
     borderRadius: 10,
     backgroundColor: "#F6E984",
-    padding:10,
-    marginVertical:5,
+    padding: 10,
+    marginVertical: 5,
     flexDirection: "column",
     justifyContent: "space-evenly",
   },
