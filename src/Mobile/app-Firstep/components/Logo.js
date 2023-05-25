@@ -1,8 +1,13 @@
 import React from 'react';
-import { StyleSheet, Image } from 'react-native';
+import { StyleSheet, Image, View } from 'react-native';
+import Container from './Container';
 
 const Logo = () => {
-  return <Image style={styles.image} source={require('../assets/logo.png')} />
+  return  <Container> 
+            <View style={styles.logo}>
+              <Image style={styles.image} source={require('../assets/logo.png')} />
+            </View>
+          </Container>
 };
 
 const styles = StyleSheet.create({
@@ -11,6 +16,10 @@ const styles = StyleSheet.create({
   height: 120,
   marginTop: 40,
   },
+  logo: {
+    alignItems: 'center',
+    marginTop: 10,
+  }
 });
 
 export default Logo;
