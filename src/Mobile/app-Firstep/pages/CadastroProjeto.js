@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
-import { Button, Headline } from 'react-native-paper';
+import { View, ScrollView } from 'react-native';
+
 
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
+import TextTitle from '../components/TextTitle';
+import Text1 from '../components/Text1';
+import Button1 from '../components/Button1';
 
-import { insertProjetos, updateProjetos} from '../services/Projetos.services';
+import { insertProjetos, updateProjetos } from '../services/Projetos.services';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -25,145 +28,116 @@ const CadastroProjeto = ({ route }) => {
     const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
 
 
-    useEffect (() => {
-        if(item){
-          setNomeProjeto(item.nomeProjeto);
-          setAutorProjeto(item.autorProjeto);
-          setEmailUsuario(item.emailUsuario);
-          setTecnologias(item.tecnologias);
-          setDescricaoProjeto(item.descricaoProjeto);
-          setDescricaoVaga(item.descricaoVaga);
-          setRepositorio(item.repositorio);
+    useEffect(() => {
+        if (item) {
+            setNomeProjeto(item.nomeProjeto);
+            setAutorProjeto(item.autorProjeto);
+            setEmailUsuario(item.emailUsuario);
+            setTecnologias(item.tecnologias);
+            setDescricaoProjeto(item.descricaoProjeto);
+            setDescricaoVaga(item.descricaoVaga);
+            setRepositorio(item.repositorio);
         }
-    
-      }, [item]);
 
-       const handleSalvar = () => {
-       if(item){
-        updateProjetos({
-            "id": item.id,
-            "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,  
-            "repositorio": repositorio,
-            "autorProjeto": autorProjeto,
-            "quantidadeParticipante": quantidadeParticipante,
-            "participantesProjeto": [],
-        }).then( res => {navigation.goBack();});
-       } else{
-        insertProjetos({
-            "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,  
-            "repositorio": repositorio,
-            "autorProjeto": autorProjeto,
-            "quantidadeParticipante": 1,
-            "participantesProjeto": [],
-        }).then(res => {
-            navigation.goBack();
-        });
-       }
-       };
+    }, [item]);
 
-  
+    const handleSalvar = () => {
+        if (item) {
+            updateProjetos({
+                "id": item.id,
+                "nomeProjeto": nomeProjeto,
+                "emailUsuario": emailUsuario,
+                "descricaoProjeto": descricaoProjeto,
+                "tecnologias": tecnologias,
+                "descricaoVaga": descricaoVaga,
+                "Finalizado": false,
+                "repositorio": repositorio,
+                "autorProjeto": autorProjeto,
+                "quantidadeParticipante": quantidadeParticipante,
+                "participantesProjeto": [],
+            }).then(res => { navigation.goBack(); });
+        } else {
+            insertProjetos({
+                "nomeProjeto": nomeProjeto,
+                "emailUsuario": emailUsuario,
+                "descricaoProjeto": descricaoProjeto,
+                "tecnologias": tecnologias,
+                "descricaoVaga": descricaoVaga,
+                "Finalizado": false,
+                "repositorio": repositorio,
+                "autorProjeto": autorProjeto,
+                "quantidadeParticipante": 1,
+                "participantesProjeto": [],
+            }).then(res => {
+                navigation.goBack();
+            });
+        }
+    };
+
+
 
     return (
         <Container>
-             <ScrollView>
-            <View style={styles.logo}>
+            <ScrollView>
                 <Logo />
-            </View>
-            <Headline style={styles.textTitulo}>Criar Projeto</Headline>
-            <Body>
-                <Input
-                    label="* Nome do Projeto:"
-                    value={nomeProjeto}
-                    onChangeText={(text) => setNomeProjeto(text)}
-                />
-                <Input
-                    label="* Autor do Projeto:"
-                    value={autorProjeto}
-                    onChangeText={(text) => setAutorProjeto(text)}
-                />
-                <Input
-                    label="* E-mail do usuário:"
-                    value={emailUsuario}
-                    onChangeText={(text) => setEmailUsuario(text)}
-                />
-                <Input
-                    label="* Tecnologias Utilizadas:"
-                    value={tecnologias}
-                    onChangeText={(text) => setTecnologias(text)}
-                />
-                <Input
-                    label="* Descrição do Projeto:"
-                    value={descricaoProjeto}
-                    onChangeText={(text) => setDescricaoProjeto(text)}
-                />
-                <Input
-                    label="* Descrição da Vaga:"
-                    value={descricaoVaga}
-                    onChangeText={(text) => setDescricaoVaga(text)}
-                />
-                <Input
-                    label="* Repositório:"
-                    value={repositorio}
-                    onChangeText={(text) => setRepositorio(text)}
-                />
-                <Headline style={styles.textObservacao}>*Obrigatório</Headline>
-                {item 
-                 ? <Button
-                    mode="contained"
-                    onPress={handleSalvar}
-                    style={styles.button}>
-                    Editar
-                   </Button>
-                :  <Button
-                    mode="contained"
-                    onPress={handleSalvar}
-                    style={styles.button}>
-                    Criar Projeto
-                   </Button>
-                }
-                <Button
-                    mode="contained"
-                    onPress={() => navigation.goBack()}
-                    style={styles.button}>
-                    Voltar
-                </Button>
-            </Body>
+                <TextTitle title="Criar Projeto" />
+                <Body>
+                    <Input
+                        label="* Nome do Projeto:"
+                        value={nomeProjeto}
+                        onChangeText={(text) => setNomeProjeto(text)}
+                    />
+                    <Input
+                        label="* Autor do Projeto:"
+                        value={autorProjeto}
+                        onChangeText={(text) => setAutorProjeto(text)}
+                    />
+                    <Input
+                        label="* E-mail do usuário:"
+                        value={emailUsuario}
+                        onChangeText={(text) => setEmailUsuario(text)}
+                    />
+                    <Input
+                        label="* Tecnologias Utilizadas:"
+                        value={tecnologias}
+                        onChangeText={(text) => setTecnologias(text)}
+                    />
+                    <Input
+                        label="* Descrição do Projeto:"
+                        value={descricaoProjeto}
+                        onChangeText={(text) => setDescricaoProjeto(text)}
+                    />
+                    <Input
+                        label="* Descrição da Vaga:"
+                        value={descricaoVaga}
+                        onChangeText={(text) => setDescricaoVaga(text)}
+                    />
+                    <Input
+                        label="* Repositório:"
+                        value={repositorio}
+                        onChangeText={(text) => setRepositorio(text)}
+                    />
+                    <Text1 title="*Obrigatório" />
+                    {item
+                        ? <Button1
+                            title="Editar dados"
+                            onPress={handleSalvar}
+                        />
+                        : <Button1
+                            title="Criar Projeto"
+                            onPress={handleSalvar}
+                        />
+                    }
+                    <Button1
+                        title="Voltar"
+                        onPress={() => navigation.goBack()}
+                    />
+                </Body>
             </ScrollView>
         </Container>
-       );
+    );
 };
 
-const styles = StyleSheet.create({
-    logo: {
-        alignItems: 'center',
-        marginTop: 10,
-    },
-    textTitulo: {
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: 20,
-    },
-    textObservacao: {
-        fontSize: 15,
-        fontWeight: 'bold',
-        textAlign: 'left',
-        marginBottom: 20,
-    },
-    button: {
-        backgroundColor: '#3E2500',
-        borderRadius: 10,
-        marginTop: 10,
-    },
-});
+
 
 export default CadastroProjeto;
