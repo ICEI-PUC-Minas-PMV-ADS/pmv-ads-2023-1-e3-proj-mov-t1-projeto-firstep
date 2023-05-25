@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, ScrollView, FlatList } from 'react-native';
-import { Button, Headline } from 'react-native-paper';
+import { View, ScrollView } from 'react-native';
 import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
 import { useIsFocused } from '@react-navigation/native';
@@ -9,7 +8,12 @@ import Container from '../components/Container';
 import Body from '../components/Body';
 import Logo from '../components/Logo';
 import Card from '../components/Card';
-//import Button1 from '../components/Button1';
+import TextTitle from '../components/TextTitle';
+import Button1 from '../components/Button1';
+import Text1 from '../components/Text1';
+import Union from '../components/Union';
+import SmallCard from '../components/SmallCard';
+import SmallText from '../components/SmallText';
 
 const RealizacaoProjeto = () => {
   const [id, setId] = useState('');
@@ -32,7 +36,7 @@ const RealizacaoProjeto = () => {
 
   async function fetchProjetos() {
 
-    const res = await getProjetos("3")
+    const res = await getProjetos("2")
     setId(res.id)
     setNomeProjeto(res.nomeProjeto)
     setDescricaoProjeto(res.descricaoProjeto)
@@ -47,113 +51,49 @@ const RealizacaoProjeto = () => {
   return (
     <Container>
       <ScrollView>
-        <View style={styles.logo}>
-          <Logo />
-        </View>
-        <Headline style={styles.textTitulo}>{nomeProjeto}</Headline>
+        <Logo/>
+        <TextTitle name={nomeProjeto}/>
         <Body>
           <View>
             <Card>
-              <Text style={styles.texto}>Descrição do projeto:</Text>
-              <Text style={styles.texto}>{descricaoProjeto}</Text>
+              <Text1 title="Descrição do projeto:"/>
+              <Text1 name={descricaoProjeto}/>
             </Card>
           </View>
           <View>
             <Card>
-              <Text style={styles.texto}>Descrição da vaga:</Text>
-              <Text style={styles.texto}>{descricaoVaga}</Text>
+              <Text1 title="Descrição da vaga:"/>
+              <Text1 name={descricaoVaga}/>
             </Card>
           </View>
           <View>
             <Card>
-              <Text style={styles.texto}>Tecnologias utilizadas:</Text>
-              <Text style={styles.texto}>{tecnologias}</Text>
+              <Text1 title="Tecnologias utilizadas:"/>
+              <Text1 name={tecnologias}/>
             </Card>
           </View>
           <View>
             <Card>
-              <Text style={styles.texto}>Autor do projeto: {autorProjeto}</Text>
-              <Text style={styles.texto}>Email do usuário: {emailUsuario}</Text>
-              <Text style={styles.texto}>Repositório: {repositorio}</Text>
+              <Text1 title="Autor do projeto: " name={autorProjeto}/>
+              <Text1 title="Email do usuário: " name={emailUsuario}/>
+              <Text1 title="Repositório: " name={repositorio}/>
             </Card>
           </View>
-          <View style={styles.uniao}>
-            <View style={styles.card2}>
-              <Text style={styles.texto2}>Precisa de ajuda?</Text>
-              <Button
-                mode="contained"
-                onPress={() => console.log('Solicitar tutor')}
-                style={styles.button}>
-                Solicitar Tutor
-              </Button>
-            </View>
-            <View style={styles.card2}>
-              <Text style={styles.texto}>{participantesProjeto}</Text>
-            </View>
-          </View>
-          <Button
-            mode="contained"
-            onPress={() => console.log('Sair do projeto')}
-            style={styles.button}>
-            Sair do projeto
-          </Button>
-          <Button
-            mode="contained"
-            onPress={() => navigation.goBack()}
-            style={styles.button}>
-            Voltar
-          </Button>
+          <Union>
+            <SmallCard>
+              <SmallText title="Precisa de ajuda?"/>
+              <Button1 onPress={() => console.log('Solicitar tutor')} title="Solicitar Tutor"/>
+            </SmallCard>
+            <SmallCard>
+              <SmallText name={participantesProjeto}/>
+            </SmallCard>
+          </Union>
+          <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto"/> 
+          <Button1 onPress={() => navigation.goBack()} title="Voltar"/>
         </Body>
       </ScrollView>
     </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  logo: {
-    alignItems: 'center',
-    marginTop: 10,
-  },
-  textTitulo: {
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20,
-  },
-  button: {
-    backgroundColor: '#3E2500',
-    borderRadius: 10,
-    alignItems: "center"
-  },
-  button: {
-    backgroundColor: '#3E2500',
-    borderRadius: 10,
-    marginTop: 10,
-    alignItems: "center"
-  },
-  texto: {
-    fontSize: 15,
-    padding: 3,
-  },
-  texto2: {
-    fontSize: 15,
-    padding: 3,
-    textAlign: 'center',
-  },
-  card2: {
-    width: "48.7%",
-    height: 140,
-    borderRadius: 10,
-    backgroundColor: "#F6E984",
-    padding: 10,
-    marginVertical: 5,
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-  },
-  uniao: {
-    flex: 1,
-    justifyContent: "space-between",
-    flexDirection: "row"
-  },
-});
 
 export default RealizacaoProjeto;
