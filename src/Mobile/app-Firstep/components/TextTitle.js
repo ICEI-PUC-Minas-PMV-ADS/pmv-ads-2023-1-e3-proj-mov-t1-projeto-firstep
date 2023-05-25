@@ -5,7 +5,7 @@ import Container from './Container';
 
 const TextTitle = (props) => {
   return  <Container> 
-            <Headline style={styles.textTitulo}>{props.name}</Headline>
+            <Headline style={styles.textTitulo}>{props.title}{props.name}</Headline>
           </Container>
 };
 
