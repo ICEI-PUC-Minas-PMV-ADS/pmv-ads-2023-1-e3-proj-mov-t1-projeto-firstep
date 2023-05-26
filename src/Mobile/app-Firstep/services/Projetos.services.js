@@ -1,7 +1,7 @@
 import API from './Webapi.services';
 import { BASE_URL } from './Urls';
 
-export async function getProjetos(id){
+/*export async function getProjetos(id){
     try{
 
         const req = await API.get(`${BASE_URL}/projetos/${id}`)
@@ -11,6 +11,23 @@ export async function getProjetos(id){
         console.error("Erro na requisição de projetos", error)
 
     }
+}*/
+
+export const getProjetos = async () => {
+	try{
+		return await API.get(`${BASE_URL}/projetos`).then(
+response => {
+return response.data;
+},
+error =>{
+console.log(error);
+return null;
+}
+);
+}catch(error){
+console.log(error);
+return null;
+}
 }
 
 export const insertProjetos = async (param) => {

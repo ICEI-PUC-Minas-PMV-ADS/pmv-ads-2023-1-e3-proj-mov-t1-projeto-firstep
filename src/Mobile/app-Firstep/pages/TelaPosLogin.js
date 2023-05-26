@@ -10,7 +10,9 @@ import Input from '../components/Input';
 import Card from '../components/Card';
 import Logo from '../components/Logo';
 
-const DATA = [
+import { getProjetos } from '../services/Projetos.services';    
+
+/*const DATA = [
     {
         id: 1,
         projeto: 'Encante com a música',
@@ -23,7 +25,10 @@ const DATA = [
         id: 3,
         projeto: 'Firstep',
     },
-];
+];*/
+
+
+
 
 const Item = ({ title }) => (
     <View style={styles.item}>
@@ -35,11 +40,21 @@ const Logo2 = () => {
 };
 
 const TelaPosLogin = () => {
+        const [projetos, setProjetos] = useState([]);
+    
+        useEffect(() => {
+            getProjetos().then((dados)=>{
+                setProjetos(dados);  
+
+              console.log(dados);
+          
+        });
+        },[]);
 
     const renderItem = ({ item }) => (
         <List.Item styles = {styles.itens}
-            title={item.projeto}
-            left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
+            title={item.nomeProjeto}
+           left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
         />
     );
 
@@ -52,13 +67,13 @@ const TelaPosLogin = () => {
             </View>
             <Headline style={styles.textTitulo}>Projetos em andamento</Headline>
             <Body>
-                <Card>
+               <Card>
                     <FlatList
-                        data={DATA}
+                        data={projetos}
                         renderItem={renderItem}
-                        keyExtractor={item => item.id}
+                        keyExtractor={(item) => item.id}
                     />
-                </Card>
+              </Card>
             </Body>
         </Container>
     );
@@ -77,9 +92,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'left',
         margin: 20,
+        
     },
     itens: {
-        fontWeight: 'bold' 
+        fontWeight: 'bold'
     },
 }
 );
