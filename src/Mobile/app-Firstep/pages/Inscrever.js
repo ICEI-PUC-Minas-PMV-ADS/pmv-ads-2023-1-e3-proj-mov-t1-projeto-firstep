@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, Alert } from 'react-native';
 import { Button, Text } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
-import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { getProjetoEspecifico, getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
+import {useUser} from '../contexts/UserContext';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
 import Card from '../components/Card';
 import Body from '../components/Body';
 
+
 const Inscrever = () => {
 
+  const { nome } = useUser();
   const navigation = useNavigation();
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
@@ -22,8 +25,8 @@ const Inscrever = () => {
   const [repositorio, setRepositorio] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
   const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
-  const [finalizado,setFinalizado] = useState('');
-  const [participantesProjeto, setParticipantesProjeto] = useState([]);
+  const [finalizado, setFinalizado] = useState('');
+  const [participantesProjeto, setParticipantesProjeto] = useState(['']);
 
   const isFocused = useIsFocused();
 
@@ -33,7 +36,8 @@ const Inscrever = () => {
 
   async function fetchProjetos() {
 
-    const res = await getProjetos("2")
+    const res = await getProjetoEspecifico("1")
+    console.log(res)
     setId(res.id)
     console.log(res)
     setNomeProjeto(res.nomeProjeto)
@@ -49,26 +53,33 @@ const Inscrever = () => {
   };
 
   const handleSalvar = () => {
-    if(quantidadeParticipante <= 5){
-      setQuantidadeParticipante(quantidadeParticipante+1)
-    }else{
-       Alert.alert('Limite máximo de participantes foi atingido');
+    if (quantidadeParticipante <= 12) {
+      const novaLista = adicionarNovoParticipante()
+      updateProjetos({
+        "id": id,
+        "nomeProjeto": nomeProjeto,
+        "emailUsuario": emailUsuario,
+        "descricaoProjeto": descricaoProjeto,
+        "tecnologias": tecnologias,
+        "descricaoVaga": descricaoVaga,
+        "Finalizado": false,
+        "repositorio": repositorio,
+        "autorProjeto": autorProjeto,
+        "quantidadeParticipante": quantidadeParticipante + 1,
+        "participantesProjeto": novaLista
+      });
+      fetchProjetos()
+    } else {
+      Alert.alert('Limite máximo de participantes foi atingido');
     }
-    updateProjetos({
-      "id": id,
-      "nomeProjeto": nomeProjeto,
-      "emailUsuario": emailUsuario,
-      "descricaoProjeto": descricaoProjeto,
-      "tecnologias": tecnologias,
-      "descricaoVaga": descricaoVaga,
-      "Finalizado": false,
-      "repositorio": repositorio,
-      "autorProjeto": autorProjeto,
-      "quantidadeParticipante": quantidadeParticipante,
-      "participantesProjeto": participantesProjeto
-    });
-
   };
+  
+const adicionarNovoParticipante  = () => {
+  const array = participantesProjeto
+ array.push(nome)
+ return array
+
+}
   return (
     <Container>
       <ScrollView>
