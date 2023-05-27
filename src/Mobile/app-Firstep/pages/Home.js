@@ -66,9 +66,9 @@ export default function Home() {
         name="TelaPosLogin"
         component={TelaPosLogin}
         options={{
-          tabBarLabel: 'Pos-Login',
+          tabBarLabel: 'Início',
           tabBarIcon: ({ color, size }) => {
-            return <Icon name="account" size={size} color={color} />;
+            return <Icon name="home" size={size} color={color} />;
           },
         }}
       />
