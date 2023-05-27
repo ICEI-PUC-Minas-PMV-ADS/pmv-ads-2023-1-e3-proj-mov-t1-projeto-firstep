@@ -53,7 +53,7 @@ const Inscrever = () => {
   };
 
   const handleSalvar = () => {
-    if (quantidadeParticipante <= 12) {
+    if (quantidadeParticipante <= 5) {
       const novaLista = adicionarNovoParticipante()
       updateProjetos({
         "id": id,
