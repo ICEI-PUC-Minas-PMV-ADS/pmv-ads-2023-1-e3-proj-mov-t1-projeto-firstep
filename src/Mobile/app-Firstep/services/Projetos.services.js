@@ -1,66 +1,82 @@
 import API from './Webapi.services';
 import { BASE_URL } from './Urls';
 
-export async function getProjetoEspecifico(id){
-    try{
+export async function getProjetoEspecifico(id) {
+  try {
 
-        const req = await API.get(`${BASE_URL}/projetos/${id}`)
-        return req.data
+    const req = await API.get(`${BASE_URL}/projetos/${id}`)
+    return req.data
 
-    }catch(error){
-        console.error("Erro na requisição de projetos", error)
+  } catch (error) {
+    console.error("Erro na requisição de projetos", error)
 
-    }
+  }
 }
 
 export const getProjetos = async () => {
-	try{
-		return await API.get(`${BASE_URL}/projetos`).then(
-response => {
-return response.data;
-},
-error =>{
-console.log(error);
-return null;
-}
-);
-}catch(error){
-console.log(error);
-return null;
-}
+  try {
+    return await API.get(`${BASE_URL}/projetos`).then(
+      response => {
+        return response.data;
+      },
+      error => {
+        console.log(error);
+        return null;
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
 }
 
 export const insertProjetos = async (param) => {
-    try{
-      return await API.post(`${BASE_URL}/projetos`, param).then( 
-        response => {
-          return response.data;
-        },
-        error =>{
-          console.log(error);
-          return  null;
-        }
-      );
-    }catch(error){
-      console.log(error);
-      return null;
-    }
+  try {
+    return await API.post(`${BASE_URL}/projetos`, param).then(
+      response => {
+        return response.data;
+      },
+      error => {
+        console.log(error);
+        return null;
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return null;
   }
+}
 
-  export const updateProjetos = async (param) => {
-    try{
-      return await API.put(`${BASE_URL}/projetos/${param.id}`, param).then( 
-        response => {
-          return response.data;
-        },
-        error =>{
-          console.log(error);
-          return  null;
-        }
-      );
-    }catch(error){
-      console.log(error);
-      return null;
-    }
+export const updateProjetos = async (param) => {
+  try {
+    return await API.put(`${BASE_URL}/projetos/${param.id}`, param).then(
+      response => {
+        return response.data;
+      },
+      error => {
+        console.log(error);
+        return null;
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return null;
   }
+}
 
+export const deleteProjetos = async () => {
+  try {
+    return await API.delete(`${BASE_URL}/projetos/${id}`).then(
+      response => {
+        return response.data;
+      },
+      error => {
+        console.log(error);
+        return null;
+      }
+    );
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
