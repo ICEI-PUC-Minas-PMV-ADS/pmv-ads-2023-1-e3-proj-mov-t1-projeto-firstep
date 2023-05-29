@@ -15,7 +15,10 @@ import Union from '../components/Union';
 import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
 
-const RealizacaoProjeto = () => {
+//import { updateProjetos, insertProjetos, deleteProjetos } from '../services/Projetos.services';
+
+const RealizacaoProjeto = ({route}) => {
+  const {item} = route.params ? route.params:{};
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
   const [descricaoProjeto, setDescricaoProjeto] = useState('');
@@ -27,32 +30,32 @@ const RealizacaoProjeto = () => {
   const [participantesProjeto, setParticipantesProjeto] = useState([]);
 
   const navigation = useNavigation();
-
+  
   const isFocused = useIsFocused();
 
   useEffect(() => {
-    fetchProjetos()
-  }, [isFocused])
+    if(item){
+    setId(item.id)
+    setNomeProjeto(item.nomeProjeto)
+    setDescricaoProjeto(item.descricaoProjeto)
+    setTecnologias(item.tecnologias)
+    setDescricaoVaga(item.descricaoVaga)
+    setRepositorio(item.repositorio)
+    setEmailUsuario(item.emailUsuario)
+    setAutorProjeto(item.autorProjeto)
+    setParticipantesProjeto(item.participantesProjeto)
+    }
+  }, [item])
 
-  async function fetchProjetos() {
-
-    const res = await getProjetos("2")
-    setId(res.id)
-    setNomeProjeto(res.nomeProjeto)
-    setDescricaoProjeto(res.descricaoProjeto)
-    setTecnologias(res.tecnologias)
-    setDescricaoVaga(res.descricaoVaga)
-    setRepositorio(res.repositorio)
-    setEmailUsuario(res.emailUsuario)
-    setAutorProjeto(res.autorProjeto)
-    setParticipantesProjeto(res.participantesProjeto)
-  };
+  //const handleExcluir = () => {
+    //deleteGasto(res.id).then(res=>{navigation.goBack();});
+  //};
 
   return (
     <Container>
       <ScrollView>
         <Logo/>
-        <TextTitle name={nomeProjeto}/>
+        <TextTitle title={nomeProjeto}/>
         <Body>
           <View>
             <Card>
