@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, ScrollView, StyleSheet } from 'react-native';
 import { getProjetos, insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
+import {useIsFocused} from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -25,9 +26,11 @@ const RealizacaoProjeto = ({route}) => {
   const [repositorio, setRepositorio] = useState('');
   const [emailUsuario, setEmailUsuario] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
+  const [finalizado, setFinalizado] = useState('');
   const [participantesProjeto, setParticipantesProjeto] = useState([]);
 
   const navigation = useNavigation();
+  const isFocused = useIsFocused();
   
 
   useEffect(() => {
@@ -40,9 +43,10 @@ const RealizacaoProjeto = ({route}) => {
     setRepositorio(item.repositorio)
     setEmailUsuario(item.emailUsuario)
     setAutorProjeto(item.autorProjeto)
+    setFinalizado(item.finalizado)
     setParticipantesProjeto(item.participantesProjeto)
     }
-  }, [item])
+  }, [isFocused])
 
   const handleExcluir = () => {
     deleteProjetos(item.id).then(res=>{navigation.goBack();});
@@ -89,12 +93,14 @@ const RealizacaoProjeto = ({route}) => {
             </SmallCard>
           </Union>
           <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto"/> 
+          
           <View style={styles.button2}>
           <SmallButton onPress={() => navigation.navigate('CadastroProjeto', {item})} title="Editar Projeto"/> 
           <SmallButton onPress={handleExcluir} title="Apagar Projeto"/> 
           </View>
           <Button1 onPress={() => navigation.goBack()} title="Voltar"/>
-        </Body>
+          
+          </Body>
       </ScrollView>
     </Container>
   );
