@@ -13,7 +13,7 @@ export async function getUsuario(id){
     }
 }
 
-export const getUsuario = async () => {
+/*export const getUsuario = async () => {
 	try{
 		return await API.get(`${BASE_URL}/users`).then(
 response => {
@@ -28,7 +28,7 @@ return null;
 console.log(error);
 return null;
 }
-}
+}*/
 
 export const insertUsuarios = async (param) => {
     try{
