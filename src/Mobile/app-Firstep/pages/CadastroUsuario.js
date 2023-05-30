@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Button, Headline } from 'react-native-paper';
+import { StyleSheet, ScrollView } from 'react-native';
+import { Headline } from 'react-native-paper';
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
+import Button1 from '../components/Button1';
 import { insertUsuarios, updateUsuarios, deleteUsuarios } from '../services/Usuarios.services';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,7 +15,7 @@ const CadastroUsuario = ({ route }) => {
 
     const [nomeUsuario, setNomeUsuario] = useState('');
     const [emailUsuario, setEmailUsuario] = useState('');
-    const [senhalUsuario, setSenhaUsuario] = useState('');
+    const [senhaUsuario, setSenhaUsuario] = useState('');
     const [descricaoUsuario, setDescricaoUsuario] = useState('');
     const [repositorio, setRepositorio] = useState('');
 
@@ -55,51 +56,48 @@ const CadastroUsuario = ({ route }) => {
 
     return (
         <Container>
-            <View style={styles.logo}>
+            <ScrollView>
                 <Logo />
-            </View>
                 <Headline style={styles.textTitulo}>Cadastre-se</Headline>
             <Body>
                 <Input
                     label="* Nome:"
-                    value={nome}
+                    value={nomeUsuario}
                     onChangeText={(text) => setNomeUsuario(text)}
                 />
                 <Input
                     label="* E-mail:"
-                    value={email}
+                    value={emailUsuario}
                     onChangeText={(text) => setEmailUsuario(text)}
                 />
                 <Input
                     label="* Senha:"
-                    value={senha}
+                    value={senhaUsuario}
                     onChangeText={(text) => setSenhaUsuario(text)}
                 />
                 <Input
                     label="* Descrição:"
-                    value={descricaoAluno}
+                    value={descricaoUsuario}
                     onChangeText={(text) => setDescricaoUsuario(text)}
                 />
                 <Input
                     label="* Github:"
-                    value={github}
+                    value={repositorio}
                     onChangeText={(text) => setRepositorio(text)}
                 />
                 <Headline style={styles.textObservacao}>*Obrigatório</Headline>
-                    item
-                        ? <Button1
+                    <Button1
                             title="Enviar Cadastro"
                             onPress={handleSalvar}
-                        />
+                    />
             </Body>
+            </ScrollView>
         </Container>
     );
 };
 
 const styles = StyleSheet.create({
-    logo: {
-        alignItems: 'center',
-    },
+
     textTitulo: {
         fontWeight: 'bold',
         textAlign: 'center',
