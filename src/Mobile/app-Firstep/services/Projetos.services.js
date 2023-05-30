@@ -64,7 +64,7 @@ export const updateProjetos = async (param) => {
   }
 }
 
-export const deleteProjetos = async () => {
+export const deleteProjetos = async (id) => {
   try {
     return await API.delete(`${BASE_URL}/projetos/${id}`).then(
       response => {
