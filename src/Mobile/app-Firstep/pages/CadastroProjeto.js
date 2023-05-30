@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Alert } from 'react-native';
-import * as Yup from 'yup';
+import { View, ScrollView } from 'react-native';
 
 
 import Container from '../components/Container';
@@ -29,7 +28,7 @@ const CadastroProjeto = ({ route }) => {
     const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
 
 
-   useEffect(() => {
+    useEffect(() => {
         if (item) {
             setNomeProjeto(item.nomeProjeto);
             setAutorProjeto(item.autorProjeto);
@@ -40,60 +39,42 @@ const CadastroProjeto = ({ route }) => {
             setRepositorio(item.repositorio);
         }
 
-    }, [item]); 
+    }, [item]);
 
-    async function handleSalvar() {
-       try{
-        const schema = Yup.object().shape({
-            nomeProjeto: Yup.string().required("Nome do projeto é obrigatório"),
-            autorProjeto: Yup.string().required("Nome obrigatório"),
-            emailUsuario: Yup.string().required("E-mail obrigatório").email("Email inválido"),
-            tecnologias:  Yup.string().required("Obrigatório informar as tecnologias utilizadas"),
-            descricaoProjeto: Yup.string().required("Descrição do projeto é obrigatório"),
-            descricaoVaga: Yup.string().required("Descrição da vaga é obrigatória"),
-            repositorio: Yup.string().required("Obrigatório informar o repositório")
-        })
-       await schema.validate({nomeProjeto, autorProjeto, emailUsuario, tecnologias, descricaoProjeto, descricaoVaga, repositorio})
-       if (item) {
-        updateProjetos({
-            "id": item.id,
-            "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,
-            "repositorio": repositorio,
-            "autorProjeto": autorProjeto,
-            "quantidadeParticipante": quantidadeParticipante,
-            "participantesProjeto": [],
-        }).then(res => { navigation.goBack(); });
-    } else {
-        insertProjetos({
-            "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,
-            "repositorio": repositorio,
-            "autorProjeto": autorProjeto,
-            "quantidadeParticipante": 1,
-            "participantesProjeto": [],
-        }).then(res => {
-            navigation.goBack();
-        });
-    }
-       Alert.alert('Cadastro realizado com sucesso!')
-       } catch(error){
-        if(error instanceof Yup.ValidationError){
-          Alert.alert(error.message)
+    const handleSalvar = () => {
+        if (item) {
+            updateProjetos({
+                "id": item.id,
+                "nomeProjeto": nomeProjeto,
+                "emailUsuario": emailUsuario,
+                "descricaoProjeto": descricaoProjeto,
+                "tecnologias": tecnologias,
+                "descricaoVaga": descricaoVaga,
+                "Finalizado": false,
+                "repositorio": repositorio,
+                "autorProjeto": autorProjeto,
+                "quantidadeParticipante": quantidadeParticipante,
+                "participantesProjeto": [],
+            }).then(res => { navigation.goBack(); });
+        } else {
+            insertProjetos({
+                "nomeProjeto": nomeProjeto,
+                "emailUsuario": emailUsuario,
+                "descricaoProjeto": descricaoProjeto,
+                "tecnologias": tecnologias,
+                "descricaoVaga": descricaoVaga,
+                "Finalizado": false,
+                "repositorio": repositorio,
+                "autorProjeto": autorProjeto,
+                "quantidadeParticipante": 1,
+                "participantesProjeto": [],
+            }).then(res => {
+                navigation.goBack();
+            });
         }
-
-       }
-
-        
     };
+
+
 
     return (
         <Container>

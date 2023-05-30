@@ -6,10 +6,9 @@ import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
 
-import { useNavigation } from '@react-navigation/native';
 import {useUser} from '../contexts/UserContext';
 
-import {login} from '../services/Auth.services';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
 
