@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView } from 'react-native';
-import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { View, ScrollView, StyleSheet } from 'react-native';
+import { getProjetos, insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
-import { useIsFocused } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -14,8 +13,7 @@ import Text1 from '../components/Text1';
 import Union from '../components/Union';
 import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
-
-//import { updateProjetos, insertProjetos, deleteProjetos } from '../services/Projetos.services';
+import SmallButton from '../components/SmallButton';
 
 const RealizacaoProjeto = ({route}) => {
   const {item} = route.params ? route.params:{};
@@ -31,7 +29,6 @@ const RealizacaoProjeto = ({route}) => {
 
   const navigation = useNavigation();
   
-  const isFocused = useIsFocused();
 
   useEffect(() => {
     if(item){
@@ -47,9 +44,9 @@ const RealizacaoProjeto = ({route}) => {
     }
   }, [item])
 
-  //const handleExcluir = () => {
-    //deleteGasto(res.id).then(res=>{navigation.goBack();});
-  //};
+  const handleExcluir = () => {
+    deleteProjetos(item.id).then(res=>{navigation.goBack();});
+  };
 
   return (
     <Container>
@@ -92,11 +89,24 @@ const RealizacaoProjeto = ({route}) => {
             </SmallCard>
           </Union>
           <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto"/> 
+          <View style={styles.button2}>
+          <SmallButton onPress={() => navigation.navigate('CadastroProjeto', {item})} title="Editar Projeto"/> 
+          <SmallButton onPress={handleExcluir} title="Apagar Projeto"/> 
+          </View>
           <Button1 onPress={() => navigation.goBack()} title="Voltar"/>
         </Body>
       </ScrollView>
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  button2: {
+    flex: 1,
+        justifyContent: "space-between",
+        flexDirection: "row"
+  }
+}
+);
 
 export default RealizacaoProjeto;
