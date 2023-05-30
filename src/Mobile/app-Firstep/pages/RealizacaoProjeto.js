@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView } from 'react-native';
-import { getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { View, ScrollView, StyleSheet } from 'react-native';
+import { getProjetos, insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
-import { useIsFocused } from '@react-navigation/native';
+import {useIsFocused} from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -14,8 +14,10 @@ import Text1 from '../components/Text1';
 import Union from '../components/Union';
 import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
+import SmallButton from '../components/SmallButton';
 
-const RealizacaoProjeto = () => {
+const RealizacaoProjeto = ({route}) => {
+  const {item} = route.params ? route.params:{};
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
   const [descricaoProjeto, setDescricaoProjeto] = useState('');
@@ -24,35 +26,37 @@ const RealizacaoProjeto = () => {
   const [repositorio, setRepositorio] = useState('');
   const [emailUsuario, setEmailUsuario] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
+  const [finalizado, setFinalizado] = useState('');
   const [participantesProjeto, setParticipantesProjeto] = useState([]);
 
   const navigation = useNavigation();
-
   const isFocused = useIsFocused();
+  
 
   useEffect(() => {
-    fetchProjetos()
+    if(item){
+    setId(item.id)
+    setNomeProjeto(item.nomeProjeto)
+    setDescricaoProjeto(item.descricaoProjeto)
+    setTecnologias(item.tecnologias)
+    setDescricaoVaga(item.descricaoVaga)
+    setRepositorio(item.repositorio)
+    setEmailUsuario(item.emailUsuario)
+    setAutorProjeto(item.autorProjeto)
+    setFinalizado(item.finalizado)
+    setParticipantesProjeto(item.participantesProjeto)
+    }
   }, [isFocused])
 
-  async function fetchProjetos() {
-
-    const res = await getProjetos("2")
-    setId(res.id)
-    setNomeProjeto(res.nomeProjeto)
-    setDescricaoProjeto(res.descricaoProjeto)
-    setTecnologias(res.tecnologias)
-    setDescricaoVaga(res.descricaoVaga)
-    setRepositorio(res.repositorio)
-    setEmailUsuario(res.emailUsuario)
-    setAutorProjeto(res.autorProjeto)
-    setParticipantesProjeto(res.participantesProjeto)
+  const handleExcluir = () => {
+    deleteProjetos(item.id).then(res=>{navigation.goBack();});
   };
 
   return (
     <Container>
       <ScrollView>
         <Logo/>
-        <TextTitle name={nomeProjeto}/>
+        <TextTitle title={nomeProjeto}/>
         <Body>
           <View>
             <Card>
@@ -89,11 +93,26 @@ const RealizacaoProjeto = () => {
             </SmallCard>
           </Union>
           <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto"/> 
+          
+          <View style={styles.button2}>
+          <SmallButton onPress={() => navigation.navigate('CadastroProjeto', {item})} title="Editar Projeto"/> 
+          <SmallButton onPress={handleExcluir} title="Apagar Projeto"/> 
+          </View>
           <Button1 onPress={() => navigation.goBack()} title="Voltar"/>
-        </Body>
+          
+          </Body>
       </ScrollView>
     </Container>
   );
 };
+
+const styles = StyleSheet.create({
+  button2: {
+    flex: 1,
+        justifyContent: "space-between",
+        flexDirection: "row"
+  }
+}
+);
 
 export default RealizacaoProjeto;
