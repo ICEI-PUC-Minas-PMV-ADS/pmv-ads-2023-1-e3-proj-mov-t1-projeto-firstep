@@ -5,13 +5,53 @@ import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
+import { insertUsuarios, updateUsuarios, deleteUsuarios } from '../services/Usuarios.services';
+import { useNavigation } from '@react-navigation/native';
 
-const CadastroUsuario = () => {
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [senha, setSenha] = useState('');
-    const [descricaoAluno, setDescricaoAluno] = useState('');
-    const [github, setGithub] = useState('');
+const CadastroUsuario = ({ route }) => {
+    const navigation = useNavigation();
+    const { item } = route.params ? route.params : {};
+
+    const [nomeUsuario, setNomeUsuario] = useState('');
+    const [emailUsuario, setEmailUsuario] = useState('');
+    const [senhalUsuario, setSenhaUsuario] = useState('');
+    const [descricaoUsuario, setDescricaoUsuario] = useState('');
+    const [repositorio, setRepositorio] = useState('');
+
+
+    useEffect(() => {
+        if (item) {
+            setNomeUsuario(item.nomeUsuario);
+            setEmailUsuario(item.emailUsuario);
+            setSenhaUsuario(item.senhaUsuario);
+            setDescricaoUsuario(item.descricaoUsuario);
+            setRepositorio(item.repositorio);
+        }
+
+    }, [item]);
+
+    const handleSalvar = () => {
+        if (item) {
+            updateUsuarios({
+                "id": item.id,
+                "nomeUsuario": nomeUsuario,
+                "emailUsuario": emailUsuario,
+                "senhaUsuario": senhaUsuario,
+                "descricaoUsuario": descricaoUsuario,
+                "repositorio": repositorio,
+            }).then(res => { navigation.goBack(); });
+        } else {
+            insertUsuarios({
+                "nomeUsuario": nomeUsuario,
+                "emailUsuario": emailUsuario,
+                "senhaUsuario": senhaUsuario,
+                "descricaoUsuario": descricaoUsuario,
+                "repositorio": repositorio,
+            }).then(res => {
+                navigation.goBack();
+            });
+        }
+    };
 
     return (
         <Container>
@@ -23,35 +63,34 @@ const CadastroUsuario = () => {
                 <Input
                     label="* Nome:"
                     value={nome}
-                    onChangeText={(text) => setNome(text)}
+                    onChangeText={(text) => setNomeUsuario(text)}
                 />
                 <Input
                     label="* E-mail:"
                     value={email}
-                    onChangeText={(text) => setEmail(text)}
+                    onChangeText={(text) => setEmailUsuario(text)}
                 />
                 <Input
                     label="* Senha:"
                     value={senha}
-                    onChangeText={(text) => setSenha(text)}
+                    onChangeText={(text) => setSenhaUsuario(text)}
                 />
                 <Input
                     label="* Descrição:"
                     value={descricaoAluno}
-                    onChangeText={(text) => setDescricaoAluno(text)}
+                    onChangeText={(text) => setDescricaoUsuario(text)}
                 />
                 <Input
                     label="* Github:"
                     value={github}
-                    onChangeText={(text) => setGithub(text)}
+                    onChangeText={(text) => setRepositorio(text)}
                 />
                 <Headline style={styles.textObservacao}>*Obrigatório</Headline>
-                <Button
-                    mode="contained"
-                    onPress={() => console.log('Pressed')}
-                    style={styles.button}>
-                    Enviar Cadastro
-                </Button>
+                    item
+                        ? <Button1
+                            title="Enviar Cadastro"
+                            onPress={handleSalvar}
+                        />
             </Body>
         </Container>
     );
