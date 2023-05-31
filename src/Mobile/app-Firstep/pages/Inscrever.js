@@ -12,7 +12,8 @@ import Card from '../components/Card';
 import Body from '../components/Body';
 
 
-const Inscrever = () => {
+const Inscrever = ({route}) => {
+  const { item } = route.params ? route.params : {};
 
   const { nome } = useUser();
   const navigation = useNavigation();
@@ -36,7 +37,8 @@ const Inscrever = () => {
 
   async function fetchProjetos() {
 
-    const res = await getProjetoEspecifico("1")
+    console.log(item)
+    const res = await getProjetoEspecifico(item.id)
     console.log(res)
     setId(res.id)
     console.log(res)
