@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, FlatList, Image, SafeAreaView, TextInput } from 'react-native';
 import { Button, Headline, List } from 'react-native-paper';
-
-
+import { useIsFocused } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -22,6 +22,7 @@ const Logo2 = () => {
 };
 
 const TelaPosLogin = () => {
+    const navigation = useNavigation();
 
     const [search, setSearch] = useState('');
     const [filteredData, setFilteredData] = useState([]);
@@ -58,6 +59,17 @@ const TelaPosLogin = () => {
             <List.Item styles={styles.itens}
                 title={item.nomeProjeto}
                 left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
+                onPress={() => navigation.navigate('RealizacaoProjeto', {item})} 
+            />
+        )
+    }
+
+    const ItemView_k = ({ item }) => {
+        return (
+            <List.Item styles={styles.itens}
+                title={item.nomeProjeto}
+                left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
+                onPress={() => navigation.navigate('Inscrever', {item})} 
             />
         )
     }
@@ -74,8 +86,6 @@ const TelaPosLogin = () => {
                 <Headline>Olá Usuário,</Headline>
             </View>
             <Body>
-            <SafeAreaView style={{ flex: 1 }}>
-               
                     <TextInput
                         style={styles.textInputStyle}
                         onChangeText={(text) => searchFilter(text)}
@@ -83,6 +93,7 @@ const TelaPosLogin = () => {
                         underlineColorAndroid="transparent"
                         placeholder="Buscar projetos"
                     />
+                    <Text>Meus Projetos</Text>
                     <Card>
                         <FlatList
                             data={filteredData}
@@ -90,7 +101,14 @@ const TelaPosLogin = () => {
                             renderItem={ItemView}
                         />
                     </Card>
-            </SafeAreaView>
+                    <Text>Projetos em andamento</Text>
+                    <Card>
+                        <FlatList
+                            data={filteredData}
+                            keyExtractor={item => item.id}
+                            renderItem={ItemView_k}
+                        />
+                    </Card>
             </Body>
         </Container>
     );
