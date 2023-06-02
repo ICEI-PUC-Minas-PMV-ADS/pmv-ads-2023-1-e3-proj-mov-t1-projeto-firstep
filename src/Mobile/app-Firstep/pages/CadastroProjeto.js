@@ -54,7 +54,24 @@ const CadastroProjeto = ({ route }) => {
             repositorio: Yup.string().required("Obrigatório informar o repositório")
         })
        await schema.validate({nomeProjeto, autorProjeto, emailUsuario, tecnologias, descricaoProjeto, descricaoVaga, repositorio})
-       
+       if(item){
+        updateProjetos({
+            "id": item.id,
+            "nomeProjeto": nomeProjeto,
+            "emailUsuario": emailUsuario,
+            "descricaoProjeto": descricaoProjeto,
+            "tecnologias": tecnologias,
+            "descricaoVaga": descricaoVaga,
+            "Finalizado": false,
+            "repositorio": repositorio,
+            "autorProjeto": autorProjeto,
+            "quantidadeParticipante": item.quantidadeParticipante,
+            "participantesProjeto": item.participantesProjeto,
+        }).then(res => {
+            navigation.goBack();
+        });
+        Alert.alert('Cadastro editado com sucesso!')
+       }else{
         insertProjetos({
             "nomeProjeto": nomeProjeto,
             "emailUsuario": emailUsuario,
@@ -69,49 +86,14 @@ const CadastroProjeto = ({ route }) => {
         }).then(res => {
             navigation.goBack();
         });
-    
        Alert.alert('Cadastro realizado com sucesso!')
-       } catch(error){
+       } }catch(error){
         if(error instanceof Yup.ValidationError){
           Alert.alert(error.message)
         }
     }};
 
-    async function handleEditar() {
-        try{
-         const schema = Yup.object().shape({
-             nomeProjeto: Yup.string().required("Nome do projeto é obrigatório"),
-             autorProjeto: Yup.string().required("Nome obrigatório"),
-             emailUsuario: Yup.string().required("E-mail obrigatório").email("Email inválido"),
-             tecnologias:  Yup.string().required("Obrigatório informar as tecnologias utilizadas"),
-             descricaoProjeto: Yup.string().required("Descrição do projeto é obrigatório"),
-             descricaoVaga: Yup.string().required("Descrição da vaga é obrigatória"),
-             repositorio: Yup.string().required("Obrigatório informar o repositório")
-         })
-        await schema.validate({nomeProjeto, autorProjeto, emailUsuario, tecnologias, descricaoProjeto, descricaoVaga, repositorio})
-        if(item){
-         updateProjetos({
-             "id": item.id,
-             "nomeProjeto": nomeProjeto,
-             "emailUsuario": emailUsuario,
-             "descricaoProjeto": descricaoProjeto,
-             "tecnologias": tecnologias,
-             "descricaoVaga": descricaoVaga,
-             "Finalizado": false,
-             "repositorio": repositorio,
-             "autorProjeto": autorProjeto,
-             "quantidadeParticipante": 1,
-             "participantesProjeto": [],
-         }).then(res => {
-             navigation.goBack();
-         });
-         Alert.alert('Cadastro editado com sucesso!')
-        }} catch(error){
-         if(error instanceof Yup.ValidationError){
-           Alert.alert(error.message)
-         }
-     }};
-
+    
     return (
         <Container>
             <ScrollView>
@@ -157,7 +139,7 @@ const CadastroProjeto = ({ route }) => {
                     {item
                         ? <Button1
                             title="Editar dados"
-                            onPress={handleEditar}
+                            onPress={handleSalvar}
                         />
                         : <Button1
                             title="Criar Projeto"
