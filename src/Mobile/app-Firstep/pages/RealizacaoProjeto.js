@@ -3,7 +3,7 @@ import { View, ScrollView, StyleSheet, Alert } from 'react-native';
 import { updateProjetos, deleteProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
 import { useIsFocused } from '@react-navigation/native';
-import {useUser} from '../contexts/UserContext';
+import { useUser } from '../contexts/UserContext';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -16,6 +16,7 @@ import Union from '../components/Union';
 import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
 import SmallButton from '../components/SmallButton';
+import ButtonEnd from '../components/ButtonEnd';
 
 const RealizacaoProjeto = ({ route }) => {
   const { item } = route.params ? route.params : {};
@@ -29,12 +30,12 @@ const RealizacaoProjeto = ({ route }) => {
   const [emailUsuario, setEmailUsuario] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
   const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
-  const [finalizado, setFinalizado] = useState('');
+  const [finalizado, setFinalizado] = useState(false);
   const [participantesProjeto, setParticipantesProjeto] = useState(['']);
 
   const navigation = useNavigation();
   const isFocused = useIsFocused();
-  
+
   useEffect(() => {
     if (item) {
       setId(item.id)
@@ -50,22 +51,23 @@ const RealizacaoProjeto = ({ route }) => {
       setParticipantesProjeto(item.participantesProjeto)
     }
   }, [isFocused])
-  
-  const toggleSwitch = () => {
-    setFinalizado(!finalizado);  
-    if(item){
-      updateProjetos({"Finalizado": true});
-    }else{
-      updateProjetos({"Finalizado": false});
-    }
-  }
 
   const handleExcluir = () => {
     deleteProjetos(item.id).then(res => { navigation.goBack(); });
   }
-  
+
+  const removerParticipante = () => {
+    const array = '';
+    for (let i = 0; i < 6; i++) {
+      if (participantesProjeto[i] != nome) {
+        array.push(participantesProjeto[i]);
+      }
+    }
+    return array
+  }
+
   const handleSair = () => {
-    if(quantidadeParticipante > 0){
+    if (quantidadeParticipante > 0) {
       const novaLista = removerParticipante()
       updateProjetos({
         "id": id,
@@ -80,26 +82,73 @@ const RealizacaoProjeto = ({ route }) => {
         "quantidadeParticipante": quantidadeParticipante - 1,
         "participantesProjeto": novaLista
       });
-    }else{
-      Alert.alert('Não há mais participantes no projeto');
+    } else {
+      Alert.alert('Você já saiu do projeto');
     }
   }
 
-  const removerParticipante  = () => {
-    const array = '';
-    for(let i=0; i<6; i++){
-      if(participantesProjeto[i] != nome){
-        array.push(participantesProjeto[i]);
-      }
-    }
-    return array
+  const finalizadorDeProjeto = () => {
+    updateProjetos({
+      "id": id,
+      "nomeProjeto": nomeProjeto,
+      "emailUsuario": emailUsuario,
+      "descricaoProjeto": descricaoProjeto,
+      "tecnologias": tecnologias,
+      "descricaoVaga": descricaoVaga,
+      "Finalizado": true,
+      "repositorio": repositorio,
+      "autorProjeto": autorProjeto,
+      "quantidadeParticipante": quantidadeParticipante,
+      "participantesProjeto": participantesProjeto
+    });
   }
+
+  const ativadorDeProjeto = () => {
+    updateProjetos({
+      "id": id,
+      "nomeProjeto": nomeProjeto,
+      "emailUsuario": emailUsuario,
+      "descricaoProjeto": descricaoProjeto,
+      "tecnologias": tecnologias,
+      "descricaoVaga": descricaoVaga,
+      "Finalizado": false,
+      "repositorio": repositorio,
+      "autorProjeto": autorProjeto,
+      "quantidadeParticipante": quantidadeParticipante,
+      "participantesProjeto": participantesProjeto
+    });
+  }
+
+  const finalizarProjeto = () => {
+    if (item) {
+      if (!item.finalizado) {
+        Alert.alert('Deseja finalizar o projeto?', [
+          { text: 'OK', onPress: () => finalizadorDeProjeto }, { text: 'Cancel', onPress: () => console.log('Cancelar'), style: 'cancel' }
+        ]);
+      } else {
+        Alert.alert('Deseja ativar o projeto novamente?', [
+          { text: 'OK', onPress: () => ativadorDeProjeto }, { text: 'Cancel', onPress: () => console.log('Cancelar'), style: 'cancel' }
+        ]);
+      }
+    } else {
+      Alert.alert('Você não selecionou nenhum projeto!');
+    }
+  }
+
+  const escolherCor = () => {
+    if(finalizado){
+      return "#3E2500"
+    }else{
+      return "#4AC288"
+    }
+}
 
   return (
     <Container>
       <ScrollView>
         <Logo />
         <TextTitle title={nomeProjeto} />
+        <ButtonEnd color={escolherCor} onPress={finalizarProjeto} title="Finalizar projeto" />
         <Body>
           <View>
             <Card>
