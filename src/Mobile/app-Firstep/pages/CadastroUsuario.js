@@ -35,18 +35,18 @@ const CadastroUsuario = ({ route }) => {
         if (item) {
             updateUsuarios({
                 "id": item.id,
-                "nomeUsuario": nomeUsuario,
-                "emailUsuario": emailUsuario,
-                "senhaUsuario": senhaUsuario,
-                "descricaoUsuario": descricaoUsuario,
+                "nome": nomeUsuario,
+                "email": emailUsuario,
+                "password": senhaUsuario,
+                "descricaoPerfil": descricaoUsuario,
                 "repositorio": repositorio,
             }).then(res => { navigation.goBack(); });
         } else {
             insertUsuarios({
-                "nomeUsuario": nomeUsuario,
-                "emailUsuario": emailUsuario,
-                "senhaUsuario": senhaUsuario,
-                "descricaoUsuario": descricaoUsuario,
+                "nome": nomeUsuario,
+                "email": emailUsuario,
+                "password": senhaUsuario,
+                "descricaoPerfil": descricaoUsuario,
                 "repositorio": repositorio,
             }).then(res => {
                 navigation.goBack();
