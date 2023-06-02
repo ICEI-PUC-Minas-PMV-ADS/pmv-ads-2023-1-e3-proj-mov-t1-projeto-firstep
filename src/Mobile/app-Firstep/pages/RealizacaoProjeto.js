@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
-import { getProjetos, insertProjetos, updateProjetos, deleteProjetos } from '../services/Projetos.services';
+import { View, ScrollView, StyleSheet, Alert } from 'react-native';
+import { updateProjetos, deleteProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
-import {useIsFocused} from '@react-navigation/native';
+import { useIsFocused } from '@react-navigation/native';
+import {useUser} from '../contexts/UserContext';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
@@ -16,8 +17,9 @@ import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
 import SmallButton from '../components/SmallButton';
 
-const RealizacaoProjeto = ({route}) => {
-  const {item} = route.params ? route.params:{};
+const RealizacaoProjeto = ({ route }) => {
+  const { item } = route.params ? route.params : {};
+  const { nome } = useUser();
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
   const [descricaoProjeto, setDescricaoProjeto] = useState('');
@@ -26,81 +28,123 @@ const RealizacaoProjeto = ({route}) => {
   const [repositorio, setRepositorio] = useState('');
   const [emailUsuario, setEmailUsuario] = useState('');
   const [autorProjeto, setAutorProjeto] = useState('');
+  const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
   const [finalizado, setFinalizado] = useState('');
-  const [participantesProjeto, setParticipantesProjeto] = useState([]);
+  const [participantesProjeto, setParticipantesProjeto] = useState(['']);
 
   const navigation = useNavigation();
   const isFocused = useIsFocused();
   
-
   useEffect(() => {
-    if(item){
-    setId(item.id)
-    setNomeProjeto(item.nomeProjeto)
-    setDescricaoProjeto(item.descricaoProjeto)
-    setTecnologias(item.tecnologias)
-    setDescricaoVaga(item.descricaoVaga)
-    setRepositorio(item.repositorio)
-    setEmailUsuario(item.emailUsuario)
-    setAutorProjeto(item.autorProjeto)
-    setFinalizado(item.finalizado)
-    setParticipantesProjeto(item.participantesProjeto)
+    if (item) {
+      setId(item.id)
+      setNomeProjeto(item.nomeProjeto)
+      setDescricaoProjeto(item.descricaoProjeto)
+      setTecnologias(item.tecnologias)
+      setDescricaoVaga(item.descricaoVaga)
+      setRepositorio(item.repositorio)
+      setEmailUsuario(item.emailUsuario)
+      setAutorProjeto(item.autorProjeto)
+      setFinalizado(item.finalizado)
+      setQuantidadeParticipante(res.quantidadeParticipante)
+      setParticipantesProjeto(item.participantesProjeto)
     }
   }, [isFocused])
+  
+  const toggleSwitch = () => {
+    setFinalizado(!finalizado);  
+    if(item){
+      updateProjetos({"Finalizado": true});
+    }else{
+      updateProjetos({"Finalizado": false});
+    }
+  }
 
   const handleExcluir = () => {
-    deleteProjetos(item.id).then(res=>{navigation.goBack();});
-  };
+    deleteProjetos(item.id).then(res => { navigation.goBack(); });
+  }
+  
+  const handleSair = () => {
+    if(quantidadeParticipante > 0){
+      const novaLista = removerParticipante()
+      updateProjetos({
+        "id": id,
+        "nomeProjeto": nomeProjeto,
+        "emailUsuario": emailUsuario,
+        "descricaoProjeto": descricaoProjeto,
+        "tecnologias": tecnologias,
+        "descricaoVaga": descricaoVaga,
+        "Finalizado": finalizado,
+        "repositorio": repositorio,
+        "autorProjeto": autorProjeto,
+        "quantidadeParticipante": quantidadeParticipante - 1,
+        "participantesProjeto": novaLista
+      });
+    }else{
+      Alert.alert('Não há mais participantes no projeto');
+    }
+  }
+
+  const removerParticipante  = () => {
+    const array = '';
+    for(let i=0; i<6; i++){
+      if(participantesProjeto[i] != nome){
+        array.push(participantesProjeto[i]);
+      }
+    }
+    return array
+  }
 
   return (
     <Container>
       <ScrollView>
-        <Logo/>
-        <TextTitle title={nomeProjeto}/>
+        <Logo />
+        <TextTitle title={nomeProjeto} />
         <Body>
           <View>
             <Card>
-              <Text1 title="Descrição do projeto:"/>
-              <Text1 name={descricaoProjeto}/>
+              <Text1 title="Descrição do projeto:" />
+              <Text1 name={descricaoProjeto} />
             </Card>
           </View>
           <View>
             <Card>
-              <Text1 title="Descrição da vaga:"/>
-              <Text1 name={descricaoVaga}/>
+              <Text1 title="Descrição da vaga:" />
+              <Text1 name={descricaoVaga} />
             </Card>
           </View>
           <View>
             <Card>
-              <Text1 title="Tecnologias utilizadas:"/>
-              <Text1 name={tecnologias}/>
+              <Text1 title="Tecnologias utilizadas:" />
+              <Text1 name={tecnologias} />
             </Card>
           </View>
           <View>
             <Card>
-              <Text1 title="Autor do projeto: " name={autorProjeto}/>
-              <Text1 title="Email do usuário: " name={emailUsuario}/>
-              <Text1 title="Repositório: " name={repositorio}/>
+              <Text1 title="Autor do projeto: " name={autorProjeto} />
+              <Text1 title="Email do usuário: " name={emailUsuario} />
+              <Text1 title="Repositório: " name={repositorio} />
             </Card>
           </View>
           <Union>
             <SmallCard>
-              <SmallText title="Precisa de ajuda?"/>
-              <Button1 onPress={() => console.log('Solicitar tutor')} title="Solicitar Tutor"/>
+              <SmallText title="Precisa de ajuda?" />
+              <Button1 onPress={() => console.log('Solicitar tutor')} title="Solicitar Tutor" />
             </SmallCard>
             <SmallCard>
-              <SmallText name={participantesProjeto}/>
+              <SmallText name={participantesProjeto} />
             </SmallCard>
           </Union>
-          <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto"/> 
-          
+          <Button1 onPress={handleSair} title="Sair do Projeto" />
+
           <View style={styles.button2}>
-          <SmallButton onPress={() => navigation.navigate('CadastroProjeto', {item})} title="Editar Projeto"/> 
-          <SmallButton onPress={handleExcluir} title="Apagar Projeto"/> 
+            <SmallButton onPress={() => navigation.navigate('CadastroProjeto', { item })} title="Editar Projeto" />
+            <SmallButton onPress={handleExcluir} title="Apagar Projeto" />
           </View>
-          <Button1 onPress={() => navigation.goBack()} title="Voltar"/>
-          
-          </Body>
+
+
+          <Button1 onPress={() => navigation.goBack()} title="Voltar" />
+        </Body>
       </ScrollView>
     </Container>
   );
@@ -109,8 +153,8 @@ const RealizacaoProjeto = ({route}) => {
 const styles = StyleSheet.create({
   button2: {
     flex: 1,
-        justifyContent: "space-between",
-        flexDirection: "row"
+    justifyContent: "space-between",
+    flexDirection: "row"
   }
 }
 );
