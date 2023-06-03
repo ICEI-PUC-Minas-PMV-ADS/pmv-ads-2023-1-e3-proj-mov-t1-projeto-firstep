@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, View, Alert,ScrollView } from "react-native";
+import { StyleSheet, View, Alert, ScrollView } from "react-native";
 import { TextInput, Button, Headline } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import { useUser } from "../contexts/UserContext";
@@ -9,6 +9,7 @@ import Container from "../components/Container";
 import Body from "../components/Body";
 import Input from "../components/Input";
 import Logo from "../components/Logo";
+import MediumButton from "../components/MediumButton";
 
 const Login = () => {
   const navigation = useNavigation();
@@ -33,49 +34,32 @@ const Login = () => {
     });
   };
   return (
-    <Container> 
-       <ScrollView>    
-        <Logo />    
+    <Container>
+      <ScrollView>
+        <Logo />
 
-      <Body>
-        <Input
-          label="Email"
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-          left={<TextInput.Icon name="account" />}
-        />
-        <Input
-          label="Senha"
-          value={password}
-          secureTextEntry
-          onChangeText={(text) => setPassword(text)}
-          left={<TextInput.Icon name="key" />}
-        />
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => setSigned(true)}>        
-          LOGIN
-        </Button>
-        <Button
-          style={styles.button}
-          mode="contained"
-          onPress={() => navigation.navigate("Register")}>       
-          Registrar
-        </Button>
-      </Body>
-      </ScrollView> 
+        <Body>
+          <Input
+            label="Email"
+            value={email}
+            onChangeText={(text) => setEmail(text)}
+            left={<TextInput.Icon name="account" />}
+          />
+          <Input
+            label="Senha"
+            value={password}
+            secureTextEntry
+            onChangeText={(text) => setPassword(text)}
+            left={<TextInput.Icon name="key" />}
+          />
+          <MediumButton onPress={() => setSigned(true)} title="LOGIN" />
+          <MediumButton
+            onPress={() => navigation.navigate("Register")}
+            title="REGISTRAR"
+          />
+        </Body>
+      </ScrollView>
     </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    marginVertical: 8,
-    marginHorizontal: 40,
-    backgroundColor: "#3E2500",
-  },
- 
-});
-
 export default Login;
