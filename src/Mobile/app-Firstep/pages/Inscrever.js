@@ -4,17 +4,19 @@ import { Button, Text } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 import { getProjetoEspecifico, getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
-import {useUser} from '../contexts/UserContext';
+import { useUser } from '../contexts/UserContext';
 
 import Container from '../components/Container';
 import Logo from '../components/Logo';
 import Card from '../components/Card';
 import Body from '../components/Body';
+import TextTitle from '../components/TextTitle';
+import Text1 from '../components/Text1';
+import QuantParticipantes from '../components/QuantParticipantes';
+import MediumButton from '../components/MediumButton';
 
-
-const Inscrever = ({route}) => {
+const Inscrever = ({ route }) => {
   const { item } = route.params ? route.params : {};
-
   const { nome } = useUser();
   const navigation = useNavigation();
   const [id, setId] = useState('');
@@ -75,84 +77,43 @@ const Inscrever = ({route}) => {
       Alert.alert('Limite máximo de participantes foi atingido');
     }
   };
-  
-const adicionarNovoParticipante  = () => {
-  const array = participantesProjeto
- array.push(nome)
- return array
 
-}
+  const adicionarNovoParticipante = () => {
+    const array = participantesProjeto
+    array.push(nome)
+    return array
+  }
   return (
     <Container>
       <ScrollView>
-        <View style={styles.logo}>
-          <Logo />
-        </View>
+        <Logo />
         <Body>
-          <Text style={styles.titulo}>{nomeProjeto}</Text>
+          <TextTitle title={nomeProjeto} />
           <Card>
-            <Text style={styles.texto}>{descricaoProjeto}</Text>
+            <Text1 title="Descrição do projeto:" />
+            <Text1 name={descricaoProjeto} />
           </Card>
           <Card>
-            <Text style={styles.texto}>{descricaoVaga}</Text>
+            <Text1 title="Descrição da vaga:" />
+            <Text1 name={descricaoVaga} />
           </Card>
           <Card>
-            <Text style={styles.texto}>Tecnologias Utilizadas: </Text>
-            <Text style={styles.texto}>{tecnologias}</Text>
+            <Text1 title="Tecnologias utilizadas:" />
+            <Text1 name={tecnologias} />
           </Card>
 
-          <Text style={styles.quantPart}>
-            Quantidade de Participantes: {quantidadeParticipante}
-          </Text>
+          <QuantParticipantes title="Quantidade de Participantes: " Text1 name={quantidadeParticipante} />
 
-          <Button
-            style={styles.button}
-            mode="contained"
-            onPress={handleSalvar}>
-            Candidatar-se
-          </Button>
-
-          <Button
-            mode="contained"
-            onPress={() => navigation.goBack()}
-            style={styles.button}>
-            Voltar
-          </Button>
+          <MediumButton
+            onPress={handleSalvar} title="Candidatar-se"
+          />
+          <MediumButton
+            onPress={() => navigation.goBack()} title="Voltar"
+          />
         </Body>
       </ScrollView>
     </Container>
   );
 };
-const styles = StyleSheet.create({
-  texto: {
-    fontSize: 15,
-  },
-
-  button: {
-    marginVertical: 8,
-    marginHorizontal: 40,
-    backgroundColor: '#3E2500',
-  },
-
-  titulo: {
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20,
-    fontSize: 25,
-  },
-
-  quantPart: {
-    fontSize: 18,
-    marginBottom: 15,
-    marginVertical: 8,
-    marginHorizontal: 40,
-    textAlign: 'center',
-  },
-
-  logo: {
-    alignItems: 'center',
-    marginTop: 10,
-  },
-});
 
 export default Inscrever;
