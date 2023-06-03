@@ -1,0 +1,72 @@
+@TOKEN=TOKEN_KEY
+### LOGIN
+POST http://localhost:3000/login
+content-type: application/json
+
+{
+    "email":"karen@pucminas.br",
+    "senha":"12345"
+}
+
+### PROJETO
+
+GET http://localhost:3000/660/projetos
+Authorization: Bearer {{TOKEN}}
+
+### CREATE
+POST http://localhost:3000/660/projetos
+content-type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+     "nomeProjeto": "AgriCont",
+    "autorProjeto": "Cláudia ",
+    "emailUsuario": "agricont@gmail.com",
+    "tecnologias": "HTML, CSS, BootStrap, NET C#,SQLServer",
+    "Finalizado": false,
+    "descricaoProjeto": "O objetivo deste projeto é facilitar o controle patrimonial",
+    "descricaoVaga": "Empresa: Juninho - Dev fullstack jr -  Salário: À Combinar",
+    "repositorio": "github.com/AgriCont",
+    "quantidadeParticipante": 1,
+    "participantesProjeto": [
+      "Carolina Laurindo",
+      "Douglas Raynner",
+      "Jéssica Grimaldi",
+      "Jeferson Queiroz",
+      "Karen Noguti"
+    ]
+}
+
+### UPDATE
+PUT http://localhost:3000/660/projetos/2
+content-type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+    "id": 2,
+    "nomeProjeto": "AgriCont",
+    "autorProjeto": "Cláudia ",
+    "emailUsuario": "agricont@gmail.com",
+    "tecnologias": "HTML, CSS, BootStrap, NET C#,SQLServer",
+    "Finalizado": false,
+    "descricaoProjeto": "O objetivo deste projeto é facilitar o controle patrimonial",
+    "descricaoVaga": "Empresa: Juninho - Dev fullstack jr -  Salário: À Combinar",
+    "repositorio": "github.com/AgriCont",
+    "quantidadeParticipante": 5,
+    "participantesProjeto": [
+      "Carolina Laurindo",
+      "Douglas Raynner",
+      "Jéssica Grimaldi",
+      "Jeferson Queiroz",
+      "Karen Noguti"
+    ]
+}
+
+
+### GET PROJETO
+GET http://localhost:3000/660/projetos/2
+Authorization: Bearer {{TOKEN}}
+
+### DELETE PROJETO
+DELETE http://localhost:3000/660/projetos/2
+Authorization: Bearer {{TOKEN}}
