@@ -8,7 +8,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Evidência do Teste:** 
 
-<img src="img/print_cadastro.png" width= 250>
+<img src="img/print_cadastro.jpg" width= 250>
 <img src="img/print_cadastro_json.png">
 
 **Avaliação:** Houve êxito no teste pois, após inserir os dados do projeto para cadastro e clicar no botão Criar Projeto, os dados informados foram salvos no Json(https://firstep-json.onrender.com/projetos).
