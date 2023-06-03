@@ -4,7 +4,7 @@ import { BASE_URL } from './Urls';
 export const login = async (param) => {
 
     try {
-        return await API.post(`${BASE_URL}/auth/login`, param).then(
+        return await API.post(`${BASE_URL}/login`, param).then(
 
             response => {
                 return response.data;

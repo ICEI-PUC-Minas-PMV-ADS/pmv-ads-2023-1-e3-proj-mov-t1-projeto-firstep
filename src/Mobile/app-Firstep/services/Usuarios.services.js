@@ -32,7 +32,7 @@ return null;
 
 export const insertUsuarios = async (param) => {
     try{
-      return await API.post(`${BASE_URL}/auth/register`, param).then( 
+      return await API.post(`${BASE_URL}/register`, param).then( 
         response => {
           return response.data;
         },
