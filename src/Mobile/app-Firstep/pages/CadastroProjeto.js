@@ -58,13 +58,14 @@ const CadastroProjeto = ({ route }) => {
         updateProjetos({
             "id": item.id,
             "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,
-            "repositorio": repositorio,
             "autorProjeto": autorProjeto,
+            "emailUsuario": emailUsuario,
+            "tecnologias": tecnologias,
+            "Finalizado": false,
+            "descricaoProjeto": descricaoProjeto, 
+            "descricaoVaga": descricaoVaga,
+            "repositorio": repositorio,
+            
             "quantidadeParticipante": item.quantidadeParticipante,
             "participantesProjeto": item.participantesProjeto,
         }).then(res => {
@@ -74,13 +75,13 @@ const CadastroProjeto = ({ route }) => {
        }else{
         insertProjetos({
             "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": false,
-            "repositorio": repositorio,
             "autorProjeto": autorProjeto,
+            "emailUsuario": emailUsuario,
+            "tecnologias": tecnologias,
+            "Finalizado": false,
+            "descricaoProjeto": descricaoProjeto, 
+            "descricaoVaga": descricaoVaga,
+            "repositorio": repositorio,
             "quantidadeParticipante": 1,
             "participantesProjeto": [],
         }).then(res => {
