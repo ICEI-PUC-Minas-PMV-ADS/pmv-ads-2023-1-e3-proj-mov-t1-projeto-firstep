@@ -10,11 +10,9 @@ import Text1 from '../components/Text1';
 import { insertUsuarios, updateUsuarios } from '../services/Usuarios.services';
 import { useNavigation } from '@react-navigation/native';
 
-
 const CadastroUsuario = ({ route }) => {
     const navigation = useNavigation();
     const { item } = route.params ? route.params : {};
-
     const [nomeUsuario, setNomeUsuario] = useState('');
     const [emailUsuario, setEmailUsuario] = useState('');
     const [senhaUsuario, setSenhaUsuario] = useState('');
@@ -92,6 +90,7 @@ const CadastroUsuario = ({ route }) => {
                 <Input
                     label="* Senha:"
                     value={senhaUsuario}
+                    secureTextEntry
                     onChangeText={(text) => setSenhaUsuario(text)}
                 />
                 <Input
