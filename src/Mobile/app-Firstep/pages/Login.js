@@ -14,8 +14,8 @@ import MediumButton from "../components/MediumButton";
 const Login = () => {
   const navigation = useNavigation();
   const { setSigned } = useUser();
-  const [email, setEmail] = useState("firstep@gmail.com");
-  const [password, setPassword] = useState("firstep");
+  const [email, setEmail] = useState('firstep@gmail.com');
+  const [password, setPassword] = useState('firstep');
 
   const handleLogin = () => {
     login({
@@ -27,9 +27,9 @@ const Login = () => {
       if (res && res.user) {
         setSigned(true);
         setName(res.user.name);
-        AsyncStorage.setItem("@TOKEN_KEY", res.accessToken).then();
+        AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
       } else {
-        Alert.alert("Atenção", "Usuário ou senha inválidos!");
+        Alert.alert('Atenção, Usuário ou senha inválidos!');
       }
     });
   };
@@ -54,7 +54,7 @@ const Login = () => {
           />
           <MediumButton onPress={() => setSigned(true)} title="LOGIN" />
           <MediumButton
-            onPress={() => navigation.navigate("Register")}
+            onPress={() => navigation.navigate('Register')}
             title="REGISTRAR"
           />
         </Body>
