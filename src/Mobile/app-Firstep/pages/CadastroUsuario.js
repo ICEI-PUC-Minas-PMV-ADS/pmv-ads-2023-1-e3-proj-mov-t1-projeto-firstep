@@ -6,8 +6,11 @@ import Body from '../components/Body';
 import Input from '../components/Input';
 import Logo from '../components/Logo';
 import Button1 from '../components/Button1';
+import TextTitle from '../components/TextTitle';
+import Text1 from '../components/Text1';
 import { insertUsuarios, updateUsuarios, deleteUsuarios } from '../services/Usuarios.services';
 import { useNavigation } from '@react-navigation/native';
+
 
 const CadastroUsuario = ({ route }) => {
     const navigation = useNavigation();
@@ -31,7 +34,17 @@ const CadastroUsuario = ({ route }) => {
 
     }, [item]);
 
-    const handleSalvar = () => {
+    async function handleSalvar() {
+        try{
+         const schema = Yup.object().shape({
+             nomeUsuario: Yup.string().required("Nome do projeto é obrigatório"),
+             emailUsuario: Yup.string().required("E-mail obrigatório").email("Email inválido"),
+             senhaUsuario: Yup.string().required("Senha obrigatória").senhaUsuario("Senha inválida"),
+             descricaoUsuario: Yup.string().required("Descrição do projeto é obrigatório"),
+             repositorio: Yup.string().required("Obrigatório informar o repositório")
+         })
+        await schema.validate({nomeProjeto, emailUsuario, senhaUsuario, descricaoUsuario, repositorio})
+        
         if (item) {
             updateUsuarios({
                 "id": item.id,
@@ -40,7 +53,10 @@ const CadastroUsuario = ({ route }) => {
                 "password": senhaUsuario,
                 "descricaoPerfil": descricaoUsuario,
                 "repositorio": repositorio,
-            }).then(res => { navigation.goBack(); });
+            }).then(res => { 
+                navigation.goBack();
+            });
+        Alert.alert('Usuário editado com sucesso!')
         } else {
             insertUsuarios({
                 "nome": nomeUsuario,
@@ -51,15 +67,19 @@ const CadastroUsuario = ({ route }) => {
             }).then(res => {
                 navigation.goBack();
             });
-        }
-    };
+            Alert.alert('Usuário cadastrado com sucesso!')
+        } }catch(error){
+         if(error instanceof Yup.ValidationError){
+           Alert.alert(error.message)
+         }
+     }};
 
     return (
         <Container>
             <ScrollView>
                 <Logo />
-                <Headline style={styles.textTitulo}>Cadastre-se</Headline>
-            <Body>
+                <TextTitle title="Cadastre-se" />
+                <Body>
                 <Input
                     label="* Nome:"
                     value={nomeUsuario}
@@ -85,7 +105,7 @@ const CadastroUsuario = ({ route }) => {
                     value={repositorio}
                     onChangeText={(text) => setRepositorio(text)}
                 />
-                <Headline style={styles.textObservacao}>*Obrigatório</Headline>
+                <Text1 title="*Obrigatório" />
                     <Button1
                             title="Enviar Cadastro"
                             onPress={handleSalvar}
@@ -95,25 +115,5 @@ const CadastroUsuario = ({ route }) => {
         </Container>
     );
 };
-
-const styles = StyleSheet.create({
-
-    textTitulo: {
-        fontWeight: 'bold',
-        textAlign: 'center',
-        marginBottom: 20,
-    },
-    textObservacao: {
-        fontSize: 15,
-        fontWeight: 'bold',
-        textAlign: 'left',
-        marginBottom: 20,
-    },
-    button: {
-        backgroundColor: '#3E2500',
-        borderRadius: 5.0,
-        margin: 10
-    },
-});
 
 export default CadastroUsuario;
