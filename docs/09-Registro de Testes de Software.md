@@ -13,6 +13,14 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Avaliação:** Houve êxito no teste pois, após inserir os dados do projeto para cadastro e clicar no botão Criar Projeto, os dados informados foram salvos no Json(https://firstep-json.onrender.com/projetos).
 
+## CT-05 - Tela Realização de Projeto
+
+**Evidência do Teste:** 
+
+<img src="img/Tela_Inscrever.png">
+
+**Avaliação:** Houve êxito em partes do teste, pois ao clicar em um dos projetos na página Pós Login o Get é realizado e depois ao clicar em Candidatar-se na página Inscrever a lógica funciona e o participante é acrescentado até o limite de 6 participantes, porém ainda não é possível registrar o Usuário no projeto, já que a autenticação  ainda não está funcionando.
+
 ## CT-07-Tela Pós login
 
 **Evidência do Teste:** 
