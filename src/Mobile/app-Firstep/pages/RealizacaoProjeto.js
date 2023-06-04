@@ -148,7 +148,7 @@ const RealizacaoProjeto = ({ route }) => {
       <ScrollView>
         <Logo />
         <TextTitle title={nomeProjeto} />
-        <ButtonEnd color={escolherCor} onPress={finalizarProjeto} title="Finalizar projeto" />
+        <ButtonEnd color={escolherCor} onPress={() => console.log('Finalizar projeto')} title="Finalizar projeto" />
         <Body>
           <View>
             <Card>
@@ -184,7 +184,7 @@ const RealizacaoProjeto = ({ route }) => {
               <SmallText name={participantesProjeto} />
             </SmallCard>
           </Union>
-          <Button1 onPress={handleSair} title="Sair do Projeto" />
+          <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto" />
 
           <View style={styles.button2}>
             <SmallButton onPress={() => navigation.navigate('CadastroProjeto', { item })} title="Editar Projeto" />
