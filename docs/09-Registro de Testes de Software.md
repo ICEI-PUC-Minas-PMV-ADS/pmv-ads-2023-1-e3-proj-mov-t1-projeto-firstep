@@ -4,6 +4,15 @@
 
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
+## CT-02-Tela Cadastro do Usuário
+
+**Evidência do Teste:** 
+
+<img src="img/telaCadastroUsuario.jpg" width= 250>
+<img src="img/jsonCadastroUsuario.jpg">
+
+**Avaliação:** Houve êxito no teste pois, após inserir os dados do usuário e clicar em Cadastre-se, os dados informados foram salvos no Json(https://firstep-json.onrender.com/users).
+
 ## CT-03-Tela Cadastro de Projeto
 
 **Evidência do Teste:** 
