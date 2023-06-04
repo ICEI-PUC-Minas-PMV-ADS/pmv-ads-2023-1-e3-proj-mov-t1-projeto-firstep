@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, ScrollView } from 'react-native';
-import { Headline } from 'react-native-paper';
+import { ScrollView, Alert } from 'react-native';
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
@@ -8,7 +7,7 @@ import Logo from '../components/Logo';
 import Button1 from '../components/Button1';
 import TextTitle from '../components/TextTitle';
 import Text1 from '../components/Text1';
-import { insertUsuarios, updateUsuarios, deleteUsuarios } from '../services/Usuarios.services';
+import { insertUsuarios, updateUsuarios } from '../services/Usuarios.services';
 import { useNavigation } from '@react-navigation/native';
 
 
