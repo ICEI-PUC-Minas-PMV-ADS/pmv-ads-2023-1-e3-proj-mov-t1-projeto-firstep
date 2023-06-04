@@ -14,7 +14,7 @@ const ButtonEnd = (props) => {
                     onPress={props.onPress}
                     title={props.title}
                 />
-                <Icon name="check-bold" size="20" color={props.color}/>
+                <Icon name="check-bold" size={20} color={props.color}/>
             </View>
         </Body>
     </Container>
