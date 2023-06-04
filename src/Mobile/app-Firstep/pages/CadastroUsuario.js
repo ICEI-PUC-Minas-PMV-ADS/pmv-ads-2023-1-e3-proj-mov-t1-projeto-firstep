@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ScrollView, Alert } from 'react-native';
+import * as Yup from 'yup';
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Input from '../components/Input';
