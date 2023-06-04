@@ -83,7 +83,7 @@ const TelaPosLogin = () => {
                     underlineColorAndroid="transparent"
                     placeholder="Buscar projetos"
                 />
-                <Text style={styles.subTitle}>Projetos em andamento</Text>
+                <Text style={styles.subTitle}>Meus Projetos</Text>
                 <Card>
                     <FlatList
                         data={filteredData}
