@@ -37,11 +37,11 @@ const CadastroUsuario = ({ route }) => {
          const schema = Yup.object().shape({
              nomeUsuario: Yup.string().required("Nome do projeto é obrigatório"),
              emailUsuario: Yup.string().required("E-mail obrigatório").email("Email inválido"),
-             senhaUsuario: Yup.string().required("Senha obrigatória").senhaUsuario("Senha inválida"),
+             senhaUsuario: Yup.string().required("Senha obrigatória"),
              descricaoUsuario: Yup.string().required("Descrição do projeto é obrigatório"),
              repositorio: Yup.string().required("Obrigatório informar o repositório")
          })
-        await schema.validate({nomeProjeto, emailUsuario, senhaUsuario, descricaoUsuario, repositorio})
+        await schema.validate({nomeUsuario, emailUsuario, senhaUsuario, descricaoUsuario, repositorio})
         
         if (item) {
             updateUsuarios({
@@ -64,6 +64,7 @@ const CadastroUsuario = ({ route }) => {
                 "repositorio": repositorio,
             }).then(res => {
                 navigation.goBack();
+                console.log(res);
             });
             Alert.alert('Usuário cadastrado com sucesso!')
         } }catch(error){
