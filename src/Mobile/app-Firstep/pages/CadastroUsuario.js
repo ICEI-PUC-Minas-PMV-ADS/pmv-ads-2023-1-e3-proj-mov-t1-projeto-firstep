@@ -106,9 +106,19 @@ const CadastroUsuario = ({ route }) => {
                     onChangeText={(text) => setRepositorio(text)}
                 />
                 <Text1 title="*Obrigatório" />
-                    <Button1
-                            title="Enviar Cadastro"
+                {item
+                        ? <Button1
+                            title="Editar cadastro"
                             onPress={handleSalvar}
+                        />
+                        : <Button1
+                            title="Cadastre-se"
+                            onPress={handleSalvar}
+                        />
+                    }
+                    <Button1
+                        title="Voltar"
+                        onPress={() => navigation.goBack()}
                     />
             </Body>
             </ScrollView>
