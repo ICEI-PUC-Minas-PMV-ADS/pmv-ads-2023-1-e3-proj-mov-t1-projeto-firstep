@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../pages/Home';
 import CadastroProjeto from '../pages/CadastroProjeto';
 import Inscrever from '../pages/Inscrever';
+import RealizacaoProjeto from '../pages/RealizacaoProjeto';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,14 @@ const Main = () => {
       <Stack.Screen
         name="Inscrever"
         component={Inscrever}
+        options={{
+          header: () => null,
+        }}
+      />
+
+      <Stack.Screen
+        name="RealizacaoProjeto"
+        component={RealizacaoProjeto}
         options={{
           header: () => null,
         }}

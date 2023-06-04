@@ -72,16 +72,7 @@ export default function Home() {
           },
         }}
       />
-      <Tab.Screen
-        name="RealizacaoProjeto"
-        component={RealizacaoProjeto}
-        options={{
-          tabBarLabel: 'Projeto',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="application" size={size} color={color} />;
-          },
-        }}
-      />
+    
       <Tab.Screen
         name="CadastroProjeto"
         component={CadastroProjeto}
