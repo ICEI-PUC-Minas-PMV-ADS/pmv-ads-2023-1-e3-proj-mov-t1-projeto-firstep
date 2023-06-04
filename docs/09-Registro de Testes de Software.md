@@ -13,9 +13,19 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Avaliação:** Houve êxito no teste pois, após inserir os dados do projeto para cadastro e clicar no botão Criar Projeto, os dados informados foram salvos no Json(https://firstep-json.onrender.com/projetos).
 
-## Avaliação
+## CT-07-Tela Pós login
+
+**Evidência do Teste:** 
+
+<img src="img/teste_pos_login.jpeg">
+
+**Avaliação:** Houve êxito no teste pois, após o usuário realizar o login, foi carregada a página que mostra os projetos que o usuário participa, e os projetos em andamento nos quais ele pode se inscrever; 
+Ao digitar um nome no campo de busca, apenas projetos que contém o texto informado no campo são mostrados.
+Ao clicar no nome do projeto, o usuário é redirecionado para a página desse projeto.
+
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
 
 > **Links Úteis**:
 > - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+
