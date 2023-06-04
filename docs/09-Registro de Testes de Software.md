@@ -17,7 +17,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Evidência do Teste:** 
 
-<img src="img/Tela_Inscrever.png">
+<img src="img/Tela_Inscrever.jpg" width= 250>
 
 **Avaliação:** Houve êxito em partes do teste, pois ao clicar em um dos projetos na página Pós Login o Get é realizado e depois ao clicar em Candidatar-se na página Inscrever a lógica funciona e o participante é acrescentado até o limite de 6 participantes, porém ainda não é possível registrar o Usuário no projeto, já que a autenticação  ainda não está funcionando.
 
@@ -25,7 +25,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Evidência do Teste:** 
 
-<img src="img/teste_pos_login.jpeg">
+<img src="img/Teste_pos_login.jpeg" width= 250>
 
 **Avaliação:** Houve êxito no teste pois, após o usuário realizar o login, foi carregada a página que mostra os projetos que o usuário participa, e os projetos em andamento nos quais ele pode se inscrever; 
 Ao digitar um nome no campo de busca, apenas projetos que contém o texto informado no campo são mostrados.
