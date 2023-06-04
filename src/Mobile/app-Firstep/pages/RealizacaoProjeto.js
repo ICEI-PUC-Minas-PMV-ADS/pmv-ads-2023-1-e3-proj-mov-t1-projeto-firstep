@@ -47,7 +47,7 @@ const RealizacaoProjeto = ({ route }) => {
       setEmailUsuario(item.emailUsuario)
       setAutorProjeto(item.autorProjeto)
       setFinalizado(item.finalizado)
-      setQuantidadeParticipante(res.quantidadeParticipante)
+      setQuantidadeParticipante(item.quantidadeParticipante)
       setParticipantesProjeto(item.participantesProjeto)
     }
   }, [isFocused])
@@ -57,8 +57,8 @@ const RealizacaoProjeto = ({ route }) => {
   }
 
   const removerParticipante = () => {
-    const array = '';
-    for (let i = 0; i < 6; i++) {
+    const array = [''];
+    for (i = 0; i < 6; i++) {
       if (participantesProjeto[i] != nome) {
         array.push(participantesProjeto[i]);
       }
