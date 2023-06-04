@@ -92,16 +92,7 @@ export default function Home() {
           },
         }}
       />
-      <Tab.Screen
-        name="Inscrever"
-        component={Inscrever}
-        options={{
-          tabBarLabel: 'Inscrever',
-          tabBarIcon: ({ color, size }) => {
-            return <Icon name="form-select" size={size} color={color} />;
-          },
-        }}
-      />
+
     </Tab.Navigator>
   );
 }
