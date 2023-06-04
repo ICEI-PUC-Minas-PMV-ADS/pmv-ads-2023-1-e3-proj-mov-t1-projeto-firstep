@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from '../pages/Home';
 import CadastroProjeto from '../pages/CadastroProjeto';
+import Inscrever from '../pages/Inscrever';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,15 +17,24 @@ const Main = () => {
           header: () => null,
         }}
       />
-    <Stack.Screen
+      <Stack.Screen
         name="CadastroProjeto"
         component={CadastroProjeto}
         options={{
           header: () => null,
         }}
       />
-    
+
+      <Stack.Screen
+        name="Inscrever"
+        component={Inscrever}
+        options={{
+          header: () => null,
+        }}
+      />
+
     </Stack.Navigator>
+
   );
 };
 
