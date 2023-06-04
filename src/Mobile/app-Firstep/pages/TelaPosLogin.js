@@ -1,22 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList, Image, SafeAreaView, TextInput } from 'react-native';
-import { Button, Headline, List } from 'react-native-paper';
+import { StyleSheet, View, Text, FlatList, Image } from 'react-native';
+import { Headline, List } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
-import Input from '../components/Input';
 import Card from '../components/Card';
-import Logo from '../components/Logo';
-
 import { getProjetos } from '../services/Projetos.services';
+import Input from '../components/Input';
 
-const Item = ({ title }) => (
-    <View style={styles.item}>
-        <Text style={styles.title}>{title}</Text>
-    </View>
-);
+
 const Logo2 = () => {
     return <Image source={require('../assets/contato.png')} />
 };
@@ -35,7 +29,7 @@ const TelaPosLogin = () => {
             setFilteredData(dados);
             setMasterData(dados);
         })
-    }, []);
+    }, [useIsFocused]);
 
     const searchFilter = (text) => {
         if (text) {
@@ -56,27 +50,24 @@ const TelaPosLogin = () => {
 
     const ItemView = ({ item }) => {
         return (
-            <List.Item styles={styles.itens}
+            <List.Item
                 title={item.nomeProjeto}
                 left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
-                onPress={() => navigation.navigate('RealizacaoProjeto', {item})} 
+                onPress={() => navigation.navigate('RealizacaoProjeto', { item })}
             />
         )
     }
 
     const ItemView_k = ({ item }) => {
         return (
-            <List.Item styles={styles.itens}
+            <List.Item
                 title={item.nomeProjeto}
                 left={props => <List.Icon {...props} icon={require('../assets/icoLista.png')} />}
-                onPress={() => navigation.navigate('Inscrever', {item})} 
+                onPress={() => navigation.navigate('Inscrever', { item })}
             />
         )
     }
 
-    const getItem = (item) => {
-        alert('Id : ' + item.id + '\n\nTarefa : ' + item.title + '\n\nCompletada: ' + item.completed);
-    };
 
     return (
         <Container>
@@ -86,29 +77,31 @@ const TelaPosLogin = () => {
                 <Headline>Olá Usuário,</Headline>
             </View>
             <Body>
-                    <TextInput
-                        style={styles.textInputStyle}
-                        onChangeText={(text) => searchFilter(text)}
-                        value={search}
-                        underlineColorAndroid="transparent"
-                        placeholder="Buscar projetos"
+                <Input
+                    onChangeText={(text) => searchFilter(text)}
+                    value={search}
+                    underlineColorAndroid="transparent"
+                    placeholder="Buscar projetos"
+                />
+                <Text style={styles.subTitle}>Projetos em andamento</Text>
+                <Card>
+                    <FlatList
+                        data={filteredData}
+                        keyExtractor={item => item.id}
+                        renderItem={ItemView}
                     />
-                    <Text>Meus Projetos</Text>
-                    <Card>
-                        <FlatList
-                            data={filteredData}
-                            keyExtractor={item => item.id}
-                            renderItem={ItemView}
-                        />
-                    </Card>
-                    <Text>Projetos em andamento</Text>
-                    <Card>
-                        <FlatList
-                            data={filteredData}
-                            keyExtractor={item => item.id}
-                            renderItem={ItemView_k}
-                        />
-                    </Card>
+                </Card>
+
+
+                <Text style={styles.subTitle}>Projetos em andamento</Text>
+                <Card>
+                    <FlatList
+                        data={filteredData}
+                        keyExtractor={item => item.id}
+                        renderItem={ItemView_k}
+                    />
+                </Card>
+
             </Body>
         </Container>
     );
@@ -123,23 +116,10 @@ const styles = StyleSheet.create({
         marginLeft: 20,
 
     },
-    textTitulo: {
-        fontWeight: 'bold',
-        textAlign: 'left',
-        margin: 20,
-    },
 
-    itens: {
-        fontWeight: 'bold'
-    },
+    subTitle: {
+        fontSize: 20,
 
-    textInputStyle: {
-        height: 40,
-        borderWidth: 1,
-        paddingLeft: 20,
-        margin: 5,
-       borderRadius: 18,
-       
     }
 }
 );
