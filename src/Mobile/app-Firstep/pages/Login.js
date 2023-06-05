@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, View, Alert, ScrollView } from "react-native";
 import { TextInput, Button, Headline } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useUser } from "../contexts/UserContext";
 import { login } from "../services/Auth.services";
 
@@ -13,21 +14,23 @@ import MediumButton from "../components/MediumButton";
 
 const Login = () => {
   const navigation = useNavigation();
-  const { setSigned } = useUser();
+  const { setSigned, setUserName } = useUser();
   const [email, setEmail] = useState('firstep@gmail.com');
   const [password, setPassword] = useState('firstep');
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     login({
       email: email,
       password: password,
     }).then((res) => {
       console.log(res);
 
-      if (res && res.user) {
+      if (res && res.users) {
+        console.log('Passou no if')
         setSigned(true);
-        setName(res.user.name);
-        AsyncStorage.setItem('@TOKEN_KEY', res.accessToken).then();
+        console.log(res.users)
+        setUserName(res.users.nome);
+        AsyncStorage.setItem('@TOKEN_KEY', res.access_token);
       } else {
         Alert.alert('Atenção, Usuário ou senha inválidos!');
       }
@@ -52,7 +55,7 @@ const Login = () => {
             onChangeText={(text) => setPassword(text)}
             left={<TextInput.Icon name="key" />}
           />
-          <MediumButton onPress={() => setSigned(true)} title="LOGIN" />
+          <MediumButton onPress={handleLogin} title="LOGIN" />
           <MediumButton
             onPress={() => navigation.navigate('Register')}
             title="REGISTRAR"
