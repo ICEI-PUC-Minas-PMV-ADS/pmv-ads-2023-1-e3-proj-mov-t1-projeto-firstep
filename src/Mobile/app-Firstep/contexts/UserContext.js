@@ -6,6 +6,11 @@ export default function UserProvider({ children }) {
   const [signed, setSigned] = useState(false);
   const [name, setName] = useState('Karen');
 
+  function setUserName(name) {
+
+    setName(name)
+
+  }
   return (
     <UserContext.Provider
       value={{
@@ -13,6 +18,7 @@ export default function UserProvider({ children }) {
         setSigned,
         name,
         setName,
+        setUserName
       }}>
       {children}
     </UserContext.Provider>
@@ -21,6 +27,5 @@ export default function UserProvider({ children }) {
 
 export function useUser() {
   const context = useContext(UserContext);
-  const { signed, setSigned, name, setName } = context;
-  return { signed, setSigned, name, setName };
+  return context;
 }
