@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const login = async (param) => {
     const user = {
-        enail: param.email.toLowerCase(),
+        email: param.email.toLowerCase(),
         password: param.password
     }
 
