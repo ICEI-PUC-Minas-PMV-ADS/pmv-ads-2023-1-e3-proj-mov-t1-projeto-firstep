@@ -3,12 +3,15 @@ import { StyleSheet, View, Text, FlatList, Image } from 'react-native';
 import { Headline, List } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
+import { useUser } from "../contexts/UserContext";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import Container from '../components/Container';
 import Body from '../components/Body';
 import Card from '../components/Card';
 import { getProjetos } from '../services/Projetos.services';
 import Input from '../components/Input';
+import ButtonLogout from '../components/ButtonLogout';
 
 
 const Logo2 = () => {
@@ -17,7 +20,8 @@ const Logo2 = () => {
 
 const TelaPosLogin = () => {
     const navigation = useNavigation();
-
+    const { name, setSigned } = useUser();
+    const isFocused = useIsFocused();
     const [search, setSearch] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [masterData, setMasterData] = useState([]);
@@ -29,7 +33,7 @@ const TelaPosLogin = () => {
             setFilteredData(dados);
             setMasterData(dados);
         })
-    }, [useIsFocused]);
+    }, [isFocused]);
 
     const searchFilter = (text) => {
         if (text) {
@@ -68,14 +72,19 @@ const TelaPosLogin = () => {
         )
     }
 
+    const handleLogout = async () => {
+      setSigned(false);
+      AsyncStorage.removeItem('@TOKEN_KEY');
+  
+    }
 
     return (
         <Container>
-
             <View style={styles.logo}>
                 <Logo2 />
-                <Headline>Olá Usuário,</Headline>
+                <Headline>Olá { name },</Headline>       
             </View>
+            <ButtonLogout onPress={handleLogout}/>
             <Body>
                 <Input
                     onChangeText={(text) => searchFilter(text)}
