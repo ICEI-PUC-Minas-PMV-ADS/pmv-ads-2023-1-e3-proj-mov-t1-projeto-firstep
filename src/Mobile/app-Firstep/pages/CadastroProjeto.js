@@ -10,7 +10,7 @@ import Logo from '../components/Logo';
 import TextTitle from '../components/TextTitle';
 import Text1 from '../components/Text1';
 import Button1 from '../components/Button1';
-import Keyboard from '../components/Keyboard';
+
 
 import { insertProjetos, updateProjetos } from '../services/Projetos.services';
 
@@ -98,7 +98,7 @@ const CadastroProjeto = ({ route }) => {
     
     return (
         <Container>
-            <Keyboard>
+           
             <ScrollView>
                 <Logo />
                 <TextTitle title="Criar Projeto" />
@@ -155,7 +155,7 @@ const CadastroProjeto = ({ route }) => {
                     />
                 </Body>
             </ScrollView>
-            </Keyboard>
+     
         </Container>
     );
 };
