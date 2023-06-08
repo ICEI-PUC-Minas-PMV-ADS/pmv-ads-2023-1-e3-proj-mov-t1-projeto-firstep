@@ -17,7 +17,7 @@ import MediumButton from '../components/MediumButton';
 
 const Inscrever = ({ route }) => {
   const { item } = route.params ? route.params : {};
-  const { nome } = useUser();
+  const { name } = useUser();
   const navigation = useNavigation();
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
@@ -80,7 +80,7 @@ const Inscrever = ({ route }) => {
 
   const adicionarNovoParticipante = () => {
     const array = participantesProjeto
-    array.push(nome)
+    array.push(name)
     return array
   }
   return (
