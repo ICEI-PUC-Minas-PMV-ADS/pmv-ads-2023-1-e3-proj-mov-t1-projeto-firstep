@@ -15,8 +15,8 @@ import MediumButton from "../components/MediumButton";
 const Login = () => {
   const navigation = useNavigation();
   const { setSigned, setUserName } = useUser();
-  const [email, setEmail] = useState('firstep@gmail.com');
-  const [password, setPassword] = useState('firstep');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = async () => {
     login({
