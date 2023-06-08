@@ -4,7 +4,7 @@ export const UserContext = createContext();
 
 export default function UserProvider({ children }) {
   const [signed, setSigned] = useState(false);
-  const [name, setName] = useState('Karen');
+  const [name, setName] = useState('');
 
   function setUserName(name) {
 
