@@ -15,7 +15,7 @@ import Text1 from '../components/Text1';
 import Union from '../components/Union';
 import SmallCard from '../components/SmallCard';
 import SmallText from '../components/SmallText';
-import SmallButton from '../components/SmallButton';
+import ButtonIcon from '../components/ButtonIcon';
 import ButtonEnd from '../components/ButtonEnd';
 
 const RealizacaoProjeto = ({ route }) => {
@@ -184,15 +184,16 @@ const RealizacaoProjeto = ({ route }) => {
               <SmallText name={participantesProjeto} />
             </SmallCard>
           </Union>
-          <Button1 onPress={() => console.log('Sair do projeto')} title="Sair do Projeto" />
 
           <View style={styles.button2}>
-            <SmallButton onPress={() => navigation.navigate('CadastroProjeto', { item })} title="Editar Projeto" />
-            <SmallButton onPress={handleExcluir} title="Apagar Projeto" />
+            <ButtonIcon onPress={() => console.log('Sair do projeto')} icon="account-multiple-minus" />
+
+            <ButtonIcon onPress={() => navigation.navigate('CadastroProjeto', { item })} icon="file-document" />
+            <ButtonIcon onPress={handleExcluir} icon="trash-can" />
+
+            <ButtonIcon onPress={() => navigation.goBack()} icon="keyboard-backspace" />
           </View>
 
-
-          <Button1 onPress={() => navigation.goBack()} title="Voltar" />
         </Body>
       </ScrollView>
     </Container>
