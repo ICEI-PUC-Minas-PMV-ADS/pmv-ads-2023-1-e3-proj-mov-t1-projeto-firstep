@@ -35,10 +35,10 @@ const CadastroUsuario = ({ route }) => {
     async function handleSalvar() {
         try{
          const schema = Yup.object().shape({
-             nomeUsuario: Yup.string().required("Nome do projeto é obrigatório"),
+             nomeUsuario: Yup.string().required("Nome do usuário é obrigatório"),
              emailUsuario: Yup.string().required("E-mail obrigatório").email("Email inválido"),
              senhaUsuario: Yup.string().required("Senha obrigatória"),
-             descricaoUsuario: Yup.string().required("Descrição do projeto é obrigatório"),
+             descricaoUsuario: Yup.string().required("Descrição do usuário é obrigatório"),
              repositorio: Yup.string().required("Obrigatório informar o repositório")
          })
         await schema.validate({nomeUsuario, emailUsuario, senhaUsuario, descricaoUsuario, repositorio})
