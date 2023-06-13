@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyleSheet, Image, View } from 'react-native';
 import { Headline } from 'react-native-paper';
-import Container from './Container';
+
 
 const TextTitle = (props) => {
-  return  <Container> 
-            <Headline style={styles.textTitulo}>{props.title}{props.name}</Headline>
-          </Container>
+  return   <Headline style={styles.textTitulo}>{props.title}{props.name}</Headline>
+          
 };
 
 const styles = StyleSheet.create({
