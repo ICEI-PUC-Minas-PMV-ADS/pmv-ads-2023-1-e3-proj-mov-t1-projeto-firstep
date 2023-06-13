@@ -25,7 +25,6 @@ const TelaPosLogin = () => {
     const [search, setSearch] = useState('');
     const [filteredData, setFilteredData] = useState([]);
     const [masterData, setMasterData] = useState([]);
-
     const [MeusProjetos, setMeusProjetos] = useState([]);
     const [Projetos, setProjetos] = useState([]);
 
