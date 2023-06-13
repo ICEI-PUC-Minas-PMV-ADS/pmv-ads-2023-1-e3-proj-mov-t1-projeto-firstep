@@ -26,7 +26,6 @@ const Login = () => {
       console.log(res);
 
       if (res && res.users) {
-        console.log('Passou no if')
         setSigned(true);
         console.log(res.users)
         setUserName(res.users.nome);
