@@ -84,7 +84,7 @@ const CadastroProjeto = ({ route }) => {
             "descricaoVaga": descricaoVaga,
             "repositorio": repositorio,
             "quantidadeParticipante": 1,
-            "participantesProjeto": [],
+            "participantesProjeto": [autorProjeto],
         }).then(res => {
             navigation.goBack();
         });
