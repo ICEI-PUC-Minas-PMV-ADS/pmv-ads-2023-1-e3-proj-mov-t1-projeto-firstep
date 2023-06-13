@@ -26,12 +26,17 @@ const TelaPosLogin = () => {
     const [filteredData, setFilteredData] = useState([]);
     const [masterData, setMasterData] = useState([]);
 
+    const [MeusProjetos, setMeusProjetos] = useState([]);
+    const [Projetos, setProjetos] = useState([]);
 
     useEffect(() => {
         getProjetos().then((dados) => {
-
             setFilteredData(dados);
             setMasterData(dados);
+            const projetosFiltrados = dados.filter(e => e.participantesProjeto.includes(name));
+            setMeusProjetos(projetosFiltrados);
+            const projetosNaoCadastrados = dados.filter(e => !e.participantesProjeto.includes(name));
+            setProjetos(projetosNaoCadastrados);
         })
     }, [isFocused]);
 
@@ -46,13 +51,26 @@ const TelaPosLogin = () => {
                     }
                 });
             setFilteredData(newData);
+
+            const projetosNaoCadastrados = newData.filter(e => !e.participantesProjeto.includes(name));
+            setProjetos(projetosNaoCadastrados);
+            const projetosFiltrados = newData.filter(e => e.participantesProjeto.includes(name));
+            setMeusProjetos(projetosFiltrados);
+
         } else {
             setFilteredData(masterData);
+
+            const projetosNaoCadastrados = masterData.filter(e => !e.participantesProjeto.includes(name));
+            setProjetos(projetosNaoCadastrados);
+            const projetosFiltrados = masterData.filter(e => e.participantesProjeto.includes(name));
+            setMeusProjetos(projetosFiltrados);
         }
         setSearch(text);
     };
 
+
     const ItemView = ({ item }) => {
+        console.log(item);
         return (
             <List.Item
                 title={item.nomeProjeto}
@@ -73,18 +91,18 @@ const TelaPosLogin = () => {
     }
 
     const handleLogout = async () => {
-      setSigned(false);
-      AsyncStorage.removeItem('@TOKEN_KEY');
-  
+        setSigned(false);
+        AsyncStorage.removeItem('@TOKEN_KEY');
+
     }
 
     return (
         <Container>
             <View style={styles.logo}>
                 <Logo2 />
-                <Headline>Olá { name },</Headline>       
+                <Headline>Olá {name},</Headline>
             </View>
-            <ButtonLogout onPress={handleLogout}/>
+            <ButtonLogout onPress={handleLogout} />
             <Body>
                 <Input
                     onChangeText={(text) => searchFilter(text)}
@@ -95,7 +113,7 @@ const TelaPosLogin = () => {
                 <Text style={styles.subTitle}>Meus Projetos</Text>
                 <Card>
                     <FlatList
-                        data={filteredData}
+                        data={MeusProjetos}
                         keyExtractor={item => item.id}
                         renderItem={ItemView}
                     />
@@ -105,7 +123,7 @@ const TelaPosLogin = () => {
                 <Text style={styles.subTitle}>Projetos em andamento</Text>
                 <Card>
                     <FlatList
-                        data={filteredData}
+                        data={Projetos}
                         keyExtractor={item => item.id}
                         renderItem={ItemView_k}
                     />
