@@ -6,7 +6,7 @@ const ButtonIcon = (props) => {
     return  <Button
                 icon={props.icon}
                 onPress={props.onPress}
-                theme={{ colors: {primary: '#3E2500'}, weight: {size: 60}}}
+                theme={{ colors: {primary: '#3E2500'}}}
                 style= {styles.button}>
                     {props.title}
             </Button>

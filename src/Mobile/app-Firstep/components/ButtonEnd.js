@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Button } from 'react-native';
-//import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Body from './Body';
 import Container from './Container';
@@ -10,11 +9,11 @@ const ButtonEnd = (props) => {
         <Body>
             <View style={styles.view}>
                 <Button
-                    color={props.color}
+                    color={"#3E2500"}
                     onPress={props.onPress}
                     title={props.title}
                 />
-                <Icon name="check-bold" size={20} color={props.color}/>
+                <Icon name="check-bold" size={20} color={"#3E2500"}/>
             </View>
         </Body>
     </Container>
