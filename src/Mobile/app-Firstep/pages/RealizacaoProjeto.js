@@ -72,21 +72,23 @@ const RealizacaoProjeto = ({ route }) => {
 
   const handleSair = () => {
     if (quantidadeParticipante > 0) {
-          const novaLista = removerParticipante()
-          updateProjetos({
-            "id": id,
-            "nomeProjeto": nomeProjeto,
-            "emailUsuario": emailUsuario,
-            "descricaoProjeto": descricaoProjeto,
-            "tecnologias": tecnologias,
-            "descricaoVaga": descricaoVaga,
-            "Finalizado": finalizado,
-            "repositorio": repositorio,
-            "autorProjeto": autorProjeto,
-            "quantidadeParticipante": quantidadeParticipante - 1,
-            "participantesProjeto": novaLista
-          });
-          Alert.alert('Você saiu do projeto');
+      const novaLista = removerParticipante()
+      updateProjetos({
+        "id": id,
+        "nomeProjeto": nomeProjeto,
+        "emailUsuario": emailUsuario,
+        "descricaoProjeto": descricaoProjeto,
+        "tecnologias": tecnologias,
+        "descricaoVaga": descricaoVaga,
+        "Finalizado": finalizado,
+        "repositorio": repositorio,
+        "autorProjeto": autorProjeto,
+        "quantidadeParticipante": quantidadeParticipante - 1,
+        "participantesProjeto": novaLista
+      }).then(res => {
+        navigation.goBack();
+      });
+      Alert.alert('Você saiu do projeto');
     } else {
       Alert.alert('Você já saiu do projeto');
     }
@@ -126,7 +128,7 @@ const RealizacaoProjeto = ({ route }) => {
 
   const finalizarProjeto = () => {
     if (item) {
-      if (!item.finalizado) {
+      if (!finalizado) {
         Alert.alert('Deseja finalizar o projeto?', [
           { text: 'OK', onPress: () => finalizadorDeProjeto }, { text: 'Cancel', onPress: () => console.log('Cancelar'), style: 'cancel' }
         ]);
