@@ -10,6 +10,7 @@ import TextTitle from '../components/TextTitle';
 import Text1 from '../components/Text1';
 import { insertUsuarios, updateUsuarios } from '../services/Usuarios.services';
 import { useNavigation } from '@react-navigation/native';
+import Keyboard from '../components/Keyboard';
 
 const CadastroUsuario = ({ route }) => {
     const navigation = useNavigation();
@@ -75,6 +76,7 @@ const CadastroUsuario = ({ route }) => {
 
     return (
         <Container>
+            <Keyboard>
             <ScrollView>
                 <Logo />
                 <TextTitle title="Cadastre-se" />
@@ -122,6 +124,7 @@ const CadastroUsuario = ({ route }) => {
                     />
             </Body>
             </ScrollView>
+            </Keyboard>
         </Container>
     );
 };
