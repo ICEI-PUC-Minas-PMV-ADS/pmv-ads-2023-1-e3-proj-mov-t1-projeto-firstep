@@ -20,7 +20,7 @@ import ButtonEnd from '../components/ButtonEnd';
 
 const RealizacaoProjeto = ({ route }) => {
   const { item } = route.params ? route.params : {};
-  const { nome } = useUser();
+  const { name } = useUser();
   const [id, setId] = useState('');
   const [nomeProjeto, setNomeProjeto] = useState('');
   const [descricaoProjeto, setDescricaoProjeto] = useState('');
@@ -57,31 +57,36 @@ const RealizacaoProjeto = ({ route }) => {
   }
 
   const removerParticipante = () => {
-    const array = [''];
+    const array = participantesProjeto;
     for (i = 0; i < 6; i++) {
-      if (participantesProjeto[i] != nome) {
-        array.push(participantesProjeto[i]);
+      if (participantesProjeto[i] === name) {
+        array.splice(i, 1);
+        novaArray = array;
+      }
+      else {
+        novaArray = array;
       }
     }
-    return array
+    return novaArray;
   }
 
   const handleSair = () => {
     if (quantidadeParticipante > 0) {
-      const novaLista = removerParticipante()
-      updateProjetos({
-        "id": id,
-        "nomeProjeto": nomeProjeto,
-        "emailUsuario": emailUsuario,
-        "descricaoProjeto": descricaoProjeto,
-        "tecnologias": tecnologias,
-        "descricaoVaga": descricaoVaga,
-        "Finalizado": finalizado,
-        "repositorio": repositorio,
-        "autorProjeto": autorProjeto,
-        "quantidadeParticipante": quantidadeParticipante - 1,
-        "participantesProjeto": novaLista
-      });
+          const novaLista = removerParticipante()
+          updateProjetos({
+            "id": id,
+            "nomeProjeto": nomeProjeto,
+            "emailUsuario": emailUsuario,
+            "descricaoProjeto": descricaoProjeto,
+            "tecnologias": tecnologias,
+            "descricaoVaga": descricaoVaga,
+            "Finalizado": finalizado,
+            "repositorio": repositorio,
+            "autorProjeto": autorProjeto,
+            "quantidadeParticipante": quantidadeParticipante - 1,
+            "participantesProjeto": novaLista
+          });
+          Alert.alert('Você saiu do projeto');
     } else {
       Alert.alert('Você já saiu do projeto');
     }
@@ -135,20 +140,11 @@ const RealizacaoProjeto = ({ route }) => {
     }
   }
 
-  const escolherCor = () => {
-    if(finalizado){
-      return "#3E2500"
-    }else{
-      return "#4AC288"
-    }
-}
-
   return (
     <Container>
       <ScrollView>
         <Logo />
         <TextTitle title={nomeProjeto} />
-        <ButtonEnd color={escolherCor} onPress={() => console.log('Finalizar projeto')} title="Finalizar projeto" />
         <Body>
           <View>
             <Card>
@@ -186,7 +182,7 @@ const RealizacaoProjeto = ({ route }) => {
           </Union>
 
           <View style={styles.button2}>
-            <ButtonIcon onPress={() => console.log('Sair do projeto')} icon="account-multiple-minus" />
+            <ButtonIcon onPress={handleSair} icon="account-multiple-minus" />
 
             <ButtonIcon onPress={() => navigation.navigate('CadastroProjeto', { item })} icon="file-document" />
             <ButtonIcon onPress={handleExcluir} icon="trash-can" />
