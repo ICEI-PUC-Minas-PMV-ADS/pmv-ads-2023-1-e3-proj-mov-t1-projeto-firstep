@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList, Image } from 'react-native';
+import { StyleSheet, View, Text, FlatList, Image, ScrollView } from 'react-native';
 import { Headline, List } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
@@ -12,6 +12,9 @@ import Card from '../components/Card';
 import { getProjetos } from '../services/Projetos.services';
 import Input from '../components/Input';
 import ButtonLogout from '../components/ButtonLogout';
+import LogoUser from '../components/logoUser';
+import Subtitle from '../components/Subtitle';
+
 
 
 const Logo2 = () => {
@@ -97,57 +100,43 @@ const TelaPosLogin = () => {
 
     return (
         <Container>
-            <View style={styles.logo}>
-                <Logo2 />
+            <View>
+                <LogoUser />
                 <Headline>Olá {name},</Headline>
             </View>
             <ButtonLogout onPress={handleLogout} />
             <Body>
-                <Input
-                    onChangeText={(text) => searchFilter(text)}
-                    value={search}
-                    underlineColorAndroid="transparent"
-                    placeholder="Buscar projetos"
-                />
-                <Text style={styles.subTitle}>Meus Projetos</Text>
-                <Card>
-                    <FlatList
-                        data={MeusProjetos}
-                        keyExtractor={item => item.id}
-                        renderItem={ItemView}
+                <ScrollView>
+                    <Input
+                        onChangeText={(text) => searchFilter(text)}
+                        value={search}
+                        underlineColorAndroid="transparent"
+                        placeholder="Buscar projetos"
                     />
-                </Card>
-
-
-                <Text style={styles.subTitle}>Projetos em andamento</Text>
-                <Card>
-                    <FlatList
-                        data={Projetos}
-                        keyExtractor={item => item.id}
-                        renderItem={ItemView_k}
-                    />
-                </Card>
-
+                    <Text style={styles.sub}>Meus Projetos</Text>
+                    <Card>
+                        <FlatList
+                            data={MeusProjetos}
+                            keyExtractor={item => item.id}
+                            renderItem={ItemView}
+                        />
+                    </Card>
+                    <Text style={styles.sub}>Projetos em andamento</Text>
+                    <Card>
+                        <FlatList
+                            data={Projetos}
+                            keyExtractor={item => item.id}
+                            renderItem={ItemView_k}
+                        />
+                    </Card>
+                </ScrollView>
             </Body>
         </Container>
     );
 };
-
-
 const styles = StyleSheet.create({
-    logo: {
-        width: 200,
-        height: 120,
-        marginTop: 60,
-        marginLeft: 20,
-
-    },
-
-    subTitle: {
-        fontSize: 20,
-
+    sub: {
+        fontSize: 25,
     }
-}
-);
-
+});
 export default TelaPosLogin;
