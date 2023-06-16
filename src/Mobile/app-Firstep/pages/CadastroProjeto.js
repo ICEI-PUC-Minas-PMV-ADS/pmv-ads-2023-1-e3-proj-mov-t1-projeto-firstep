@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Alert } from 'react-native';
+import { ScrollView, Alert, View } from 'react-native';
 import * as Yup from 'yup';
 
 
@@ -10,11 +10,13 @@ import Logo from '../components/Logo';
 import TextTitle from '../components/TextTitle';
 import Text1 from '../components/Text1';
 import Button1 from '../components/Button1';
+import SwitchFinalizado from '../components/SwitchFinalizado';
 import Keyboard from '../components/Keyboard';
 
 import { insertProjetos, updateProjetos } from '../services/Projetos.services';
 
 import { useNavigation } from '@react-navigation/native';
+
 
 const CadastroProjeto = ({ route }) => {
     const navigation = useNavigation();
@@ -27,8 +29,10 @@ const CadastroProjeto = ({ route }) => {
     const [descricaoProjeto, setDescricaoProjeto] = useState('');
     const [descricaoVaga, setDescricaoVaga] = useState('');
     const [repositorio, setRepositorio] = useState('');
+    const [finalizado, setFinalizado] = useState(false);
     const [quantidadeParticipante, setQuantidadeParticipante] = useState('');
 
+    const handleFinalizado = () => setFinalizado(!finalizado);
 
    useEffect(() => {
         if (item) {
@@ -39,6 +43,7 @@ const CadastroProjeto = ({ route }) => {
             setDescricaoProjeto(item.descricaoProjeto);
             setDescricaoVaga(item.descricaoVaga);
             setRepositorio(item.repositorio);
+            setFinalizado(item.finalizado);
         }
 
     }, [item]); 
@@ -62,14 +67,14 @@ const CadastroProjeto = ({ route }) => {
             "autorProjeto": autorProjeto,
             "emailUsuario": emailUsuario,
             "tecnologias": tecnologias,
-            "finalizado": false,
+            "finalizado": finalizado,
             "descricaoProjeto": descricaoProjeto, 
             "descricaoVaga": descricaoVaga,
-            "repositorio": repositorio,
-            
+            "repositorio": repositorio,  
             "quantidadeParticipante": item.quantidadeParticipante,
             "participantesProjeto": item.participantesProjeto,
         }).then(res => {
+            console.log(res)
             navigation.goBack();
         });
         Alert.alert('Cadastro editado com sucesso!')
@@ -98,7 +103,7 @@ const CadastroProjeto = ({ route }) => {
     
     return (
         <Container>
-            <Keyboard>
+          <Keyboard>
             <ScrollView>
                 <Logo />
                 <TextTitle title="Criar Projeto" />
@@ -138,7 +143,14 @@ const CadastroProjeto = ({ route }) => {
                         value={repositorio}
                         onChangeText={(text) => setRepositorio(text)}
                     />
-                    <Text1 title="*Obrigatório" />
+                   
+                    {item
+                    ? <SwitchFinalizado
+                    value={finalizado}
+                    onValueChange={handleFinalizado} />
+                    :<></>
+                    }
+                    
                     {item
                         ? <Button1
                             title="Editar dados"
@@ -153,6 +165,7 @@ const CadastroProjeto = ({ route }) => {
                         title="Voltar"
                         onPress={() => navigation.goBack()}
                     />
+                    <Text1 title="*Obrigatório" />
                 </Body>
             </ScrollView>
             </Keyboard>
