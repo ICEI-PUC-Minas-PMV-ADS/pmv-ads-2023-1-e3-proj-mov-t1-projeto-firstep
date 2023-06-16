@@ -9,7 +9,7 @@ const SwitchFinalizado = (props) => {
                <Switch 
                value={props.value} 
                onValueChange={props.onValueChange} 
-               color={'#348AA7'}
+               color={'#3E2500'}
                style={styles.switch}/>
             </View>
         ;
