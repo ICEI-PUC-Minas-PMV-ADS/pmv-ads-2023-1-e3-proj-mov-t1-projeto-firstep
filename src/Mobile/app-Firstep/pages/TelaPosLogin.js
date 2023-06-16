@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, FlatList, Image, ScrollView } from 'react-native';
-import { Headline, List } from 'react-native-paper';
+import { Headline, List, RadioButton } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
 import { useUser } from "../contexts/UserContext";
@@ -13,7 +13,7 @@ import { getProjetos } from '../services/Projetos.services';
 import Input from '../components/Input';
 import ButtonLogout from '../components/ButtonLogout';
 import LogoUser from '../components/logoUser';
-import Subtitle from '../components/Subtitle';
+
 
 
 
@@ -30,6 +30,7 @@ const TelaPosLogin = () => {
     const [masterData, setMasterData] = useState([]);
     const [MeusProjetos, setMeusProjetos] = useState([]);
     const [Projetos, setProjetos] = useState([]);
+    const [checked, setChecked] = React.useState('finalizado');
 
     useEffect(() => {
         getProjetos().then((dados) => {
@@ -57,7 +58,11 @@ const TelaPosLogin = () => {
             const projetosNaoCadastrados = newData.filter(e => !e.participantesProjeto.includes(name));
             setProjetos(projetosNaoCadastrados);
             const projetosFiltrados = newData.filter(e => e.participantesProjeto.includes(name));
-            setMeusProjetos(projetosFiltrados);
+            if (checked == 'finalizado') {
+                setMeusProjetos(projetosFiltrados.filter(e => e.Finalizado === true));
+            } else {
+                setMeusProjetos(projetosFiltrados.filter(e => e.Finalizado === false));
+            }
 
         } else {
             setFilteredData(masterData);
@@ -113,6 +118,26 @@ const TelaPosLogin = () => {
                         underlineColorAndroid="transparent"
                         placeholder="Buscar projetos"
                     />
+
+                    <View style={styles.radio}>
+                        <View style={styles.ritem}>
+                        <Text>Finalizados</Text>
+                            <RadioButton
+                                value="finalizado"
+                                status={checked === 'finalizado' ? 'checked' : 'unchecked'}
+                                onPress={() => setChecked('finalizado')}
+                            />
+                        </View>
+                        <View style={styles.ritem}>
+
+                            <Text>Em andamento</Text>
+                            <RadioButton
+                                value="andamento"
+                                status={checked === 'andamento' ? 'checked' : 'unchecked'}
+                                onPress={() => setChecked('andamento')}
+                            />
+                        </View>
+                    </View>
                     <Text style={styles.sub}>Meus Projetos</Text>
                     <Card>
                         <FlatList
@@ -137,6 +162,15 @@ const TelaPosLogin = () => {
 const styles = StyleSheet.create({
     sub: {
         fontSize: 25,
-    }
+    },
+    radio: {
+        flexDirection: 'row',
+        justifyContent:'space-evenly',
+},
+    ritem: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent:'space-evenly',
+}
 });
 export default TelaPosLogin;
