@@ -66,7 +66,7 @@ const Inscrever = ({ route }) => {
         "descricaoProjeto": descricaoProjeto,
         "tecnologias": tecnologias,
         "descricaoVaga": descricaoVaga,
-        "Finalizado": false,
+        "finalizado":finalizado,
         "repositorio": repositorio,
         "autorProjeto": autorProjeto,
         "quantidadeParticipante": quantidadeParticipante + 1,
