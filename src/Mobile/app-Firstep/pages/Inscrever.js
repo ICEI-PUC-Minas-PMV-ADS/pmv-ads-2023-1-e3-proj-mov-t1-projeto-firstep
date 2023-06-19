@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, ScrollView, Alert } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { ScrollView, Alert } from 'react-native';
 import { useIsFocused } from '@react-navigation/native';
-import { getProjetoEspecifico, getProjetos, insertProjetos, updateProjetos } from '../services/Projetos.services';
+import { getProjetoEspecifico, updateProjetos } from '../services/Projetos.services';
 import { useNavigation } from '@react-navigation/native';
 import { useUser } from '../contexts/UserContext';
 
