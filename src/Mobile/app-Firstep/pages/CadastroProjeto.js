@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ScrollView, Alert, View } from 'react-native';
+import { ScrollView, Alert } from 'react-native';
 import * as Yup from 'yup';
 
 
