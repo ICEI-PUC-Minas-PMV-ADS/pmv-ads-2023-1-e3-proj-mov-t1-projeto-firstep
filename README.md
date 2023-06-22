@@ -35,7 +35,6 @@ O backend do projeto encontra-se hospedado no endereço https://firstep-json.onr
 - As credenciais serão validadas, a sessão será iniciada e o usuário será redirecionado para a tela inicial do usuário.
 - Na tela inicial, o usuário poderá conferir os projetos que estão em andamento e se candidatar a algum projeto. Além disso, poderá clicar no ícone de criar projeto para cadastrar um projeto.
 
-### Para dispositivos IOS siga as instruções abaixo:
 
 # Documentação
 
