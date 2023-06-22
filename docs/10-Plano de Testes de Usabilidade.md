@@ -20,9 +20,6 @@ Os testes de usabilidade permitem avaliar a qualidade da interface com o usuári
 |   | 5) 3º desafio: visualizar as informações do projeto cadastrado.|
 |   | 6) 4º desafio: Buscar por projetos cadastrados filtrando por linguagem de programação.|
 |   | 7) 5º desafio: Conectar-se ao projeto encontrado.| 
-|   | 8) 6º desafio: |
-|   | 9) 7º desafio: |
-|   |10) 8º desafio: |
 
 |   | Itens a serem avaliados pós teste |
 |---|---------| 
