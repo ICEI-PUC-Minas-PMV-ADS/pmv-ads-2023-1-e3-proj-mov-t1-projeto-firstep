@@ -9,13 +9,13 @@ FirStep
 ## Identidade Visual (Marca, Design)
 
 ### Logotipo
-[logo](img/logo_.png)
+<img src="img/logo_.png" width=150 height=150>
 
 ### Paleta de cores
 
 O grupo fez um estudo de cores e escolheu a paleta de cores abaixo para utilizar no projeto:
 
-[paleta](img/cores.png)
+<img src="img/cores.png" width=250>
 
 ## Conjunto de Slides (Estrutura)
 
