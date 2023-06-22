@@ -23,7 +23,19 @@ O objetivo deste trabalho é ajudar estagiários e recém formados, por isso pro
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+O backend do projeto encontra-se hospedado no endereço https://firstep-json.onrender.com/ e seu repositório encontra-se clicando [aqui](https://github.com/ClaudiaCarapiaFerraz/firstep_json_). 
+
+* Para dispositivos Android basta seguir as intruções abaixo para acessar o aplicativo:
+
+- Faça o download do app clicando [aqui](https://expo.dev/artifacts/eas/rV6WbytYcx8AdAwjzd5hEU.apk)
+- Instale o aplicativo no celular.
+- Abra o aplicativo. 
+- Clique em registrar e faça o seu cadastro.
+- Informe as credenciais de login cadastradas.
+- As credenciais serão validadas, a sessão será iniciada e o usuário será redirecionado para a tela inicial do usuário.
+- Na tela inicial, o usuário poderá conferir os projetos que estão em andamento e se candidatar a algum projeto. Mas também poderá clicar no ícone de criar projeto para cadastrar um projeto.
+
+* Para dispositivos IOS siga as instruções abaixo:
 
 # Documentação
 
