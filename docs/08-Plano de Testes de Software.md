@@ -6,22 +6,20 @@ Apresente os cenários de testes utilizados na realização dos testes da sua ap
 
 Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
 
-| **Caso de teste**   | **CT-01-Tela Login**|
+| **Caso de teste**   | **CT-01-Tela Login** |
 |:---:	|:---:	|
 |Requisito Associado |  RF-002 - O aplicativo deve permitir login de usuários. | 
 | Objetivo do Teste 	| O usuário deverá realizar o login.|
 | Passos 	| - Acessar o aplicativo <br> - Digitar email e senha <br> - Clicar no botão 'login' |  
 |Critério de Êxito | - Verificar se o usuário conseguiu se conectar a sua conta  .|
 |  |  |
-| **Caso de teste**   | **CT-02-Tela Cadastro do Usuário**|
-|:---:	|:---:	|
+| **Caso de teste**   | **CT-02-Tela Cadastro do Usuário** |
 |Requisito Associado |  RF-001 - O aplicativo deve permitir cadastro de usuários. | 
 | Objetivo do Teste 	| O usuário deverá realizar seu cadastro|
 | Passos 	| - Acessar o aplicativo <br> - Digitar nome, e-mail, senha, descrição e link do github <br> - Clicar no botão 'Enviar cadastro' |  
 |Critério de Êxito | - O cadastro do usuário deve ser realizado.|
 |  |  |
-| **Caso de teste**   | **CT-03-Tela Cadastro de Projeto**|
-|	|	|
+| **Caso de teste**   | **CT-03-Tela Cadastro de Projeto** |
 |Requisito Associado |  RF-008 - O aplicativo deve permitir que usuários publiquem ideias de projetos que desejem desenvolver. | 
 | Objetivo do Teste 	| Verificar se o cadastro será realizado |
 | Passos 	| - Acessar o aplicativo <br> - Fazer login <br> -Clicar no ícone 'Criar Projeto' <br> - Preencher o formulário  <br> - Clicar no botão 'Criar Projeto'|  
