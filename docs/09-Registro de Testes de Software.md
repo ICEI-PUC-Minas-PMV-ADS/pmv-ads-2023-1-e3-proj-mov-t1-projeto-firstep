@@ -4,6 +4,15 @@
 
 Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
 
+## CT-01-Tela Login
+*Evidência do Teste:** 
+
+<img src="img/TEla_login_final.png" width= 250>
+
+
+**Avaliação:** Houve êxito no teste, pois após o usuário informar e-mail, senha e clicar login ele é direcionado para sua conta.
+
+
 ## CT-02-Tela Cadastro do Usuário
 
 **Evidência do Teste:** 
@@ -28,7 +37,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 <img src="img/Tela_Inscrever.jpg" width= 250>
 
-**Avaliação:** Houve êxito em partes do teste, pois ao clicar em um dos projetos na página Pós Login o Get é realizado e depois ao clicar em Candidatar-se na página Inscrever a lógica funciona e o participante é acrescentado até o limite de 6 participantes, porém ainda não é possível registrar o Usuário no projeto, já que a autenticação  ainda não está funcionando.
+**Avaliação:** Houve êxito no teste, pois ao clicar em um dos projetos na página Pós Login o Get é realizado e depois ao clicar em Candidatar-se na página Inscrever o candidato é inserido no Projeto.
 
 ## CT-07-Tela Pós login
 
