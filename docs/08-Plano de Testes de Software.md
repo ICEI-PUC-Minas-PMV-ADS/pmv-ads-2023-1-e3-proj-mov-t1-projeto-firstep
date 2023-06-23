@@ -33,12 +33,6 @@ Enumere quais cenários de testes foram selecionados para teste. Neste tópico o
 | Passos 	| - Acessar o aplicativo <br> - Clicar no projeto que deseja se cadastrar<br> - Clicar em "Cadastrar-se" <br> 
 |Critério de Êxito | - Ao clicar em "Cadastrar-se" o usuário deve ser incluído como participante.  | 
 |   |    | 
-| **Caso de Teste**	| **CT-06 – Realização do Projeto**	|
-|Requisito Associado | RF-007 - O aplicativo deve disponibilizar contato com tutores.|
-| Objetivo do Teste 	| Verificar se o sistema permite que o usuário solicite um tutor. |
-| Passos 	| - Acessar o aplicativo <br> - Clicar no projeto em que está cadastrado<br> - Clicar em "Solicitar tutor" <br> 
-|Critério de Êxito | - Deve ser enviado uma mensagem a um tutor disponível.  | 
-|   |    | 
 | **Caso de Teste**	| **CT-07 – Tela Pós Login**	|
 |Requisito Associado | RF-006 - O aplicativo deve ter uma página com amostras de projetos.|
 | Objetivo do Teste 	| Verificar se , após o usuário realizar o login, será apresentada a tela com seus projetos em andamento. |
