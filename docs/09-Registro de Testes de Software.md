@@ -31,7 +31,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 **Avaliação:** Houve êxito no teste pois, após inserir os dados do projeto para cadastro e clicar no botão Criar Projeto, os dados informados foram salvos no Json(https://firstep-json.onrender.com/projetos).
 
-## CT-05 - Tela Realização de Projeto
+## CT-05 - Tela Informações do Projeto
 
 **Evidência do Teste:** 
 
