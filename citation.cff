@@ -1,0 +1,27 @@
+message: Please cite this software using these metadata.
+title: Firstep
+authors:
+  - family-names: Laurindo
+    given-names: Carolina
+  - family-names: Carapiá
+    given-names: Cláudia
+  - family-names: Raynner 
+    given-names: Douglas
+  - family-names: Grimaldi
+    given-names: Jéssica
+  - family-names: Queiroz
+    given-names: Jeferson
+  - family-names: Noguti
+    given-names: Karen
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ricardo dos Santos Machado
+    given-names: Will
+keywords:
+  - Estágio
+  - Voluntário
+  - Recém formados
+  - Tecnologia
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t1-projeto-firstep
+version: 1.0.0
+date-released: 2023-06-22
